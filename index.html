@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מפת מחירי הסופרמרקטים בישראל</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- MarkerCluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="img/Lobby 99 logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="title-container">
+                <h1>מפת מחירי הסופרמרקטים בישראל</h1>
+                <p class="subtitle">מידע השוואתי על מחירי מזון בחנויות שונות</p>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="sidebar">
+                <div class="filter-container">
+                    <h2>מסננים</h2>
+
+                    <div class="filter-group">
+                        <label for="chain-filter">רשת:</label>
+                        <select id="chain-filter">
+                            <option value="all">הכל</option>
+                            <!-- Will be populated via JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="city-filter">עיר:</label>
+                        <select id="city-filter">
+                            <option value="all">הכל</option>
+                            <!-- Will be populated via JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="price-diff-filter">עד כמה יקר\זול מהממוצע:</label>
+                        <div class="range-slider">
+                            <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
+                            <output id="price-diff-output">20%</output>
+                        </div>
+                    </div>
+                    
+                    <button id="reset-filters" class="btn">איפוס מסננים</button>
+                </div>
+                
+                <div class="store-info">
+                    <h2>מידע על החנות</h2>
+                    <div id="store-details">
+                        <p class="info-placeholder">בחר חנות במפה לקבלת מידע</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="map"></div>
+        </div>
+        
+        <footer>
+            <p>© כל הזכויות שמורות. נתונים מבוססים על מידע שפורסם ע"י רשתות השיווק</p>
+        </footer>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- MarkerCluster JS -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/map.js"></script>
+
+<div id="price-modal" class="price-modal">
+    <div class="price-modal-content">
+        <div class="price-modal-header">
+            <div>
+                <h3 id="price-modal-title">טבלת מחירים</h3>
+                <div id="price-modal-store-info" class="store-info"></div>
+            </div>
+            <span class="close-modal">&times;</span>
+        </div>
+
+        <div class="table-controls">
+            <div class="search-control">
+                <input type="text" id="price-search" class="search-input" placeholder="חיפוש מוצר...">
+            </div>
+            <div class="sort-controls">
+                <button class="sort-btn active" data-sort="name">מיון לפי שם</button>
+                <button class="sort-btn" data-sort="price">מיון לפי מחיר</button>
+                <button class="sort-btn" data-sort="diff">מיון לפי הפרש</button>
+            </div>
+        </div>
+
+        <div id="price-table-container" class="price-table-container">
+            <!-- Table will be inserted here via JavaScript -->
+        </div>
+    </div>
+</div>
+
+<div style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background: white; padding: 10px; border: 1px solid #333; display: none;" id="debug-panel">
+    <h3>Debug Panel</h3>
+    <div id="debug-log" style="max-height: 200px; overflow-y: auto; font-family: monospace; font-size: 12px;"></div>
+    <button onclick="testJsonFetch()" style="margin-top: 10px;">Test JSON Fetch</button>
+</div>
+
+<script>
+// Add this script right after the debug panel
+function debugLog(message) {
+    const debugPanel = document.getElementById('debug-panel');
+    const debugLog = document.getElementById('debug-log');
+    debugPanel.style.display = 'block';
+
+    const timestamp = new Date().toLocaleTimeString();
+    const logEntry = document.createElement('div');
+    logEntry.textContent = `[${timestamp}] ${message}`;
+    debugLog.appendChild(logEntry);
+
+    // Scroll to bottom
+    debugLog.scrollTop = debugLog.scrollHeight;
+
+    // Also log to console
+    console.log(message);
+}
+
+// Test function to directly fetch a JSON file
+function testJsonFetch() {
+    debugLog('Testing JSON fetch...');
+
+    const storeCode = 'ram_064';
+    const paths = [
+        `data/store_files/${storeCode}.json`,
+        `/data/store_files/${storeCode}.json`,
+        `./data/store_files/${storeCode}.json`
+    ];
+
+    paths.forEach(path => {
+        debugLog(`Trying path: ${path}`);
+
+        fetch(path)
+            .then(response => {
+                debugLog(`Path ${path}: ${response.status} ${response.ok ? 'OK' : 'Failed'}`);
+                if (!response.ok) {
+                    throw new Error(`Failed with status ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                debugLog(`SUCCESS! Got data for store: ${data.store_name} with ${data.prices.length} prices`);
+
+                // Try to show the price modal with this data
+                if (window.showStorePrices) {
+                    debugLog('Calling showStorePrices...');
+                    window.showStorePrices(storeCode);
+                } else {
+                    debugLog('ERROR: showStorePrices function not found');
+                }
+            })
+            .catch(error => {
+                debugLog(`ERROR: ${error.message}`);
+            });
+    });
+}
+
+// Override the showStorePrices function for debugging
+const originalShowStorePrices = window.showStorePrices;
+window.showStorePrices = function(storeCode) {
+    debugLog(`showStorePrices called with store code: ${storeCode}`);
+
+    // Get elements
+    const modal = document.getElementById('price-modal');
+    const tableContainer = document.getElementById('price-table-container');
+
+    debugLog(`Modal exists: ${!!modal}, Table container exists: ${!!tableContainer}`);
+
+    // Show loading state
+    if (tableContainer) tableContainer.innerHTML = '<p class="text-center">טוען נתונים...</p>';
+    if (modal) modal.style.display = 'block';
+
+    // Log the full URL we're fetching from
+    const fetchUrl = `data/store_files/${storeCode}.json`;
+    debugLog(`Fetching from URL: ${fetchUrl}`);
+
+    // Fetch the store price data
+    fetch(fetchUrl)
+        .then(response => {
+            debugLog(`Fetch response status: ${response.status}`);
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            debugLog(`Data received with ${data.prices ? data.prices.length : 0} prices`);
+
+            // Call the original function if it exists
+            if (originalShowStorePrices) {
+                originalShowStorePrices(storeCode);
+            } else {
+                debugLog('Original showStorePrices function not found, displaying data manually');
+                // Display the data manually
+                // ...rest of the function...
+            }
+        })
+        .catch(error => {
+            debugLog(`Error: ${error.message}`);
+            if (tableContainer) {
+                tableContainer.innerHTML = `
+                    <div class="error-message">
+                        <p>שגיאה בטעינת נתוני המחירים</p>
+                        <p>אנא נסה שוב מאוחר יותר</p>
+                        <p><small>פרטי השגיאה: ${error.message}</small></p>
+                    </div>
+                `;
+            }
+        });
+};
+</script>
+
+</body>
+</html>

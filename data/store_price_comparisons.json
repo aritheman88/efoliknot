@@ -1,0 +1,2562 @@
+[
+  {
+    "store_code": "ram_054",
+    "store_name": "קרית גת",
+    "chainname": "רמי לוי",
+    "city": "קרית גת",
+    "latitude": 31.6038516,
+    "longitude": 34.7722626,
+    "average_price_diff": NaN,
+    "item_count": 8389
+  },
+  {
+    "store_code": "shu_845",
+    "store_name": "אקספרס נחשון כפר סבא",
+    "chainname": "שופרסל",
+    "city": "כפר סבא",
+    "latitude": 32.1747937,
+    "longitude": 34.9057509,
+    "average_price_diff": NaN,
+    "item_count": 1453
+  },
+  {
+    "store_code": "car_0067",
+    "store_name": "סיטי חולון",
+    "chainname": "קרפור",
+    "city": "חולון",
+    "latitude": 32.0087634,
+    "longitude": 34.7784706,
+    "average_price_diff": NaN,
+    "item_count": 3856
+  },
+  {
+    "store_code": "ampm_544",
+    "store_name": "Am-pm ברודצקי",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.1065947,
+    "longitude": 34.7973754,
+    "average_price_diff": NaN,
+    "item_count": 4271
+  },
+  {
+    "store_code": "shu_610",
+    "store_name": "יש חסד ירושלים- רמת שלמה",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.811922,
+    "longitude": 35.21672,
+    "average_price_diff": NaN,
+    "item_count": 4374
+  },
+  {
+    "store_code": "shu_388",
+    "store_name": "אקספרס דניה",
+    "chainname": "שופרסל",
+    "city": "חיפה",
+    "latitude": 32.7669868,
+    "longitude": 35.0133399,
+    "average_price_diff": NaN,
+    "item_count": 2051
+  },
+  {
+    "store_code": "shu_069",
+    "store_name": "שלי ת\"א- רמת אביב ב",
+    "chainname": "שופרסל",
+    "city": "תל אביב יפו",
+    "latitude": 32.107476,
+    "longitude": 34.795951,
+    "average_price_diff": NaN,
+    "item_count": 5303
+  },
+  {
+    "store_code": "tiv_018",
+    "store_name": "רחובות",
+    "chainname": "טיב טעם",
+    "city": "רחובות",
+    "latitude": 31.9093234,
+    "longitude": 34.8052219,
+    "average_price_diff": NaN,
+    "item_count": 10351
+  },
+  {
+    "store_code": "vic_058",
+    "store_name": "כפר יונה",
+    "chainname": "ויקטורי",
+    "city": "כפר יונה",
+    "latitude": 32.3185475,
+    "longitude": 34.9346133,
+    "average_price_diff": NaN,
+    "item_count": 3497
+  },
+  {
+    "store_code": "yoh_022",
+    "store_name": "חדרה",
+    "chainname": "יוחננוף",
+    "city": "חדרה",
+    "latitude": 32.4414918,
+    "longitude": 34.930406,
+    "average_price_diff": NaN,
+    "item_count": 8295
+  },
+  {
+    "store_code": "stop_005",
+    "store_name": "קסטרא",
+    "chainname": "סטופ מרקט",
+    "city": "חיפה",
+    "latitude": 32.7880209,
+    "longitude": 34.9681521,
+    "average_price_diff": NaN,
+    "item_count": 15915
+  },
+  {
+    "store_code": "shu_368",
+    "store_name": "אקספרס-נשר מרגנית",
+    "chainname": "שופרסל",
+    "city": "חיפה",
+    "latitude": 32.7721793,
+    "longitude": 35.045039,
+    "average_price_diff": NaN,
+    "item_count": 1643
+  },
+  {
+    "store_code": "shu_750",
+    "store_name": "גוד מרקט שירת הים",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.817648,
+    "longitude": 35.2002417,
+    "average_price_diff": NaN,
+    "item_count": 2253
+  },
+  {
+    "store_code": "sap_151",
+    "store_name": "המכולת גני תקוה זכיין",
+    "chainname": "סופר ספיר",
+    "city": "גני תקווה",
+    "latitude": 32.060497,
+    "longitude": 34.873121,
+    "average_price_diff": NaN,
+    "item_count": 1349
+  },
+  {
+    "store_code": "car_0037",
+    "store_name": "מרקט אור יהודה",
+    "chainname": "קרפור",
+    "city": "אור יהודה",
+    "latitude": 32.0347675,
+    "longitude": 34.8499789,
+    "average_price_diff": NaN,
+    "item_count": 3497
+  },
+  {
+    "store_code": "nat_004",
+    "store_name": "עימנואל נתיב החסד NH   W",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "עמנואל",
+    "latitude": 32.160688,
+    "longitude": 35.136036,
+    "average_price_diff": NaN,
+    "item_count": 3872
+  },
+  {
+    "store_code": "shu_188",
+    "store_name": "דילירוחם- צבי בורנשטיין",
+    "chainname": "שופרסל",
+    "city": "ירוחם",
+    "latitude": 30.9883432,
+    "longitude": 34.9272665,
+    "average_price_diff": NaN,
+    "item_count": 4610
+  },
+  {
+    "store_code": "tiv_024",
+    "store_name": "הוד השרון",
+    "chainname": "טיב טעם",
+    "city": "הוד השרון",
+    "latitude": 32.1687202,
+    "longitude": 34.9019432,
+    "average_price_diff": NaN,
+    "item_count": 6796
+  },
+  {
+    "store_code": "nat_246",
+    "store_name": "בית שמש נחל שורק 11 נתיב החסד M NH",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "בית שמש",
+    "latitude": 31.7150547,
+    "longitude": 34.9940196,
+    "average_price_diff": NaN,
+    "item_count": 3393
+  },
+  {
+    "store_code": "vic_087",
+    "store_name": "צמח",
+    "chainname": "ויקטורי",
+    "city": "צמח",
+    "latitude": 32.7029522,
+    "longitude": 35.5850662,
+    "average_price_diff": NaN,
+    "item_count": 5749
+  },
+  {
+    "store_code": "shu_144",
+    "store_name": "דיל שבירו כפר סבא",
+    "chainname": "שופרסל",
+    "city": "כפר סבא",
+    "latitude": 32.1920475,
+    "longitude": 34.8916444,
+    "average_price_diff": NaN,
+    "item_count": 7167
+  },
+  {
+    "store_code": "nat_034",
+    "store_name": "חבקוק נתיב החסד NH @",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "בני ברק",
+    "latitude": 32.0862681,
+    "longitude": 34.8347687,
+    "average_price_diff": NaN,
+    "item_count": 2541
+  },
+  {
+    "store_code": "stop_002",
+    "store_name": "ארנה",
+    "chainname": "סטופ מרקט",
+    "city": "הרצליה",
+    "latitude": 32.1624641,
+    "longitude": 34.7967872,
+    "average_price_diff": NaN,
+    "item_count": 13455
+  },
+  {
+    "store_code": "ram_064",
+    "store_name": "אור עקיבא",
+    "chainname": "רמי לוי",
+    "city": "חיפה",
+    "latitude": 32.80263,
+    "longitude": 34.983837,
+    "average_price_diff": NaN,
+    "item_count": 5831
+  },
+  {
+    "store_code": "car_1228",
+    "store_name": "תל כביר",
+    "chainname": "קרפור",
+    "city": "תל אביב יפו",
+    "latitude": 32.0404773,
+    "longitude": 34.7658227,
+    "average_price_diff": NaN,
+    "item_count": 3954
+  },
+  {
+    "store_code": "nat_056",
+    "store_name": "נתניה שמואל הנציב  נתיב W",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "נתניה",
+    "latitude": 32.3320378,
+    "longitude": 34.8566145,
+    "average_price_diff": NaN,
+    "item_count": 2442
+  },
+  {
+    "store_code": "car_2410",
+    "store_name": "מרקט עיר ימים נתניה",
+    "chainname": "קרפור",
+    "city": "נתניה",
+    "latitude": 32.2791567,
+    "longitude": 34.8470676,
+    "average_price_diff": NaN,
+    "item_count": 5344
+  },
+  {
+    "store_code": "shu_279",
+    "store_name": "אקספרס-ת\"א דרויאנוב",
+    "chainname": "שופרסל",
+    "city": "תל אביב יפו",
+    "latitude": 32.076927,
+    "longitude": 34.771436,
+    "average_price_diff": NaN,
+    "item_count": 2166
+  },
+  {
+    "store_code": "car_0059",
+    "store_name": "מרקט קרית גת",
+    "chainname": "קרפור",
+    "city": "קרית גת",
+    "latitude": 31.6353946,
+    "longitude": 34.7722321,
+    "average_price_diff": NaN,
+    "item_count": 5074
+  },
+  {
+    "store_code": "maa_044",
+    "store_name": "שמעון חכם",
+    "chainname": "מעיין אלפיים",
+    "city": "ירושלים",
+    "latitude": 31.7956357,
+    "longitude": 35.218633,
+    "average_price_diff": NaN,
+    "item_count": 1950
+  },
+  {
+    "store_code": "mah_040",
+    "store_name": "40 אופקים",
+    "chainname": "מחסני השוק",
+    "city": "אופקים",
+    "latitude": 31.3152192,
+    "longitude": 34.6247327,
+    "average_price_diff": NaN,
+    "item_count": 7186
+  },
+  {
+    "store_code": "nat_015",
+    "store_name": "ירמיהו נתיב החסדNH   @",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "בני ברק",
+    "latitude": 32.0886348,
+    "longitude": 34.8264938,
+    "average_price_diff": NaN,
+    "item_count": 2741
+  },
+  {
+    "store_code": "ram_046",
+    "store_name": "רעננה",
+    "chainname": "רמי לוי",
+    "city": "רעננה",
+    "latitude": 32.194741,
+    "longitude": 34.8812187,
+    "average_price_diff": NaN,
+    "item_count": 8549
+  },
+  {
+    "store_code": "shu_082",
+    "store_name": "אקספרס חולון",
+    "chainname": "שופרסל",
+    "city": "חולון",
+    "latitude": 32.0180655,
+    "longitude": 34.7706369,
+    "average_price_diff": NaN,
+    "item_count": 3112
+  },
+  {
+    "store_code": "shu_024",
+    "store_name": "שלי אשדוד- הנביאים",
+    "chainname": "שופרסל",
+    "city": "אשדוד",
+    "latitude": 31.7835101,
+    "longitude": 34.6474636,
+    "average_price_diff": NaN,
+    "item_count": 4137
+  },
+  {
+    "store_code": "shu_743",
+    "store_name": "אקספרס קריית גת",
+    "chainname": "שופרסל",
+    "city": "קריית גת",
+    "latitude": 31.6031361,
+    "longitude": 34.7574882,
+    "average_price_diff": NaN,
+    "item_count": 993
+  },
+  {
+    "store_code": "car_4150",
+    "store_name": "סיטי הרצליה פיתוח",
+    "chainname": "קרפור",
+    "city": "הרצליה",
+    "latitude": 32.1708537,
+    "longitude": 34.8028265,
+    "average_price_diff": NaN,
+    "item_count": 2604
+  },
+  {
+    "store_code": "car_0055",
+    "store_name": "דליית אל כרמל",
+    "chainname": "קרפור",
+    "city": "דליית אל כרמל",
+    "latitude": 32.6955201,
+    "longitude": 35.0514526,
+    "average_price_diff": NaN,
+    "item_count": 3323
+  },
+  {
+    "store_code": "mah_035",
+    "store_name": "35 שלומי",
+    "chainname": "מחסני השוק",
+    "city": "שלומי",
+    "latitude": 33.0754389,
+    "longitude": 35.1450494,
+    "average_price_diff": NaN,
+    "item_count": 3916
+  },
+  {
+    "store_code": "shu_015",
+    "store_name": "יש פת- רוטשילד",
+    "chainname": "שופרסל",
+    "city": "פתח תקוה",
+    "latitude": 32.0863037,
+    "longitude": 34.8822187,
+    "average_price_diff": NaN,
+    "item_count": 3821
+  },
+  {
+    "store_code": "fre_017",
+    "store_name": "טיפ טוב רעננה שברץ",
+    "chainname": "פרש מרקט",
+    "city": "רעננה",
+    "latitude": 32.1823402,
+    "longitude": 34.8825928,
+    "average_price_diff": NaN,
+    "item_count": 2621
+  },
+  {
+    "store_code": "car_0353",
+    "store_name": "סיטי הצרכנייה אשדוד",
+    "chainname": "קרפור",
+    "city": "אשדוד",
+    "latitude": 31.8041835,
+    "longitude": 34.6429239,
+    "average_price_diff": NaN,
+    "item_count": 3174
+  },
+  {
+    "store_code": "car_2540",
+    "store_name": "מרקט מודעין שמשוני",
+    "chainname": "קרפור",
+    "city": "מודיעין",
+    "latitude": 31.9120349,
+    "longitude": 35.0018653,
+    "average_price_diff": NaN,
+    "item_count": 5977
+  },
+  {
+    "store_code": "nat_006",
+    "store_name": "קוטלר נתיב החסד NH   @",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "בני ברק",
+    "latitude": 32.0862681,
+    "longitude": 34.8347687,
+    "average_price_diff": NaN,
+    "item_count": 2367
+  },
+  {
+    "store_code": "shu_369",
+    "store_name": "שלי שוהם- תרשיש",
+    "chainname": "שופרסל",
+    "city": "שוהם",
+    "latitude": 31.9938747,
+    "longitude": 34.9458434,
+    "average_price_diff": NaN,
+    "item_count": 3709
+  },
+  {
+    "store_code": "zol_038",
+    "store_name": "עוזיאל  111",
+    "chainname": "זול ובגדול",
+    "city": "ירושלים",
+    "latitude": 31.7649707,
+    "longitude": 35.1887016,
+    "average_price_diff": NaN,
+    "item_count": 4101
+  },
+  {
+    "store_code": "car_1252",
+    "store_name": "קרפור אילת מעלה",
+    "chainname": "קרפור",
+    "city": "אילת",
+    "latitude": 29.5658228,
+    "longitude": 34.9551073,
+    "average_price_diff": NaN,
+    "item_count": 5814
+  },
+  {
+    "store_code": "mah_036",
+    "store_name": "36 עפולה ביהח העמק",
+    "chainname": "מחסני השוק",
+    "city": "כרכור",
+    "latitude": 32.62152171,
+    "longitude": 35.3172841,
+    "average_price_diff": NaN,
+    "item_count": 2798
+  },
+  {
+    "store_code": "yud_236",
+    "store_name": "צור יצחק",
+    "chainname": "סופר יודה",
+    "city": "צור יצחק",
+    "latitude": 32.2404566,
+    "longitude": 34.9976979,
+    "average_price_diff": NaN,
+    "item_count": 2106
+  },
+  {
+    "store_code": "car_0515",
+    "store_name": "מגה רווה ר\"ג - חדש",
+    "chainname": "קרפור",
+    "city": "רמת גן",
+    "latitude": 32.068424,
+    "longitude": 34.824785,
+    "average_price_diff": NaN,
+    "item_count": 3319
+  },
+  {
+    "store_code": "ampm_511",
+    "store_name": "Am-pm  הרצל",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.0549445,
+    "longitude": 34.7709586,
+    "average_price_diff": NaN,
+    "item_count": 4388
+  },
+  {
+    "store_code": "ampm_594",
+    "store_name": "AMPM חדרה",
+    "chainname": "ampm",
+    "city": "חדרה",
+    "latitude": 32.438695,
+    "longitude": 34.9109822,
+    "average_price_diff": NaN,
+    "item_count": 4044
+  },
+  {
+    "store_code": "ram_311",
+    "store_name": "סופרקופיקס ק.קריון",
+    "chainname": "רמי לוי",
+    "city": "קרית ביאליק",
+    "latitude": 32.8429886,
+    "longitude": 35.0923142,
+    "average_price_diff": NaN,
+    "item_count": 4011
+  },
+  {
+    "store_code": "vic_047",
+    "store_name": "אופקים",
+    "chainname": "ויקטורי",
+    "city": "אופקים",
+    "latitude": 31.3089715,
+    "longitude": 34.6229422,
+    "average_price_diff": NaN,
+    "item_count": 6190
+  },
+  {
+    "store_code": "nat_039",
+    "store_name": "נתניה - השוק נתיב החסד NH    @",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "נתניה",
+    "latitude": 32.3304193,
+    "longitude": 34.859859,
+    "average_price_diff": NaN,
+    "item_count": 2238
+  },
+  {
+    "store_code": "ram_050",
+    "store_name": "חולון",
+    "chainname": "רמי לוי",
+    "city": "חולון",
+    "latitude": 32.0239698,
+    "longitude": 34.7983618,
+    "average_price_diff": NaN,
+    "item_count": 9352
+  },
+  {
+    "store_code": "car_0108",
+    "store_name": "סיטי פנקס תל אביב",
+    "chainname": "קרפור",
+    "city": "תל אביב יפו",
+    "latitude": 32.090765,
+    "longitude": 34.788861,
+    "average_price_diff": NaN,
+    "item_count": 5441
+  },
+  {
+    "store_code": "maa_009",
+    "store_name": "גבעת מרדכי",
+    "chainname": "מעיין אלפיים",
+    "city": "ירושלים",
+    "latitude": 31.762951,
+    "longitude": 35.197501,
+    "average_price_diff": NaN,
+    "item_count": 2972
+  },
+  {
+    "store_code": "fre_013",
+    "store_name": "מחסני מזון ק.שמואל",
+    "chainname": "פרש מרקט",
+    "city": "חיפה",
+    "latitude": 32.838104,
+    "longitude": 35.0713437,
+    "average_price_diff": NaN,
+    "item_count": 4244
+  },
+  {
+    "store_code": "shu_104",
+    "store_name": "שלי פ\"ת- גד מכנס",
+    "chainname": "שופרסל",
+    "city": "פתח תקווה",
+    "latitude": 32.077118,
+    "longitude": 34.886727,
+    "average_price_diff": NaN,
+    "item_count": 3900
+  },
+  {
+    "store_code": "sap_043",
+    "store_name": "נטו חיסכון מעלות*",
+    "chainname": "סופר ספיר",
+    "city": "מעלות תרשיחא",
+    "latitude": 33.019962,
+    "longitude": 35.277005,
+    "average_price_diff": NaN,
+    "item_count": 6897
+  },
+  {
+    "store_code": "shu_350",
+    "store_name": "דיל גבעת אולגה-הרב ניסים",
+    "chainname": "שופרסל",
+    "city": "גבעת אולגה",
+    "latitude": 32.44041491,
+    "longitude": 34.88324036,
+    "average_price_diff": NaN,
+    "item_count": 4624
+  },
+  {
+    "store_code": "fre_007",
+    "store_name": "היפר דודו מינץ",
+    "chainname": "פרש מרקט",
+    "city": "פתח תקווה",
+    "latitude": 32.0749593,
+    "longitude": 34.8899758,
+    "average_price_diff": NaN,
+    "item_count": 3483
+  },
+  {
+    "store_code": "shu_360",
+    "store_name": "אקספרס מאירוביץ ראשל\"צ",
+    "chainname": "שופרסל",
+    "city": "ראשון לציון",
+    "latitude": 31.9586614,
+    "longitude": 34.8083768,
+    "average_price_diff": NaN,
+    "item_count": 2286
+  },
+  {
+    "store_code": "zol_019",
+    "store_name": "אשדוד",
+    "chainname": "זול ובגדול",
+    "city": "אשדוד",
+    "latitude": 31.7809928,
+    "longitude": 34.6316162,
+    "average_price_diff": NaN,
+    "item_count": 4540
+  },
+  {
+    "store_code": "ampm_579",
+    "store_name": "AM-PM הקוממיות 16",
+    "chainname": "ampm",
+    "city": "בת ים",
+    "latitude": 32.0070868,
+    "longitude": 34.7412609,
+    "average_price_diff": NaN,
+    "item_count": 4603
+  },
+  {
+    "store_code": "shu_035",
+    "store_name": "דיל אקסטרה באר-שבע ולפסו",
+    "chainname": "שופרסל",
+    "city": "באר שבע",
+    "latitude": 31.2220096,
+    "longitude": 34.8034019,
+    "average_price_diff": NaN,
+    "item_count": 6390
+  },
+  {
+    "store_code": "zol_041",
+    "store_name": "ארץ חפץ",
+    "chainname": "זול ובגדול",
+    "city": "ירושלים",
+    "latitude": 31.7957476,
+    "longitude": 35.223376,
+    "average_price_diff": NaN,
+    "item_count": 1993
+  },
+  {
+    "store_code": "shefa_041",
+    "store_name": "נתיבות",
+    "chainname": "שפע ברכת השם",
+    "city": "נתיבות",
+    "latitude": 31.4179635,
+    "longitude": 34.5940019,
+    "average_price_diff": NaN,
+    "item_count": 4149
+  },
+  {
+    "store_code": "car_2840",
+    "store_name": "מרקט אשדוד ח",
+    "chainname": "קרפור",
+    "city": "אשדוד",
+    "latitude": 31.7836627,
+    "longitude": 34.6534113,
+    "average_price_diff": NaN,
+    "item_count": 4243
+  },
+  {
+    "store_code": "vic_021",
+    "store_name": "רמלה הולצברג",
+    "chainname": "ויקטורי",
+    "city": "רמלה",
+    "latitude": 31.9334559,
+    "longitude": 34.8540757,
+    "average_price_diff": NaN,
+    "item_count": 3783
+  },
+  {
+    "store_code": "shu_209",
+    "store_name": "דיל אשקלון- רוטשילד",
+    "chainname": "שופרסל",
+    "city": "אשקלון",
+    "latitude": 31.6687885,
+    "longitude": 34.5742523,
+    "average_price_diff": NaN,
+    "item_count": 4171
+  },
+  {
+    "store_code": "sap_027",
+    "store_name": "טירת הכרמל",
+    "chainname": "סופר ספיר",
+    "city": "טירת הכרמל",
+    "latitude": 32.760128,
+    "longitude": 34.9734687,
+    "average_price_diff": NaN,
+    "item_count": 4041
+  },
+  {
+    "store_code": "ram_019",
+    "store_name": "אדמרליטי",
+    "chainname": "רמי לוי",
+    "city": "חיפה",
+    "latitude": 32.8187067,
+    "longitude": 35.0536682,
+    "average_price_diff": NaN,
+    "item_count": 7772
+  },
+  {
+    "store_code": "car_1040",
+    "store_name": "סיטי הוד השרון",
+    "chainname": "קרפור",
+    "city": "הוד השרון",
+    "latitude": 32.1590679,
+    "longitude": 34.8883458,
+    "average_price_diff": NaN,
+    "item_count": 3581
+  },
+  {
+    "store_code": "shu_087",
+    "store_name": "דיל רעננה- החרושת",
+    "chainname": "שופרסל",
+    "city": "רעננה",
+    "latitude": 32.1931117,
+    "longitude": 34.8816089,
+    "average_price_diff": NaN,
+    "item_count": 6135
+  },
+  {
+    "store_code": "yud_213",
+    "store_name": "סופר יודה בית אלעל",
+    "chainname": "סופר יודה",
+    "city": "תל אביב יפו",
+    "latitude": 32.0763898,
+    "longitude": 34.7684482,
+    "average_price_diff": NaN,
+    "item_count": 2926
+  },
+  {
+    "store_code": "shu_176",
+    "store_name": "שערי רווחהירושלים",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.79217,
+    "longitude": 35.2099448,
+    "average_price_diff": NaN,
+    "item_count": 6831
+  },
+  {
+    "store_code": "ram_070",
+    "store_name": "שדרות",
+    "chainname": "רמי לוי",
+    "city": "שדרות",
+    "latitude": 31.5268163,
+    "longitude": 34.60206307,
+    "average_price_diff": NaN,
+    "item_count": 4559
+  },
+  {
+    "store_code": "yen_3010",
+    "store_name": "אריאל ב",
+    "chainname": "יינות ביתן",
+    "city": "אריאל",
+    "latitude": 32.1076507,
+    "longitude": 35.1898933,
+    "average_price_diff": NaN,
+    "item_count": 3428
+  },
+  {
+    "store_code": "ram_321",
+    "store_name": "ס.קופיקס גבעת שמואל",
+    "chainname": "רמי לוי",
+    "city": "גבעת שמואל",
+    "latitude": 32.077299,
+    "longitude": 34.849206,
+    "average_price_diff": NaN,
+    "item_count": 2608
+  },
+  {
+    "store_code": "nat_001",
+    "store_name": "רחובות C  NH ברכל",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "רחובות",
+    "latitude": 31.8833486,
+    "longitude": 34.8228706,
+    "average_price_diff": NaN,
+    "item_count": 1865
+  },
+  {
+    "store_code": "vic_001",
+    "store_name": "גן-יבנה",
+    "chainname": "ויקטורי",
+    "city": "גן יבנה",
+    "latitude": 31.7754364,
+    "longitude": 34.7042045,
+    "average_price_diff": NaN,
+    "item_count": 5475
+  },
+  {
+    "store_code": "shu_169",
+    "store_name": "אקספרס באר שבע",
+    "chainname": "שופרסל",
+    "city": "באר שבע",
+    "latitude": 31.2521018,
+    "longitude": 34.7867691,
+    "average_price_diff": NaN,
+    "item_count": 2160
+  },
+  {
+    "store_code": "sap_070",
+    "store_name": "בת ים",
+    "chainname": "סופר ספיר",
+    "city": "בת ים",
+    "latitude": 32.0131258,
+    "longitude": 34.7424517,
+    "average_price_diff": NaN,
+    "item_count": 1565
+  },
+  {
+    "store_code": "shu_018",
+    "store_name": "דיל חולון-קרן היסוד",
+    "chainname": "שופרסל",
+    "city": "חולון",
+    "latitude": 32.0082068,
+    "longitude": 34.7912443,
+    "average_price_diff": NaN,
+    "item_count": 5024
+  },
+  {
+    "store_code": "car_3174",
+    "store_name": "סיטי גבעת שמואל",
+    "chainname": "קרפור",
+    "city": "גבעת שמואל",
+    "latitude": 32.0679616,
+    "longitude": 34.8457903,
+    "average_price_diff": NaN,
+    "item_count": 2711
+  },
+  {
+    "store_code": "zol_032",
+    "store_name": "הבקעה",
+    "chainname": "זול ובגדול",
+    "city": "בקעת הירדן",
+    "latitude": 32.0558853,
+    "longitude": 35.4694328,
+    "average_price_diff": NaN,
+    "item_count": 6113
+  },
+  {
+    "store_code": "ram_306",
+    "store_name": "ר.בשכונה חדרה הרצל",
+    "chainname": "רמי לוי",
+    "city": "חדרה",
+    "latitude": 32.4374105,
+    "longitude": 34.9190936,
+    "average_price_diff": NaN,
+    "item_count": 3133
+  },
+  {
+    "store_code": "shu_134",
+    "store_name": "דיל מודיעין- ישפרו סנטר",
+    "chainname": "שופרסל",
+    "city": "מודיעין",
+    "latitude": 31.8898011,
+    "longitude": 34.9628105,
+    "average_price_diff": NaN,
+    "item_count": 6587
+  },
+  {
+    "store_code": "vic_030",
+    "store_name": "אלקנה",
+    "chainname": "ויקטורי",
+    "city": "אלקנה",
+    "latitude": 32.1132236,
+    "longitude": 35.0274226,
+    "average_price_diff": NaN,
+    "item_count": 4060
+  },
+  {
+    "store_code": "fre_030",
+    "store_name": "מחסני להב כצנלסון",
+    "chainname": "פרש מרקט",
+    "city": "קרית אתא",
+    "latitude": 32.8040328,
+    "longitude": 35.108047,
+    "average_price_diff": NaN,
+    "item_count": 2377
+  },
+  {
+    "store_code": "shu_124",
+    "store_name": "דיל בת ים- אורט ישראל",
+    "chainname": "שופרסל",
+    "city": "בת ים",
+    "latitude": 32.00892,
+    "longitude": 34.746448,
+    "average_price_diff": NaN,
+    "item_count": 6256
+  },
+  {
+    "store_code": "vic_029",
+    "store_name": "רמת גן",
+    "chainname": "ויקטורי",
+    "city": "רמת גן",
+    "latitude": 32.0834004,
+    "longitude": 34.815928,
+    "average_price_diff": NaN,
+    "item_count": 4622
+  },
+  {
+    "store_code": "ram_700",
+    "store_name": "בית הפירות פסגת זאב",
+    "chainname": "רמי לוי",
+    "city": "ירושלים",
+    "latitude": 31.7323116,
+    "longitude": 35.200415,
+    "average_price_diff": NaN,
+    "item_count": 1978
+  },
+  {
+    "store_code": "car_2518",
+    "store_name": "מגה פארק הירקון",
+    "chainname": "קרפור",
+    "city": "תל אביב יפו",
+    "latitude": 32.100744,
+    "longitude": 34.807026,
+    "average_price_diff": NaN,
+    "item_count": 3736
+  },
+  {
+    "store_code": "cit_024",
+    "store_name": "סיטי מרקט פרדס חנה כרכור בע\"מ",
+    "chainname": "סיטי מרקט",
+    "city": "פרדס חנה",
+    "latitude": 32.4762448,
+    "longitude": 34.9719941,
+    "average_price_diff": NaN,
+    "item_count": 31817
+  },
+  {
+    "store_code": "shu_366",
+    "store_name": "שלי כפר ורדים- מרכז מסחר",
+    "chainname": "שופרסל",
+    "city": "כפר ורדים",
+    "latitude": 32.9955566,
+    "longitude": 35.2755959,
+    "average_price_diff": NaN,
+    "item_count": 2365
+  },
+  {
+    "store_code": "shu_135",
+    "store_name": "דיל אשקלון- פאור סנטר",
+    "chainname": "שופרסל",
+    "city": "אשקלון",
+    "latitude": 31.6748007,
+    "longitude": 34.6060214,
+    "average_price_diff": NaN,
+    "item_count": 7428
+  },
+  {
+    "store_code": "fre_046",
+    "store_name": "סופר כרמים",
+    "chainname": "פרש מרקט",
+    "city": "ראשון לציון",
+    "latitude": 31.9740224,
+    "longitude": 34.7794211,
+    "average_price_diff": NaN,
+    "item_count": 3971
+  },
+  {
+    "store_code": "shefa_017",
+    "store_name": "אגן האיילות ג. זאב",
+    "chainname": "שפע ברכת השם",
+    "city": "גבעת זאב",
+    "latitude": 31.863743,
+    "longitude": 35.151288,
+    "average_price_diff": NaN,
+    "item_count": 3150
+  },
+  {
+    "store_code": "tiv_019",
+    "store_name": "רמת החייל",
+    "chainname": "טיב טעם",
+    "city": "תל אביב יפו",
+    "latitude": 32.1137123,
+    "longitude": 34.8413772,
+    "average_price_diff": NaN,
+    "item_count": 12025
+  },
+  {
+    "store_code": "nat_029",
+    "store_name": "רשבם נתיב החסד  NH C",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "בני ברק",
+    "latitude": 32.0788317,
+    "longitude": 34.8354962,
+    "average_price_diff": NaN,
+    "item_count": 1815
+  },
+  {
+    "store_code": "vic_057",
+    "store_name": "סיטי מרגוזה",
+    "chainname": "ויקטורי",
+    "city": "תל אביב יפו",
+    "latitude": 32.0519789,
+    "longitude": 34.7554971,
+    "average_price_diff": NaN,
+    "item_count": 1939
+  },
+  {
+    "store_code": "nat_240",
+    "store_name": "סורוצקין/מנחם משיב1, ברכל@ BAR",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "ירושלים",
+    "latitude": 31.7989733,
+    "longitude": 35.2059299,
+    "average_price_diff": NaN,
+    "item_count": 3020
+  },
+  {
+    "store_code": "osh_001",
+    "store_name": "מגדל העמק",
+    "chainname": "אושר עד",
+    "city": "מגדל העמק",
+    "latitude": 32.6696574,
+    "longitude": 35.2368042,
+    "average_price_diff": NaN,
+    "item_count": 4727
+  },
+  {
+    "store_code": "tiv_012",
+    "store_name": "חוצות המפרץ (קריות)",
+    "chainname": "טיב טעם",
+    "city": "קריות",
+    "latitude": 32.8073578,
+    "longitude": 35.0548125,
+    "average_price_diff": NaN,
+    "item_count": 8643
+  },
+  {
+    "store_code": "shu_376",
+    "store_name": "אקספרס רעננה- משה דיין",
+    "chainname": "שופרסל",
+    "city": "רעננה",
+    "latitude": 32.1816708,
+    "longitude": 34.8630715,
+    "average_price_diff": NaN,
+    "item_count": 2321
+  },
+  {
+    "store_code": "ram_314",
+    "store_name": "סופרקופיקס הנשיא",
+    "chainname": "רמי לוי",
+    "city": "חדרה",
+    "latitude": 32.4407565,
+    "longitude": 34.9150453,
+    "average_price_diff": NaN,
+    "item_count": 2693
+  },
+  {
+    "store_code": "shu_607",
+    "store_name": "יש חסד מודיעין עלי-ק.ספר",
+    "chainname": "שופרסל",
+    "city": "קרית ספר",
+    "latitude": 31.9238605,
+    "longitude": 35.0433387,
+    "average_price_diff": NaN,
+    "item_count": 5172
+  },
+  {
+    "store_code": "ram_037",
+    "store_name": "נתניה חדש",
+    "chainname": "רמי לוי",
+    "city": "נתניה",
+    "latitude": 32.3219229,
+    "longitude": 34.8717951,
+    "average_price_diff": NaN,
+    "item_count": 8792
+  },
+  {
+    "store_code": "mah_001",
+    "store_name": "1 ב\"ש-בית אשל",
+    "chainname": "מחסני השוק",
+    "city": "באר שבע",
+    "latitude": 31.239921,
+    "longitude": 34.7939865,
+    "average_price_diff": NaN,
+    "item_count": 6956
+  },
+  {
+    "store_code": "shu_245",
+    "store_name": "דיל ירושלים- פסגת זאב",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.8311112,
+    "longitude": 35.241774,
+    "average_price_diff": NaN,
+    "item_count": 4443
+  },
+  {
+    "store_code": "car_0046",
+    "store_name": "רמלה",
+    "chainname": "קרפור",
+    "city": "רמלה",
+    "latitude": 31.9229092,
+    "longitude": 34.8779067,
+    "average_price_diff": NaN,
+    "item_count": 5088
+  },
+  {
+    "store_code": "shu_022",
+    "store_name": "שלי נתניה- סמילנסקי",
+    "chainname": "שופרסל",
+    "city": "נתניה",
+    "latitude": 32.3272194,
+    "longitude": 34.8550823,
+    "average_price_diff": NaN,
+    "item_count": 4367
+  },
+  {
+    "store_code": "shu_303",
+    "store_name": "אקספרס טבעון - יהודה הנשיא",
+    "chainname": "שופרסל",
+    "city": "קרית טבעון",
+    "latitude": 32.7146161,
+    "longitude": 35.1252205,
+    "average_price_diff": NaN,
+    "item_count": 2463
+  },
+  {
+    "store_code": "shu_608",
+    "store_name": "יש חסד ירושלים-קרית שאול",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.7881378,
+    "longitude": 35.1868011,
+    "average_price_diff": NaN,
+    "item_count": 4555
+  },
+  {
+    "store_code": "car_2577",
+    "store_name": "מגה לב נתניה",
+    "chainname": "קרפור",
+    "city": "נתניה",
+    "latitude": 32.2950621,
+    "longitude": 34.8505542,
+    "average_price_diff": NaN,
+    "item_count": 4299
+  },
+  {
+    "store_code": "shu_168",
+    "store_name": "שלי אשדוד- כינרת",
+    "chainname": "שופרסל",
+    "city": "אשדוד",
+    "latitude": 31.7844314,
+    "longitude": 34.6340866,
+    "average_price_diff": NaN,
+    "item_count": 4277
+  },
+  {
+    "store_code": "fre_040",
+    "store_name": "פרשמרקט מרום נווה",
+    "chainname": "פרש מרקט",
+    "city": "רמת גן",
+    "latitude": 32.0714834,
+    "longitude": 34.8280633,
+    "average_price_diff": NaN,
+    "item_count": 5553
+  },
+  {
+    "store_code": "yud_232",
+    "store_name": "הרצליה",
+    "chainname": "סופר יודה",
+    "city": "הרצליה",
+    "latitude": 32.1654561,
+    "longitude": 34.8369438,
+    "average_price_diff": NaN,
+    "item_count": 2310
+  },
+  {
+    "store_code": "yud_208",
+    "store_name": "סופר יודה קינג גורג",
+    "chainname": "סופר יודה",
+    "city": "תל אביב יפו",
+    "latitude": 32.0734079,
+    "longitude": 34.7748745,
+    "average_price_diff": NaN,
+    "item_count": 3234
+  },
+  {
+    "store_code": "shu_331",
+    "store_name": "אקספרס ת\"א- תוספתא",
+    "chainname": "שופרסל",
+    "city": "תל אביב יפו",
+    "latitude": 32.0974616,
+    "longitude": 34.7986012,
+    "average_price_diff": NaN,
+    "item_count": 1672
+  },
+  {
+    "store_code": "nat_275",
+    "store_name": "רמב\"ם 16 מודיעין עילית ברכל  C",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "מודיעין עילית",
+    "latitude": 31.932477,
+    "longitude": 35.042265,
+    "average_price_diff": NaN,
+    "item_count": 1945
+  },
+  {
+    "store_code": "osh_005",
+    "store_name": "קרית ביאליק",
+    "chainname": "אושר עד",
+    "city": "קרית ביאליק",
+    "latitude": 32.8618235,
+    "longitude": 35.098291,
+    "average_price_diff": NaN,
+    "item_count": 5533
+  },
+  {
+    "store_code": "nat_050",
+    "store_name": "אחיסמך  נתיב החסד C",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "לוד",
+    "latitude": 31.9365986,
+    "longitude": 34.8977799,
+    "average_price_diff": NaN,
+    "item_count": 1994
+  },
+  {
+    "store_code": "shu_101",
+    "store_name": "שלי הוד השרון- ק מרגלית",
+    "chainname": "שופרסל",
+    "city": "הוד השרון",
+    "latitude": 32.149961,
+    "longitude": 34.8838788,
+    "average_price_diff": NaN,
+    "item_count": 5337
+  },
+  {
+    "store_code": "haz_219",
+    "store_name": "תוצרת חקלאית ירקות הכשרת הישוב",
+    "chainname": "חצי חינם",
+    "city": "ראשון לציון",
+    "latitude": 31.9890683,
+    "longitude": 34.7620323,
+    "average_price_diff": NaN,
+    "item_count": 393
+  },
+  {
+    "store_code": "cit_015",
+    "store_name": "סיטי מרקט \"השדרה\" חולון",
+    "chainname": "סיטי מרקט",
+    "city": "חולון",
+    "latitude": 32.0232032,
+    "longitude": 34.7652111,
+    "average_price_diff": NaN,
+    "item_count": 30055
+  },
+  {
+    "store_code": "shu_214",
+    "store_name": "דיל קרית גת- מלכי ישראל",
+    "chainname": "שופרסל",
+    "city": "קרית גת",
+    "latitude": 31.6031361,
+    "longitude": 34.7574882,
+    "average_price_diff": NaN,
+    "item_count": 7086
+  },
+  {
+    "store_code": "shu_040",
+    "store_name": "שלי בש- עומר",
+    "chainname": "שופרסל",
+    "city": "עומר",
+    "latitude": 31.264479,
+    "longitude": 34.8505942,
+    "average_price_diff": NaN,
+    "item_count": 3417
+  },
+  {
+    "store_code": "ram_703",
+    "store_name": "בית הפירות פת",
+    "chainname": "רמי לוי",
+    "city": "ירושלים",
+    "latitude": 31.74883394,
+    "longitude": 35.1978328,
+    "average_price_diff": NaN,
+    "item_count": 1842
+  },
+  {
+    "store_code": "sap_040",
+    "store_name": "נטו חיסכון ביתר עלית*",
+    "chainname": "סופר ספיר",
+    "city": "ביתר עילית",
+    "latitude": 31.698843,
+    "longitude": 35.1280398,
+    "average_price_diff": NaN,
+    "item_count": 8828
+  },
+  {
+    "store_code": "cit_037",
+    "store_name": "סיטי מרקט דב הוז",
+    "chainname": "סיטי מרקט",
+    "city": "חולון",
+    "latitude": 32.0232032,
+    "longitude": 34.7652111,
+    "average_price_diff": NaN,
+    "item_count": 29552
+  },
+  {
+    "store_code": "ampm_536",
+    "store_name": "Am-pmזבוטינסקי 44",
+    "chainname": "ampm",
+    "city": "רמת גן",
+    "latitude": 32.0845621,
+    "longitude": 34.8098643,
+    "average_price_diff": NaN,
+    "item_count": 4562
+  },
+  {
+    "store_code": "ram_334",
+    "store_name": "ר. בשכונה הוד השרון",
+    "chainname": "רמי לוי",
+    "city": "הוד השרון",
+    "latitude": 32.1594042,
+    "longitude": 34.9017986,
+    "average_price_diff": NaN,
+    "item_count": 3805
+  },
+  {
+    "store_code": "mah_065",
+    "store_name": "65 קרית אתא",
+    "chainname": "מחסני השוק",
+    "city": "קרית אתא",
+    "latitude": 32.8125999,
+    "longitude": 35.1053976,
+    "average_price_diff": NaN,
+    "item_count": 4383
+  },
+  {
+    "store_code": "osh_022",
+    "store_name": "אשקלון בת הדר",
+    "chainname": "אושר עד",
+    "city": "אשקלון בת הדר",
+    "latitude": 31.648125,
+    "longitude": 34.597146,
+    "average_price_diff": NaN,
+    "item_count": 4892
+  },
+  {
+    "store_code": "yoh_041",
+    "store_name": "אשקלון ברנע",
+    "chainname": "יוחננוף",
+    "city": "אשקלון",
+    "latitude": 31.7011517,
+    "longitude": 34.5798745,
+    "average_price_diff": NaN,
+    "item_count": 5419
+  },
+  {
+    "store_code": "osh_014",
+    "store_name": "חדרה",
+    "chainname": "אושר עד",
+    "city": "חדרה",
+    "latitude": 32.4493907,
+    "longitude": 34.914005,
+    "average_price_diff": NaN,
+    "item_count": 5434
+  },
+  {
+    "store_code": "car_0610",
+    "store_name": "סיטי באר שבע",
+    "chainname": "קרפור",
+    "city": "באר שבע",
+    "latitude": 31.24748704,
+    "longitude": 34.78006782,
+    "average_price_diff": NaN,
+    "item_count": 2531
+  },
+  {
+    "store_code": "shu_772",
+    "store_name": "גוד מרקט מאה שערים",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.7883061,
+    "longitude": 35.2184496,
+    "average_price_diff": NaN,
+    "item_count": 1405
+  },
+  {
+    "store_code": "shu_195",
+    "store_name": "דיל קריון- דרך עכו",
+    "chainname": "שופרסל",
+    "city": "קרית ביאליק",
+    "latitude": 32.8453313,
+    "longitude": 35.0919425,
+    "average_price_diff": NaN,
+    "item_count": 7079
+  },
+  {
+    "store_code": "car_3680",
+    "store_name": "קרפור מרקט בית שמש",
+    "chainname": "קרפור",
+    "city": "בית שמש",
+    "latitude": 31.7145524,
+    "longitude": 34.9886899,
+    "average_price_diff": NaN,
+    "item_count": 4495
+  },
+  {
+    "store_code": "yoh_037",
+    "store_name": "עפולה",
+    "chainname": "יוחננוף",
+    "city": "עפולה",
+    "latitude": 32.6065955,
+    "longitude": 35.2974223,
+    "average_price_diff": NaN,
+    "item_count": 6163
+  },
+  {
+    "store_code": "car_1236",
+    "store_name": "סיטי מגדלי דוד תא",
+    "chainname": "קרפור",
+    "city": "תל אביב יפו",
+    "latitude": 32.0814732,
+    "longitude": 34.7854416,
+    "average_price_diff": NaN,
+    "item_count": 3972
+  },
+  {
+    "store_code": "maa_022",
+    "store_name": "בית ישראל",
+    "chainname": "מעיין אלפיים",
+    "city": "ירושלים",
+    "latitude": 31.7895097,
+    "longitude": 35.2243603,
+    "average_price_diff": NaN,
+    "item_count": 2325
+  },
+  {
+    "store_code": "shefa_025",
+    "store_name": "תלפיות",
+    "chainname": "שפע ברכת השם",
+    "city": "ירושלים",
+    "latitude": 31.750588,
+    "longitude": 35.2099999,
+    "average_price_diff": NaN,
+    "item_count": 5080
+  },
+  {
+    "store_code": "ram_337",
+    "store_name": "ר.ל בשכונה גבעתיים",
+    "chainname": "רמי לוי",
+    "city": "גבעתיים",
+    "latitude": 32.0748921,
+    "longitude": 34.8183974,
+    "average_price_diff": NaN,
+    "item_count": 4097
+  },
+  {
+    "store_code": "yud_207",
+    "store_name": "סופר יודה ריינס",
+    "chainname": "סופר יודה",
+    "city": "תל אביב יפו",
+    "latitude": 32.0831294,
+    "longitude": 34.776354,
+    "average_price_diff": NaN,
+    "item_count": 2184
+  },
+  {
+    "store_code": "mah_044",
+    "store_name": "44 ערד",
+    "chainname": "מחסני השוק",
+    "city": "ערד",
+    "latitude": 31.2612547,
+    "longitude": 35.2152179,
+    "average_price_diff": NaN,
+    "item_count": 6351
+  },
+  {
+    "store_code": "mah_083",
+    "store_name": "83 גבעת שמואל",
+    "chainname": "מחסני השוק",
+    "city": "גבעת שמואל",
+    "latitude": 32.077607,
+    "longitude": 34.8469088,
+    "average_price_diff": NaN,
+    "item_count": 2141
+  },
+  {
+    "store_code": "shu_133",
+    "store_name": "יש חסד ביתר עילית-  הר\"ן",
+    "chainname": "שופרסל",
+    "city": "ביתר עילית",
+    "latitude": 31.7043471,
+    "longitude": 35.1175965,
+    "average_price_diff": NaN,
+    "item_count": 4329
+  },
+  {
+    "store_code": "shefa_032",
+    "store_name": "תכלת מרדכי",
+    "chainname": "שפע ברכת השם",
+    "city": "ירושלים",
+    "latitude": 31.7934491,
+    "longitude": 35.2054938,
+    "average_price_diff": NaN,
+    "item_count": 2446
+  },
+  {
+    "store_code": "shu_020",
+    "store_name": "שלי רחובות-הרצל",
+    "chainname": "שופרסל",
+    "city": "רחובות",
+    "latitude": 31.8989977,
+    "longitude": 34.8099711,
+    "average_price_diff": NaN,
+    "item_count": 4151
+  },
+  {
+    "store_code": "sap_161",
+    "store_name": "זכיין המכולת נורדיה",
+    "chainname": "סופר ספיר",
+    "city": "נורדיה",
+    "latitude": 32.314656,
+    "longitude": 34.896792,
+    "average_price_diff": NaN,
+    "item_count": 1559
+  },
+  {
+    "store_code": "ram_302",
+    "store_name": "ר.בשכונה שטמפפר פת",
+    "chainname": "רמי לוי",
+    "city": "פתח תקווה",
+    "latitude": 32.0912329,
+    "longitude": 34.8872136,
+    "average_price_diff": NaN,
+    "item_count": 2649
+  },
+  {
+    "store_code": "car_1201",
+    "store_name": "מגה יהלומים גבעתיים",
+    "chainname": "קרפור",
+    "city": "גבעתיים",
+    "latitude": 32.075318,
+    "longitude": 34.8086113,
+    "average_price_diff": NaN,
+    "item_count": 5008
+  },
+  {
+    "store_code": "sap_002",
+    "store_name": "צומת פת",
+    "chainname": "סופר ספיר",
+    "city": "ירושלים",
+    "latitude": 31.7571641,
+    "longitude": 35.1981377,
+    "average_price_diff": NaN,
+    "item_count": 3553
+  },
+  {
+    "store_code": "yud_237",
+    "store_name": "סופר יודה געש",
+    "chainname": "סופר יודה",
+    "city": "פתח תקווה",
+    "latitude": 32.0917549,
+    "longitude": 34.8594302,
+    "average_price_diff": NaN,
+    "item_count": 1612
+  },
+  {
+    "store_code": "sap_047",
+    "store_name": "חדרה סיטי",
+    "chainname": "סופר ספיר",
+    "city": "חדרה",
+    "latitude": 32.4322069,
+    "longitude": 34.9281808,
+    "average_price_diff": NaN,
+    "item_count": 5277
+  },
+  {
+    "store_code": "shu_771",
+    "store_name": "גוד מרקט בני ברק",
+    "chainname": "שופרסל",
+    "city": "בני ברק",
+    "latitude": 32.0830437,
+    "longitude": 34.8407225,
+    "average_price_diff": NaN,
+    "item_count": 2632
+  },
+  {
+    "store_code": "shu_390",
+    "store_name": "שופרסל אקספרס אם המושבות",
+    "chainname": "שופרסל",
+    "city": "פתח תקוה",
+    "latitude": 32.084041,
+    "longitude": 34.887762,
+    "average_price_diff": NaN,
+    "item_count": 3201
+  },
+  {
+    "store_code": "sap_069",
+    "store_name": "זכיין - נהריה",
+    "chainname": "סופר ספיר",
+    "city": "נהריה",
+    "latitude": 33.00663,
+    "longitude": 35.094561,
+    "average_price_diff": NaN,
+    "item_count": 1026
+  },
+  {
+    "store_code": "maa_062",
+    "store_name": "נווה יעקב (אביר יעקב)",
+    "chainname": "מעיין אלפיים",
+    "city": "ירושלים",
+    "latitude": 31.841769,
+    "longitude": 35.242762,
+    "average_price_diff": NaN,
+    "item_count": 1957
+  },
+  {
+    "store_code": "shu_325",
+    "store_name": "אקספרס ששת הימים נס ציונ",
+    "chainname": "שופרסל",
+    "city": "נס ציונה",
+    "latitude": 31.936063,
+    "longitude": 34.7964159,
+    "average_price_diff": NaN,
+    "item_count": 2168
+  },
+  {
+    "store_code": "shefa_036",
+    "store_name": "תל ציון",
+    "chainname": "שפע ברכת השם",
+    "city": "תל ציון",
+    "latitude": 31.8797998,
+    "longitude": 35.2406234,
+    "average_price_diff": NaN,
+    "item_count": 2391
+  },
+  {
+    "store_code": "fre_032",
+    "store_name": "פרשמרקט רמת אביב",
+    "chainname": "פרש מרקט",
+    "city": "תל אביב יפו",
+    "latitude": 32.1126597,
+    "longitude": 34.7993318,
+    "average_price_diff": NaN,
+    "item_count": 3400
+  },
+  {
+    "store_code": "ram_012",
+    "store_name": "ביתר עלית",
+    "chainname": "רמי לוי",
+    "city": "ירושלים",
+    "latitude": 31.6998481,
+    "longitude": 35.107769,
+    "average_price_diff": NaN,
+    "item_count": 6442
+  },
+  {
+    "store_code": "vic_048",
+    "store_name": "טירת הכרמל",
+    "chainname": "ויקטורי",
+    "city": "טירת הכרמל",
+    "latitude": 32.7685502,
+    "longitude": 34.968224,
+    "average_price_diff": NaN,
+    "item_count": 5631
+  },
+  {
+    "store_code": "shu_238",
+    "store_name": "דיל באר יעקב",
+    "chainname": "שופרסל",
+    "city": "באר יעקב",
+    "latitude": 31.94197637,
+    "longitude": 34.83391427,
+    "average_price_diff": NaN,
+    "item_count": 4803
+  },
+  {
+    "store_code": "fre_025",
+    "store_name": "מחסני להב יבנה",
+    "chainname": "פרש מרקט",
+    "city": "יבנה",
+    "latitude": 31.8664093,
+    "longitude": 34.7358169,
+    "average_price_diff": NaN,
+    "item_count": 4129
+  },
+  {
+    "store_code": "ampm_501",
+    "store_name": "Am-pm בן יהודה 30",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.0760792,
+    "longitude": 34.7682159,
+    "average_price_diff": NaN,
+    "item_count": 3820
+  },
+  {
+    "store_code": "maa_021",
+    "store_name": "שמואל הנביא",
+    "chainname": "מעיין אלפיים",
+    "city": "ירושלים",
+    "latitude": 31.789996,
+    "longitude": 35.224843,
+    "average_price_diff": NaN,
+    "item_count": 2524
+  },
+  {
+    "store_code": "yoh_035",
+    "store_name": "תל אביב נחלת יצחק",
+    "chainname": "יוחננוף",
+    "city": "תל אביב יפו",
+    "latitude": 32.0739817,
+    "longitude": 34.7981136,
+    "average_price_diff": NaN,
+    "item_count": 4557
+  },
+  {
+    "store_code": "haz_207",
+    "store_name": "תוצרת חקלאית ירקות לחי",
+    "chainname": "חצי חינם",
+    "city": "ראשון לציון",
+    "latitude": 31.9884319,
+    "longitude": 34.7625541,
+    "average_price_diff": NaN,
+    "item_count": 679
+  },
+  {
+    "store_code": "yoh_024",
+    "store_name": "כפר סבא",
+    "chainname": "יוחננוף",
+    "city": "כפר סבא",
+    "latitude": 32.1669158,
+    "longitude": 34.9284553,
+    "average_price_diff": NaN,
+    "item_count": 7469
+  },
+  {
+    "store_code": "ampm_599",
+    "store_name": "AM-PM טירת הכרמל",
+    "chainname": "ampm",
+    "city": "טירת הכרמל",
+    "latitude": 32.7498722,
+    "longitude": 34.9666721,
+    "average_price_diff": NaN,
+    "item_count": 4031
+  },
+  {
+    "store_code": "shu_267",
+    "store_name": "דיל קצרין- חרמון",
+    "chainname": "שופרסל",
+    "city": "קצרין",
+    "latitude": 32.99083,
+    "longitude": 35.7086193,
+    "average_price_diff": NaN,
+    "item_count": 5873
+  },
+  {
+    "store_code": "shu_752",
+    "store_name": "אקספרס כפר סבא דוכיפת",
+    "chainname": "שופרסל",
+    "city": "כפר סבא",
+    "latitude": 32.178195,
+    "longitude": 34.90761,
+    "average_price_diff": NaN,
+    "item_count": 2086
+  },
+  {
+    "store_code": "ram_309",
+    "store_name": "ר.בשכונה רוטשילד כס",
+    "chainname": "רמי לוי",
+    "city": "כפר סבא",
+    "latitude": 32.178195,
+    "longitude": 34.90761,
+    "average_price_diff": NaN,
+    "item_count": 3261
+  },
+  {
+    "store_code": "car_3420",
+    "store_name": "מגה אלנבי ירושלים",
+    "chainname": "קרפור",
+    "city": "ירושלים",
+    "latitude": 31.7532717,
+    "longitude": 35.2129031,
+    "average_price_diff": NaN,
+    "item_count": 3798
+  },
+  {
+    "store_code": "vic_075",
+    "store_name": "סיטי ויצמן",
+    "chainname": "ויקטורי",
+    "city": "תל אביב יפו",
+    "latitude": 32.0848954,
+    "longitude": 34.789189,
+    "average_price_diff": NaN,
+    "item_count": 2505
+  },
+  {
+    "store_code": "shu_027",
+    "store_name": "שלי רעננה- אחוזה",
+    "chainname": "שופרסל",
+    "city": "רעננה",
+    "latitude": 32.1797063,
+    "longitude": 34.8791798,
+    "average_price_diff": NaN,
+    "item_count": 3001
+  },
+  {
+    "store_code": "shu_305",
+    "store_name": "אקספרס ת\"א- יהודה המכבי",
+    "chainname": "שופרסל",
+    "city": "תל אביב יפו",
+    "latitude": 32.094182,
+    "longitude": 34.7928439,
+    "average_price_diff": NaN,
+    "item_count": 2463
+  },
+  {
+    "store_code": "shu_025",
+    "store_name": "אקספרס ארבל כ\"ס",
+    "chainname": "שופרסל",
+    "city": "כפר סבא",
+    "latitude": 32.178195,
+    "longitude": 34.90761,
+    "average_price_diff": NaN,
+    "item_count": 1042
+  },
+  {
+    "store_code": "yoh_019",
+    "store_name": "אור יהודה גדול",
+    "chainname": "יוחננוף",
+    "city": "אור יהודה",
+    "latitude": 32.0327584,
+    "longitude": 34.8509935,
+    "average_price_diff": NaN,
+    "item_count": 7216
+  },
+  {
+    "store_code": "stop_010",
+    "store_name": "ראשון לציון",
+    "chainname": "סטופ מרקט",
+    "city": "ראשון לציון",
+    "latitude": 31.9856421,
+    "longitude": 34.7676707,
+    "average_price_diff": NaN,
+    "item_count": 15294
+  },
+  {
+    "store_code": "shefa_037",
+    "store_name": "בן קיסמא בית שמש",
+    "chainname": "שפע ברכת השם",
+    "city": "בית שמש",
+    "latitude": 31.7361289,
+    "longitude": 34.9972326,
+    "average_price_diff": NaN,
+    "item_count": 2970
+  },
+  {
+    "store_code": "car_0065",
+    "store_name": "קרפור מרקט אשקלון",
+    "chainname": "קרפור",
+    "city": "אשקלון",
+    "latitude": 31.6990642,
+    "longitude": 34.5831652,
+    "average_price_diff": NaN,
+    "item_count": 2804
+  },
+  {
+    "store_code": "mah_011",
+    "store_name": "11  עין יהב",
+    "chainname": "מחסני השוק",
+    "city": "עין יהב",
+    "latitude": 30.6567034,
+    "longitude": 35.2334266,
+    "average_price_diff": NaN,
+    "item_count": 3707
+  },
+  {
+    "store_code": "shu_109",
+    "store_name": "שלי ראש העין- ז'בוטינסקי",
+    "chainname": "שופרסל",
+    "city": "ראש העין",
+    "latitude": 32.0925903,
+    "longitude": 34.9662017,
+    "average_price_diff": NaN,
+    "item_count": 5871
+  },
+  {
+    "store_code": "nat_229",
+    "store_name": "נ. המשפט 5/קרית ספר, ברכלC  BAR",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "קרית ספר",
+    "latitude": 31.9293822,
+    "longitude": 35.0446268,
+    "average_price_diff": NaN,
+    "item_count": 2212
+  },
+  {
+    "store_code": "cit_034",
+    "store_name": "סיטי מרקט ולנטינו חולון",
+    "chainname": "סיטי מרקט",
+    "city": "חולון",
+    "latitude": 32.0134239,
+    "longitude": 34.7697106,
+    "average_price_diff": NaN,
+    "item_count": 40222
+  },
+  {
+    "store_code": "shu_210",
+    "store_name": "דיל ראשל\"צ- שמוטקין",
+    "chainname": "שופרסל",
+    "city": "ראשון לציון",
+    "latitude": 31.9764175,
+    "longitude": 34.8121871,
+    "average_price_diff": NaN,
+    "item_count": 7065
+  },
+  {
+    "store_code": "ampm_529",
+    "store_name": "Am-pm בן גוריון",
+    "chainname": "ampm",
+    "city": "בת ים",
+    "latitude": 32.0813031,
+    "longitude": 34.8205539,
+    "average_price_diff": NaN,
+    "item_count": 3462
+  },
+  {
+    "store_code": "shu_014",
+    "store_name": "דיל ברנע אשקלון",
+    "chainname": "שופרסל",
+    "city": "אשקלון",
+    "latitude": 31.688549,
+    "longitude": 34.572634,
+    "average_price_diff": NaN,
+    "item_count": 5523
+  },
+  {
+    "store_code": "shu_071",
+    "store_name": "דיל אקסטרה תל חנן  נשר",
+    "chainname": "שופרסל",
+    "city": "נשר",
+    "latitude": 32.7804467,
+    "longitude": 35.0380194,
+    "average_price_diff": NaN,
+    "item_count": 7328
+  },
+  {
+    "store_code": "car_0033",
+    "store_name": "היפר בית שמש",
+    "chainname": "קרפור",
+    "city": "בית שמש",
+    "latitude": 31.7564164,
+    "longitude": 34.9902576,
+    "average_price_diff": NaN,
+    "item_count": 6856
+  },
+  {
+    "store_code": "maa_035",
+    "store_name": "מגדל העמק",
+    "chainname": "מעיין אלפיים",
+    "city": "מגדל העמק",
+    "latitude": 32.6757994,
+    "longitude": 35.2384784,
+    "average_price_diff": NaN,
+    "item_count": 3149
+  },
+  {
+    "store_code": "maa_027",
+    "store_name": "נופי הסלע",
+    "chainname": "מעיין אלפיים",
+    "city": "מעלה אדומים",
+    "latitude": 31.7866667,
+    "longitude": 35.3127811,
+    "average_price_diff": NaN,
+    "item_count": 2816
+  },
+  {
+    "store_code": "nat_057",
+    "store_name": "ביתר נתיב   W",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "ביתר עילית",
+    "latitude": 31.70533621,
+    "longitude": 35.11464246,
+    "average_price_diff": NaN,
+    "item_count": 1074
+  },
+  {
+    "store_code": "shu_110",
+    "store_name": "דיל הפארק ב\"ש",
+    "chainname": "שופרסל",
+    "city": "באר שבע",
+    "latitude": 31.2307493,
+    "longitude": 34.8230902,
+    "average_price_diff": NaN,
+    "item_count": 3965
+  },
+  {
+    "store_code": "nat_230",
+    "store_name": "עמידר/רמת גן,לנדרס 1,  ברכלM BAR",
+    "chainname": "נתיב החסד- סופר חסד בע\"מ",
+    "city": "רמת גן",
+    "latitude": 32.0692707,
+    "longitude": 34.8386134,
+    "average_price_diff": NaN,
+    "item_count": 3886
+  },
+  {
+    "store_code": "ram_009",
+    "store_name": "קסיטנה",
+    "chainname": "רמי לוי",
+    "city": "קרית מלאכי",
+    "latitude": 31.7278229,
+    "longitude": 34.754139,
+    "average_price_diff": NaN,
+    "item_count": 8628
+  },
+  {
+    "store_code": "maa_001",
+    "store_name": "רכס",
+    "chainname": "מעיין אלפיים",
+    "city": "ירושלים",
+    "latitude": 31.7740173,
+    "longitude": 35.2259714,
+    "average_price_diff": NaN,
+    "item_count": 1515
+  },
+  {
+    "store_code": "shu_009",
+    "store_name": "שלי נתניה- ויצמן",
+    "chainname": "שופרסל",
+    "city": "נתניה",
+    "latitude": 32.3314167,
+    "longitude": 34.8586214,
+    "average_price_diff": NaN,
+    "item_count": 4041
+  },
+  {
+    "store_code": "tiv_025",
+    "store_name": "צומת סביון",
+    "chainname": "טיב טעם",
+    "city": "סביון",
+    "latitude": 32.035899,
+    "longitude": 34.86504,
+    "average_price_diff": NaN,
+    "item_count": 7473
+  },
+  {
+    "store_code": "car_4120",
+    "store_name": "מגה הדר הרצליה",
+    "chainname": "קרפור",
+    "city": "הרצליה",
+    "latitude": 32.1674928,
+    "longitude": 34.8492819,
+    "average_price_diff": NaN,
+    "item_count": 3856
+  },
+  {
+    "store_code": "maa_039",
+    "store_name": "סימטת אזר",
+    "chainname": "מעיין אלפיים",
+    "city": "בני ברק",
+    "latitude": 32.0907813,
+    "longitude": 34.8352474,
+    "average_price_diff": NaN,
+    "item_count": 2946
+  },
+  {
+    "store_code": "shu_396",
+    "store_name": "דיל הקדר נתניה",
+    "chainname": "שופרסל",
+    "city": "נתניה",
+    "latitude": 32.3226356,
+    "longitude": 34.8734588,
+    "average_price_diff": NaN,
+    "item_count": 6122
+  },
+  {
+    "store_code": "shu_241",
+    "store_name": "דיל בני ברק איילון",
+    "chainname": "שופרסל",
+    "city": "בני ברק",
+    "latitude": 32.084932,
+    "longitude": 34.835226,
+    "average_price_diff": NaN,
+    "item_count": 6788
+  },
+  {
+    "store_code": "ram_044",
+    "store_name": "חדרה",
+    "chainname": "רמי לוי",
+    "city": "חדרה",
+    "latitude": 32.4555358,
+    "longitude": 34.9052124,
+    "average_price_diff": NaN,
+    "item_count": 9223
+  },
+  {
+    "store_code": "ampm_597",
+    "store_name": "AM-PM נרקיסים",
+    "chainname": "ampm",
+    "city": "יפו",
+    "latitude": 32.0402655,
+    "longitude": 34.7564832,
+    "average_price_diff": NaN,
+    "item_count": 4061
+  },
+  {
+    "store_code": "haz_217",
+    "store_name": "תוצרת חקלאית מרכבה ירקות",
+    "chainname": "חצי חינם",
+    "city": "חולון",
+    "latitude": 32.010494,
+    "longitude": 34.80814,
+    "average_price_diff": NaN,
+    "item_count": 474
+  },
+  {
+    "store_code": "yud_210",
+    "store_name": "סופר יודה יהודה מכבי",
+    "chainname": "סופר יודה",
+    "city": "תל אביב יפו",
+    "latitude": 32.0943112,
+    "longitude": 34.7941808,
+    "average_price_diff": NaN,
+    "item_count": 3303
+  },
+  {
+    "store_code": "zol_008",
+    "store_name": "בית וגן חכמי",
+    "chainname": "זול ובגדול",
+    "city": "ירושלים",
+    "latitude": 31.76239763,
+    "longitude": 35.19087882,
+    "average_price_diff": NaN,
+    "item_count": 4574
+  },
+  {
+    "store_code": "shu_171",
+    "store_name": "אקספרס אוסטשינסקי",
+    "chainname": "שופרסל",
+    "city": "כפר סבא",
+    "latitude": 32.1722128,
+    "longitude": 34.9043166,
+    "average_price_diff": NaN,
+    "item_count": 2235
+  },
+  {
+    "store_code": "ampm_570",
+    "store_name": "AMPMהרצל 61",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.0576846,
+    "longitude": 34.77095,
+    "average_price_diff": NaN,
+    "item_count": 3687
+  },
+  {
+    "store_code": "mah_091",
+    "store_name": "91 זבוטינסקי- ת\"א",
+    "chainname": "מחסני השוק",
+    "city": "רמת גן",
+    "latitude": 32.0903051,
+    "longitude": 34.8211636,
+    "average_price_diff": NaN,
+    "item_count": 3111
+  },
+  {
+    "store_code": "ampm_512",
+    "store_name": "Am-pm  כל-בו שלום",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.0640664,
+    "longitude": 34.7696096,
+    "average_price_diff": NaN,
+    "item_count": 4888
+  },
+  {
+    "store_code": "stop_009",
+    "store_name": "אבן יהודה",
+    "chainname": "סטופ מרקט",
+    "city": "אבן יהודה",
+    "latitude": 32.2697887,
+    "longitude": 34.8885915,
+    "average_price_diff": NaN,
+    "item_count": 7450
+  },
+  {
+    "store_code": "shu_362",
+    "store_name": "אקספרס קרן היסוד ירושלים",
+    "chainname": "שופרסל",
+    "city": "ירושלים",
+    "latitude": 31.7734111,
+    "longitude": 35.2201442,
+    "average_price_diff": NaN,
+    "item_count": 1942
+  },
+  {
+    "store_code": "ram_403",
+    "store_name": "שוויצריה הקטנה נתניה",
+    "chainname": "רמי לוי",
+    "city": "נתניה",
+    "latitude": 32.33058,
+    "longitude": 34.8591309,
+    "average_price_diff": NaN,
+    "item_count": 3281
+  },
+  {
+    "store_code": "ram_017",
+    "store_name": "ראש העין",
+    "chainname": "רמי לוי",
+    "city": "ראש העין",
+    "latitude": 32.1072425,
+    "longitude": 34.9555511,
+    "average_price_diff": NaN,
+    "item_count": 8199
+  },
+  {
+    "store_code": "mah_071",
+    "store_name": "71 קריית מלאכי",
+    "chainname": "מחסני השוק",
+    "city": "קרית מלאכי",
+    "latitude": 31.7932857,
+    "longitude": 34.6399485,
+    "average_price_diff": NaN,
+    "item_count": 4432
+  },
+  {
+    "store_code": "shu_111",
+    "store_name": "יש חסד טבריה עלית-לב האג",
+    "chainname": "שופרסל",
+    "city": "טבריה",
+    "latitude": 32.7795991,
+    "longitude": 35.5169531,
+    "average_price_diff": NaN,
+    "item_count": 4128
+  },
+  {
+    "store_code": "sap_160",
+    "store_name": "המכולת חולון",
+    "chainname": "סופר ספיר",
+    "city": "חולון",
+    "latitude": 32.0180655,
+    "longitude": 34.7706369,
+    "average_price_diff": NaN,
+    "item_count": 751
+  },
+  {
+    "store_code": "zol_012",
+    "store_name": "הפסגה 16",
+    "chainname": "זול ובגדול",
+    "city": "ירושלים",
+    "latitude": 31.7691712,
+    "longitude": 35.1823198,
+    "average_price_diff": NaN,
+    "item_count": 2529
+  },
+  {
+    "store_code": "shu_579",
+    "store_name": "אקספרס סביון",
+    "chainname": "שופרסל",
+    "city": "סביון",
+    "latitude": 32.0494274,
+    "longitude": 34.875514,
+    "average_price_diff": NaN,
+    "item_count": 3184
+  },
+  {
+    "store_code": "haz_208",
+    "store_name": "תוצרת חקלאית שוק ראשון",
+    "chainname": "חצי חינם",
+    "city": "ראשון לציון",
+    "latitude": 31.9864425,
+    "longitude": 34.7731246,
+    "average_price_diff": NaN,
+    "item_count": 8097
+  },
+  {
+    "store_code": "maa_060",
+    "store_name": "ברנפלד",
+    "chainname": "מעיין אלפיים",
+    "city": "באר שבע",
+    "latitude": 31.2704307,
+    "longitude": 34.7991725,
+    "average_price_diff": NaN,
+    "item_count": 1078
+  },
+  {
+    "store_code": "shu_250",
+    "store_name": "שופרסל דיל מצודותקריית שמונה",
+    "chainname": "שופרסל",
+    "city": "קרית שמונה",
+    "latitude": 33.2229782,
+    "longitude": 35.576867,
+    "average_price_diff": NaN,
+    "item_count": 16
+  },
+  {
+    "store_code": "sap_067",
+    "store_name": "סופר ספיר ראשל\"צ",
+    "chainname": "סופר ספיר",
+    "city": "ראשון לציון",
+    "latitude": 31.9631612,
+    "longitude": 34.8002367,
+    "average_price_diff": NaN,
+    "item_count": 1982
+  },
+  {
+    "store_code": "zol_014",
+    "store_name": "פ.זאב מרידור",
+    "chainname": "זול ובגדול",
+    "city": "ירושלים",
+    "latitude": 31.8163589,
+    "longitude": 35.2526715,
+    "average_price_diff": NaN,
+    "item_count": 3368
+  },
+  {
+    "store_code": "shu_357",
+    "store_name": "שלי צורן קדימה- לב השרון",
+    "chainname": "שופרסל",
+    "city": "צורן",
+    "latitude": 32.2879702,
+    "longitude": 34.9458451,
+    "average_price_diff": NaN,
+    "item_count": 5627
+  },
+  {
+    "store_code": "ram_063",
+    "store_name": "ביג באר שבע החדש",
+    "chainname": "רמי לוי",
+    "city": "באר שבע",
+    "latitude": 31.2545153,
+    "longitude": 34.7975161,
+    "average_price_diff": NaN,
+    "item_count": 8973
+  },
+  {
+    "store_code": "vic_035",
+    "store_name": "סיטי אחד העם",
+    "chainname": "ויקטורי",
+    "city": "תל אביב יפו",
+    "latitude": 32.0645392,
+    "longitude": 34.7741588,
+    "average_price_diff": NaN,
+    "item_count": 2008
+  },
+  {
+    "store_code": "ram_003",
+    "store_name": "רמי לוי בשכונה",
+    "chainname": "רמי לוי",
+    "city": "ירושלים",
+    "latitude": 31.8092121,
+    "longitude": 35.1941519,
+    "average_price_diff": NaN,
+    "item_count": 4083
+  },
+  {
+    "store_code": "shu_131",
+    "store_name": "אקספרס הוד השרון",
+    "chainname": "שופרסל",
+    "city": "הוד השרון",
+    "latitude": 32.149961,
+    "longitude": 34.8838788,
+    "average_price_diff": NaN,
+    "item_count": 1623
+  },
+  {
+    "store_code": "sap_050",
+    "store_name": "צור הדסה",
+    "chainname": "סופר ספיר",
+    "city": "צור הדסה",
+    "latitude": 31.7201353,
+    "longitude": 35.0890934,
+    "average_price_diff": NaN,
+    "item_count": 2537
+  },
+  {
+    "store_code": "sap_020",
+    "store_name": "צפת",
+    "chainname": "סופר ספיר",
+    "city": "צפת",
+    "latitude": 32.957236,
+    "longitude": 35.4970289,
+    "average_price_diff": NaN,
+    "item_count": 5175
+  },
+  {
+    "store_code": "ram_005",
+    "store_name": "רב מכר",
+    "chainname": "רמי לוי",
+    "city": "ירושלים",
+    "latitude": 31.7520269,
+    "longitude": 35.2091884,
+    "average_price_diff": NaN,
+    "item_count": 9524
+  },
+  {
+    "store_code": "yoh_028",
+    "store_name": "ראשלצ רמת אליהו",
+    "chainname": "יוחננוף",
+    "city": "ראשלצ",
+    "latitude": 31.9828662,
+    "longitude": 34.7923622,
+    "average_price_diff": NaN,
+    "item_count": 6154
+  },
+  {
+    "store_code": "shu_371",
+    "store_name": "שלי ברניצקי",
+    "chainname": "שופרסל",
+    "city": "ראשון לציון",
+    "latitude": 31.9589758,
+    "longitude": 34.7994432,
+    "average_price_diff": NaN,
+    "item_count": 4387
+  },
+  {
+    "store_code": "vic_046",
+    "store_name": "דימונה",
+    "chainname": "ויקטורי",
+    "city": "דימונה",
+    "latitude": 31.0615094,
+    "longitude": 35.0241686,
+    "average_price_diff": NaN,
+    "item_count": 5303
+  },
+  {
+    "store_code": "ampm_560",
+    "store_name": "AMPMיהודה הלוי",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.0708973,
+    "longitude": 34.7820237,
+    "average_price_diff": NaN,
+    "item_count": 3915
+  },
+  {
+    "store_code": "shu_083",
+    "store_name": "דיל ב\"ש- שאול המלך",
+    "chainname": "שופרסל",
+    "city": "באר שבע",
+    "latitude": 31.2621396,
+    "longitude": 34.776395,
+    "average_price_diff": NaN,
+    "item_count": 4527
+  },
+  {
+    "store_code": "yud_205",
+    "store_name": "סופר יודה ישעיהו",
+    "chainname": "סופר יודה",
+    "city": "תל אביב יפו",
+    "latitude": 32.0950571,
+    "longitude": 34.7786353,
+    "average_price_diff": NaN,
+    "item_count": 4353
+  },
+  {
+    "store_code": "yud_231",
+    "store_name": "סופר יודה אשלים",
+    "chainname": "סופר יודה",
+    "city": "ראשון לציון",
+    "latitude": 31.9656037,
+    "longitude": 34.7751115,
+    "average_price_diff": NaN,
+    "item_count": 2943
+  },
+  {
+    "store_code": "ampm_534",
+    "store_name": "Am-pm בוגרשוב",
+    "chainname": "ampm",
+    "city": "תל אביב יפו",
+    "latitude": 32.0760008,
+    "longitude": 34.7717635,
+    "average_price_diff": NaN,
+    "item_count": 3482
+  },
+  {
+    "store_code": "ampm_401",
+    "store_name": "AM-PMדרך השלום",
+    "chainname": "ampm",
+    "city": "גבעתיים",
+    "latitude": 32.066902,
+    "longitude": 34.803277,
+    "average_price_diff": NaN,
+    "item_count": 4215
+  },
+  {
+    "store_code": "haz_205",
+    "store_name": "כל בו חצי חינם לחי",
+    "chainname": "חצי חינם",
+    "city": "ראשון לציון",
+    "latitude": 31.9884319,
+    "longitude": 34.7625541,
+    "average_price_diff": NaN,
+    "item_count": 11371
+  },
+  {
+    "store_code": "shu_216",
+    "store_name": "שלי הוד השרון",
+    "chainname": "שופרסל",
+    "city": "הוד השרון",
+    "latitude": 32.149961,
+    "longitude": 34.8838788,
+    "average_price_diff": NaN,
+    "item_count": 3529
+  },
+  {
+    "store_code": "stop_006",
+    "store_name": "הוד השרון",
+    "chainname": "סטופ מרקט",
+    "city": "הוד השרון",
+    "latitude": 32.1301231,
+    "longitude": 34.8951759,
+    "average_price_diff": NaN,
+    "item_count": 15610
+  },
+  {
+    "store_code": "ram_040",
+    "store_name": "יבנה",
+    "chainname": "רמי לוי",
+    "city": "יבנה",
+    "latitude": 31.885868,
+    "longitude": 34.7338294,
+    "average_price_diff": NaN,
+    "item_count": 8065
+  }
+]

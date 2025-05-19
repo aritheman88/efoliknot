@@ -1,0 +1,173 @@
+{
+  "store_code": "shu_250",
+  "store_name": "שופרסל דיל מצודותקריית שמונה",
+  "chainname": "שופרסל",
+  "subchainname": "שופרסל דיל",
+  "city": "קרית שמונה",
+  "latitude": 33.2229782,
+  "longitude": 35.576867,
+  "average_price_diff": NaN,
+  "item_count": 16,
+  "prices": [
+    {
+      "itemcode": 7290000000749,
+      "itemname": "פלפל שישקה מתוק",
+      "manufacturer": "קטיף.",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 14.59191451377057,
+      "price_diff_pct": -11.594876821501998
+    },
+    {
+      "itemcode": 7290000000848,
+      "itemname": "תירס טרי",
+      "manufacturer": "ביכורי השקמה",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": 13.64610055280388,
+      "price_diff_pct": 9.188701507394951
+    },
+    {
+      "itemcode": 7290000000886,
+      "itemname": "עגבניה שרי אשכולות",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 15.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000963174,
+      "itemname": "תפוח עץ יונתן ארה\"ב יבוא, מחיר לפי משקל",
+      "manufacturer": null,
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 12.9,
+      "average_price": 14.378926821595407,
+      "price_diff_pct": -10.285376926560593
+    },
+    {
+      "itemcode": 7290000963297,
+      "itemname": "תפוח עץ סטרקינג 65",
+      "manufacturer": "קטיף",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000963952,
+      "itemname": "נקטרינה 50",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000964027,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000964461,
+      "itemname": "פומלית",
+      "manufacturer": "קטיף.",
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": 7.468965571502159,
+      "price_diff_pct": -7.617729202997631
+    },
+    {
+      "itemcode": 7290000965079,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000965178,
+      "itemname": "שזיף מטלי מובחר",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000966328,
+      "itemname": "אפרסמון 65",
+      "manufacturer": "קטיף",
+      "brand": null,
+      "category": null,
+      "price": 15.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000968285,
+      "itemname": "משמש מובחר",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000986784,
+      "itemname": "תות שדה ארוז",
+      "manufacturer": "קטיף.",
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290001546666,
+      "itemname": "ענב לבן ליחידה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 15.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011110109,
+      "itemname": "תירס לבן מתוק יחידה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8717906000134,
+      "itemname": "ענבים ירוקים יחידה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 15.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    }
+  ]
+}

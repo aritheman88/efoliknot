@@ -1,0 +1,6803 @@
+{
+  "store_code": "haz_207",
+  "store_name": "תוצרת חקלאית ירקות לחי",
+  "chainname": "חצי חינם",
+  "subchainname": "חצי חינם",
+  "city": "ראשון לציון",
+  "latitude": 31.9884319,
+  "longitude": 34.7625541,
+  "average_price_diff": NaN,
+  "item_count": 679,
+  "prices": [
+    {
+      "itemcode": 172,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 626,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 650,
+      "itemname": "נענע",
+      "manufacturer": "ביכורי שדה",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 2051,
+      "itemname": "לפת ישראל",
+      "manufacturer": "סלמה אשר *15*",
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 2545,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 25.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3377,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3528,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3535,
+      "itemname": "גרעין אבטיח קלוי",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 59.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3542,
+      "itemname": "גרעין לבן קלוי",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3559,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 32.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3566,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 56.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3573,
+      "itemname": "פיסטוק קלוי",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3597,
+      "itemname": "קשיו קלוי",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3601,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3603,
+      "itemname": "שקד ענק קלוי",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3641,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 110.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3801,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4266,
+      "itemname": "חמצוצים",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4815,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4907,
+      "itemname": "חומוס קלוי",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4914,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 89.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4921,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 56.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4938,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4983,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5003,
+      "itemname": "תירס מטוגן",
+      "manufacturer": "שקדיה",
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5010,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5799,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6147,
+      "itemname": "מארז5לחמניות ח.מלאה/",
+      "manufacturer": "בונז'ור",
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6246,
+      "itemname": "מארז 3 יח פיתה פרנה",
+      "manufacturer": "בייקרס",
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6500,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6503,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6504,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6506,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6550,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6600,
+      "itemname": "עגבניות בישול",
+      "manufacturer": "ביכורי שדה",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6660,
+      "itemname": "סלסלה לחג",
+      "manufacturer": "שונות /שרות",
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6800,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6801,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6850,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6900,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6950,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7000,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7003,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7009,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7036,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7050,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7053,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7059,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7065,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7069,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7075,
+      "itemname": "פילה נילוס טרי",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7100,
+      "itemname": "מבצע ראש השנה",
+      "manufacturer": "שונות /שרות",
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7111,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7113,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7114,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7117,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7123,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7124,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7131,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7132,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7140,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7141,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7144,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7145,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7148,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7152,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7153,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7155,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7156,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7158,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7159,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7161,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7162,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7163,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7165,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7170,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7171,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7172,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7173,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7175,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7177,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7178,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7179,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7180,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7181,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7183,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7184,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7200,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7242,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7243,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7248,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7249,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7250,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7259,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7300,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7320,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7323,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7341,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7342,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7350,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7373,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7376,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7377,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7388,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 59.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7389,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 59.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7400,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7432,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7433,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7441,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7461,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7473,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7476,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7490,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7491,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7492,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7493,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7500,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7501,
+      "itemname": "כנפיים עוף בגריל-מגה",
+      "manufacturer": null,
+      "brand": null,
+      "category": "בשר",
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7505,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7507,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7508,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7509,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7511,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 22.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7517,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7520,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7525,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7526,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7533,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7535,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7536,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7541,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7544,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7545,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7555,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7562,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7565,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7662,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7663,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7697,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7698,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7713,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7714,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7730,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7732,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7736,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7742,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7744,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7750,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 0.01,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7758,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7759,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7763,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7764,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 15.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7768,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7800,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8000,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8002,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 16.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8003,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8011,
+      "itemname": "מארז 4 חצי בגט",
+      "manufacturer": "פילסברי",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8012,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8100,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8224,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8228,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8500,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 16.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 9766,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 46.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 9773,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 10311,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 20.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 10328,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 40.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 10809,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 30.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 10816,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 10861,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 62.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 10892,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 41.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 11639,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 11646,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 65.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 11684,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 95.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 11691,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 69.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 18225,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 18263,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 54.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 18294,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 51.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 18355,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 69.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 19642,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 19666,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 125.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 19697,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20099,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 69.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20136,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 62.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20143,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 30.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20266,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 81.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20327,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 30.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20433,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 59.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 20501,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 22581,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 59.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 26565,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 41.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 28255,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 61.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 29245,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 80.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 29801,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 109.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 91198,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 92119,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 40.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 490601,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 33.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 490762,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 700000,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 900636,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 900650,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 80.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 900971,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 142.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 901886,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 45.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 910208,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 910352,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 911052,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 920115,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 922249,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 53.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 930022,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 52.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 930039,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 933368,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 90.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 940014,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 940052,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 940083,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 940151,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 20.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 940168,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 16.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 940175,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 31.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 943008,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 943015,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 943046,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 943053,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960111,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 31.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960159,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 43.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960180,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 90.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960234,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 52.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960241,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 109.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960272,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 122.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960326,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 100.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960333,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 91.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960388,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 36.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 960500,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 91.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961040,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961071,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 36.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961132,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 65.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961217,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961262,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 66.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961279,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 36.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961309,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 30.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961569,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 62.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961606,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961804,
+      "itemname": "דלעת ארוזה שקיל",
+      "manufacturer": "ביכורי שדה",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 30.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 961828,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 964058,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 72.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 964409,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 199.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 970509,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 36.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 978260,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 978369,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 979038,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 100.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 979069,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 131.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 979083,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 80.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 979502,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 61.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 979540,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 131.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 979601,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 60.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980003,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 182.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980041,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 80.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980058,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 80.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980065,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980157,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980188,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 90.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980225,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 51.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980232,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 61.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980386,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980393,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 65.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980515,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 40.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980539,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980560,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 66.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980669,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 70.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 980676,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 30.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 990040,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 65.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 999012,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 45.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 1274576,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 22.1,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 1274583,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 22.1,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 1274934,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 27.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 1780428,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 30.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3485901,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3485918,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 89.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3485925,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 199.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3485932,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 140.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3485949,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486014,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486021,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486038,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486083,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486090,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486137,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486144,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 120.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486168,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486175,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 65.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486205,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486243,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 59.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486274,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486281,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486298,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486304,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 59.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486328,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 49.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486335,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 55.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486342,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486359,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486403,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486533,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486571,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 25.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486588,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 25.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3486595,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996018,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996049,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996056,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996063,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996094,
+      "itemname": "סלרי אפרתי",
+      "manufacturer": "ירקות אלעד",
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996117,
+      "itemname": "כרוב לבן אפרתי",
+      "manufacturer": "ירקות אלעד",
+      "brand": null,
+      "category": null,
+      "price": 14.7,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996124,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.7,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996285,
+      "itemname": "לבבות חסה חסלט.",
+      "manufacturer": "יעל ירק עלים לשיווק בעמ",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996506,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996513,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996544,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 3996551,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5610011,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5610028,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5610127,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5946554,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5946578,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 5946745,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6199027,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6199218,
+      "itemname": "מאגדת שמינייה גלידל אייס מטקה",
+      "manufacturer": "פלקו בעמ",
+      "brand": null,
+      "category": null,
+      "price": 34.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6199942,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 27.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6265500,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6265548,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6704511,
+      "itemname": "תפו\"א למיקרוגל",
+      "manufacturer": "ביכורי שדה",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6900418,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6900425,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8417228,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 50.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8644235,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8644945,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 13.1,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 72986370,
+      "itemname": "בן&גריס פיינט וניל",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.52877744462755,
+      "price_diff_pct": 2.736469670727369
+    },
+    {
+      "itemcode": 72986424,
+      "itemname": "בן&גריס פיינט קרם עוגיות בד\"צ",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.587007545110747,
+      "price_diff_pct": 2.4931560043025587
+    },
+    {
+      "itemcode": 72986448,
+      "itemname": "בן&גריס פיינט וניל טופי קראנץ'",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.748064185727028,
+      "price_diff_pct": 1.826146121495906
+    },
+    {
+      "itemcode": 72986455,
+      "itemname": "בן&גריס פיינט ניו יורק סופר",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.702777442225702,
+      "price_diff_pct": 2.012820456878542
+    },
+    {
+      "itemcode": 72986479,
+      "itemname": "בן&גריס פיינט צ'אנקי מנקי",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.754071322636808,
+      "price_diff_pct": 1.8014356973893184
+    },
+    {
+      "itemcode": 72989425,
+      "itemname": "בן&גריס פיינט שוקולד בראוניס בד\"צ",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.486943290212388,
+      "price_diff_pct": 2.911987426673323
+    },
+    {
+      "itemcode": 72991886,
+      "itemname": "בן&גריס פיינט דולצ'ה דה לצ'ה",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.49679110776932,
+      "price_diff_pct": 2.8706163559832665
+    },
+    {
+      "itemcode": 76840002351,
+      "itemname": "בן&גריס פיינט ס'מורס",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.516935156237693,
+      "price_diff_pct": 2.7860939363316715
+    },
+    {
+      "itemcode": 76840002542,
+      "itemname": "בן&גריס פיינט נטפליקס & צ'יל",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.624393857546114,
+      "price_diff_pct": 2.3375444113825035
+    },
+    {
+      "itemcode": 76840100156,
+      "itemname": "בן&גריס פיינט צ'רי צ'רי דרים",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.639648117125034,
+      "price_diff_pct": 2.2741878463982994
+    },
+    {
+      "itemcode": 76840100583,
+      "itemname": "בן&גריס פיינט בצק עוגיות",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.758305315163444,
+      "price_diff_pct": 1.7840263265758973
+    },
+    {
+      "itemcode": 76840101542,
+      "itemname": "בן&גריס פיינט קרמל סוטרא ליבה",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.6293358527108,
+      "price_diff_pct": 2.317009888946684
+    },
+    {
+      "itemcode": 76840363957,
+      "itemname": "בן&גריס פיינט סולטד קרמל ליבה",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.66794838457026,
+      "price_diff_pct": 2.15685393505419
+    },
+    {
+      "itemcode": 76840400218,
+      "itemname": "בן&גריס פיינט עוגת גבינה ותות",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.684549752641818,
+      "price_diff_pct": 2.088149277679316
+    },
+    {
+      "itemcode": 196852056477,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 611745285685,
+      "itemname": "אבוקדו ארוז בשל",
+      "manufacturer": "ביכורי שדה דרום שיווק, מור בריאות בע\"מ, משתנה, קונסיגנציה-מור בריאות בעמ *45*",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 11.9,
+      "average_price": 11.992457041775223,
+      "price_diff_pct": -0.7709599580232191
+    },
+    {
+      "itemcode": 611745286330,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 611745288655,
+      "itemname": "קוביות קרח איגלו 2 ק",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 611745304225,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 693493013093,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 693493138451,
+      "itemname": "חסה לליק.",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 693493231749,
+      "itemname": "חסה לאליק הידרופונית190ג",
+      "manufacturer": "דהן סולנום בע\"מ",
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": 14.333961882681217,
+      "price_diff_pct": -16.98038478546544
+    },
+    {
+      "itemcode": 693493231756,
+      "itemname": "חסה סלנובה הידרופונית160",
+      "manufacturer": "דהן סולנום בע\"מ",
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": 14.342622569349945,
+      "price_diff_pct": -17.03051556672632
+    },
+    {
+      "itemcode": 693493231770,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 693493231800,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 693493231817,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 693493237451,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 710497310987,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 726529646603,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 24.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 768404001640,
+      "itemname": "בן&גריס פיינט קפה",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.37499967024694,
+      "price_diff_pct": 3.384616783236665
+    },
+    {
+      "itemcode": 855074007086,
+      "itemname": "פלפלון ביס בשקית 200גר",
+      "manufacturer": "טנא נגב בע\"מ",
+      "brand": "טנא נגב",
+      "category": "ירקות ופירות",
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4050328191931,
+      "itemname": "ענב אדום 500 גר",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 34.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4050328191948,
+      "itemname": "ענבים שחור יבוא",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": 17.79665530724669,
+      "price_diff_pct": 68.00909768604046
+    },
+    {
+      "itemcode": 4770166223082,
+      "itemname": "גלידת שמנת בטעם קרמל עם קרמל ושקדים 400מ",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Dadu",
+      "category": "גלידות",
+      "price": 27.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237049290,
+      "itemname": "גלידת שמנת טעם וניל ציפוי צימק.פלומביר58גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Svalia",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237049313,
+      "itemname": "גלידת שמנת טעם וניל שקד ציפוי צימק.63 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Svalia",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237049450,
+      "itemname": "גלידת שמנת טעם וניל גביע פלומביר70גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Svalia",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": 7.201807220298123,
+      "price_diff_pct": -16.687578319381533
+    },
+    {
+      "itemcode": 4770237050432,
+      "itemname": "גלידת שמנת טעם שוק.פלומביר גביע 70 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Svalia",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237059855,
+      "itemname": "גלידת שמנת בטעם וניל מצופה 65 גרם SVALYA",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Svalia",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237059862,
+      "itemname": "גלידת שמנת בטעם קרמל מלוח עם שקדים 65 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Saville",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237059879,
+      "itemname": "גלידת שמנת בטעם שוקולד מצופה 65 גרם SVAL",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Saville",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237059886,
+      "itemname": "גלידת שמנת טילון וניל מצופה 85 גרם SVALY",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Svalia",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4770237059893,
+      "itemname": "גלידת שמנת טילון וניל מצופה שקדים 85 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Saville",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4810168037888,
+      "itemname": "גלידת שמנת טעם וניל אגוז אסקימו 65גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4810168038267,
+      "itemname": "גלידת שמנת טעם וניל פלומביר ציפוי צימק.אסקימו65גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4810168038977,
+      "itemname": "גלידת שמנת טעם וניל גביע פלומביר 75גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": 7.420487757426937,
+      "price_diff_pct": -19.142781497149087
+    },
+    {
+      "itemcode": 4810168038984,
+      "itemname": "גלידת שמנת טעם וניל השכבות וופל 80 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": 7.357407380033423,
+      "price_diff_pct": -18.44953405349231
+    },
+    {
+      "itemcode": 4810168038991,
+      "itemname": "גלידת שמנת טעם שוקולד גביע פלומביר75גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4810168045098,
+      "itemname": "גלידת שמנת קרם ברולה גביע פלומביר70גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4810168045432,
+      "itemname": "גלידת שמנת בטעם וניל קרם טראפל בציפוי צימק.65גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "יוקקי",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": 7.324626808735862,
+      "price_diff_pct": -18.084563805435376
+    },
+    {
+      "itemcode": 4810168060268,
+      "itemname": "גלידת שמנת משובחת \"סופלה\" אסקימו 65 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "אסקימו",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": 7.207258036059718,
+      "price_diff_pct": -16.75058711675791
+    },
+    {
+      "itemcode": 4810168065324,
+      "itemname": "מאגדת גלידת שמנת משובחת וניל סנדוויץ 8יח",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "דילר",
+      "category": "גלידות",
+      "price": 35.2,
+      "average_price": 36.51973808857433,
+      "price_diff_pct": -3.613766575689717
+    },
+    {
+      "itemcode": 4820077161659,
+      "itemname": "גלידת סנדביץ בטעם וניל 75 גרם RUD",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.42255613499118,
+      "price_diff_pct": -15.097348475414638
+    },
+    {
+      "itemcode": 4820077161666,
+      "itemname": "גלידת סנדביץ בטעם וניל מצופה 80 גרם RUD",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.470454299088681,
+      "price_diff_pct": -15.526755661871249
+    },
+    {
+      "itemcode": 4820077161673,
+      "itemname": "גלידת שמנת סנדביץ בטעם וניל 80 גרם RUD",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.444166425863902,
+      "price_diff_pct": -15.291624064447774
+    },
+    {
+      "itemcode": 4820077161680,
+      "itemname": "גלידת שמנת סנדביץ בטעם וניל ושוקולד 80",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.233653595814339,
+      "price_diff_pct": -13.360405856827464
+    },
+    {
+      "itemcode": 4820077161734,
+      "itemname": "מוצ'י גלידת שמנת משובחת מנגו 240 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "מוצ'י",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": 31.63678171442843,
+      "price_diff_pct": -4.541491379868026
+    },
+    {
+      "itemcode": 4820077161741,
+      "itemname": "גלידת שמנת משובחת MOCHI וניל-קרמל 240 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "מוצ'י",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": 32.044642959322246,
+      "price_diff_pct": -5.756478428122457
+    },
+    {
+      "itemcode": 4820077161758,
+      "itemname": "גלידת שמנת משובחת MOCHI פיסטוק 240 גרם (",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "מוצ'י",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": 31.930928013988378,
+      "price_diff_pct": -5.420850948115538
+    },
+    {
+      "itemcode": 4820077161765,
+      "itemname": "גלידת שמנת משובחת MOCHI דובדבן לבן - קוק",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "מוצ'י",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": 31.580769337140598,
+      "price_diff_pct": -4.3721839781678264
+    },
+    {
+      "itemcode": 4820077161819,
+      "itemname": "גלידת שרבת MOCHI אוכמניות שחורות - קפה 2",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "מוצ'י",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4820077161918,
+      "itemname": "גלידת שמנת MACARON וניל וקרמל מלוח 240 ג",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "דליס",
+      "category": "גלידה",
+      "price": 35.2,
+      "average_price": 36.598719217838386,
+      "price_diff_pct": -3.8217709464451457
+    },
+    {
+      "itemcode": 4820077161956,
+      "itemname": "גלידת שמנת MACARON פיסטוק 240 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "דליס",
+      "category": "גלידה",
+      "price": 35.2,
+      "average_price": 36.390426777778785,
+      "price_diff_pct": -3.271263579974546
+    },
+    {
+      "itemcode": 4820077161970,
+      "itemname": "גלידת שמנת MACARON אוכמניות ושוקולד 240",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "דליס",
+      "category": "גלידה",
+      "price": 35.2,
+      "average_price": 36.48904241274481,
+      "price_diff_pct": -3.5326835880312712
+    },
+    {
+      "itemcode": 4820077162014,
+      "itemname": "מאגדת גלידת שמנת משובחת וניל סנדוויץ 32",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": 31.18284319896324,
+      "price_diff_pct": -3.15187166446682
+    },
+    {
+      "itemcode": 4820077162052,
+      "itemname": "מאגדת גלידת שמנת משובחת פיסטוק מצופה על",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "דילר",
+      "category": "גלידה",
+      "price": 30.2,
+      "average_price": 30.885310781877592,
+      "price_diff_pct": -2.218889059324957
+    },
+    {
+      "itemcode": 4820077162113,
+      "itemname": "גלידת שמנת משובחת MOCHI וניל קרמל 80 גרם",
+      "manufacturer": "NAYSI",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4820077162120,
+      "itemname": "גלידת שמנת משובחת MOCHI פיסטוק 80 גרם",
+      "manufacturer": "NAYSI",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4820077162144,
+      "itemname": "גלידת שמנת משובחת MACARON וניל וקרמל מלו",
+      "manufacturer": "NAYSI",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4820154723428,
+      "itemname": "טילון אמפרזה תות שדה 100 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4820154723442,
+      "itemname": "גלידת שמנת וניל ושוקולד גביע אמפרזה 100גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.40457990879321,
+      "price_diff_pct": -14.935062729170264
+    },
+    {
+      "itemcode": 4823097809815,
+      "itemname": "גלידה לנינגרד 70 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4823097810019,
+      "itemname": "טילון שמנת וניל קרמל וופל אמפרזה 100 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "אימפרזה",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.211504206193231,
+      "price_diff_pct": -13.152077869960612
+    },
+    {
+      "itemcode": 4823097811849,
+      "itemname": "גלידת שמנת עם א.לוז בגביע וופל 70 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4823097812273,
+      "itemname": "גלידה חלבית אפרסק ומנגו 85 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 4823097814062,
+      "itemname": "גלידה שמנת בטעם פיסטוק ושוקולד לבן 75 גר",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 8.0,
+      "average_price": 9.446478638850467,
+      "price_diff_pct": -15.312358119368884
+    },
+    {
+      "itemcode": 4823097815359,
+      "itemname": "מאגדת שרבט בטעם פירות 360 גרם",
+      "manufacturer": "דילר בי.אמ.די",
+      "brand": "Rud",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 26.46398576322969,
+      "price_diff_pct": -4.776248651803359
+    },
+    {
+      "itemcode": 6009678410399,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 6902023070883,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290000137513,
+      "itemname": "קרמיסימו שוקו ניל חלבי 60יח 630גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "קרמיסימו",
+      "category": "גלידה",
+      "price": 52.6,
+      "average_price": 53.15789029949001,
+      "price_diff_pct": -1.0494966906076861
+    },
+    {
+      "itemcode": 7290000137643,
+      "itemname": "שלגוני טעמקור 8יח",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעמקור",
+      "category": "גלידות",
+      "price": 35.9,
+      "average_price": 40.9492746048276,
+      "price_diff_pct": -12.330559340927449
+    },
+    {
+      "itemcode": 7290003457991,
+      "itemname": "קורנטו קלאסיק בטעם וניל 6 יח",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "קורנטו",
+      "category": "גלידות",
+      "price": 31.9,
+      "average_price": 36.30219395118847,
+      "price_diff_pct": -12.126523143773662
+    },
+    {
+      "itemcode": 7290003996292,
+      "itemname": "שבבי גזר אפרתי 250 גרם",
+      "manufacturer": "חסלט",
+      "brand": "חסלט",
+      "category": "ירקות ופירות",
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290003996568,
+      "itemname": "חסה לאליק - חסלט",
+      "manufacturer": "חסלט, יעל ירק עלים, יעל ירק עלים לשיווק בעמ, נסטלה שוויץ - רורשאך",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 13.84610743722516,
+      "price_diff_pct": -6.8330210603563275
+    },
+    {
+      "itemcode": 7290004554903,
+      "itemname": "גלידת פנטזיה שוקו וניל פרווה 900 מ\"ל",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "פנטסיה גלידה",
+      "category": "גלידה",
+      "price": 27.9,
+      "average_price": 26.382509238819658,
+      "price_diff_pct": 5.751881852646069
+    },
+    {
+      "itemcode": 7290005610509,
+      "itemname": "צנונית ארוזה",
+      "manufacturer": "קטיף, תוצרת הנגב אגודה שיתופית *60*",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": 7.735064863642573,
+      "price_diff_pct": -23.72397511839881
+    },
+    {
+      "itemcode": 7290008806985,
+      "itemname": "קרמיסימו נישנושים ש.וניל פרווה 60יח",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "קרמיסימו",
+      "category": "גלידה",
+      "price": 52.6,
+      "average_price": 52.766116894966316,
+      "price_diff_pct": -0.31481735769372465
+    },
+    {
+      "itemcode": 7290010051502,
+      "itemname": "פטרוזליה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010051519,
+      "itemname": "כוסברה יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010051526,
+      "itemname": "שמיר",
+      "manufacturer": "ביכורי שדה",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010051533,
+      "itemname": "נענע יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010051540,
+      "itemname": "סלרי עלים יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010051571,
+      "itemname": "סלרי ראש יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010051595,
+      "itemname": "לבבות קיסר",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650002,
+      "itemname": "פטריות יער חוות תקוע",
+      "manufacturer": "חוות פטריות תקוע, תקוע",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 12.317511158604775,
+      "price_diff_pct": 4.728949167529755
+    },
+    {
+      "itemcode": 7290010650019,
+      "itemname": "אנדיב בלגי אמיתי חוו",
+      "manufacturer": "פמילי, תקוע",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": 15.841176089118509,
+      "price_diff_pct": -5.941327107429943
+    },
+    {
+      "itemcode": 7290010650033,
+      "itemname": "בצלצלי שאלוט",
+      "manufacturer": "גורמה, פנחס, קונס`-מרינה פטריות הגליל בעמ *, תקוע",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 13.988888510068257,
+      "price_diff_pct": -7.7839530230335905
+    },
+    {
+      "itemcode": 7290010650040,
+      "itemname": "פטריות שיטאקי",
+      "manufacturer": "פנטה אמפאק בע\"מ, תקוע",
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650088,
+      "itemname": "פטריות שמפיניון מיוב",
+      "manufacturer": "תקוע",
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650101,
+      "itemname": "עגבניות מיובשות 200גר",
+      "manufacturer": "חוות פטריות תקוע בע\"מ",
+      "brand": "חוות פטריות תקוע",
+      "category": "ממרחים",
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650255,
+      "itemname": "לקט פטריות למרק חוות",
+      "manufacturer": "תקוע",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650279,
+      "itemname": "לקט פטריות לפסטה 25",
+      "manufacturer": "תקוע",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650354,
+      "itemname": "שורש כורכום טרי ארוז",
+      "manufacturer": "פסטה לנסי, תקוע",
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": 11.715789092214484,
+      "price_diff_pct": 1.5723303512516311
+    },
+    {
+      "itemcode": 7290010650415,
+      "itemname": "עגבניות מיובשות 200גר",
+      "manufacturer": "חוות פטריות תקוע בע\"מ",
+      "brand": "חוות פטריות תקוע",
+      "category": "ממרחים",
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650538,
+      "itemname": "תירס סופר מתוק חוות",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650576,
+      "itemname": "פטריות שינוקי",
+      "manufacturer": "חוות פטריות תקוע, פנטה אמפאק בע\"מ, תקוע",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": 11.464347449592921,
+      "price_diff_pct": -13.645324833978826
+    },
+    {
+      "itemcode": 7290010650590,
+      "itemname": "ריזוטו פטריות איטלקי 275 גרם",
+      "manufacturer": "חוות פטריות תקוע בע\"מ",
+      "brand": "חוות פטריות תקוע",
+      "category": "תבשילים",
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650668,
+      "itemname": "למון גראס",
+      "manufacturer": "ביכורי השקמה",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": 10.885039029158945,
+      "price_diff_pct": -9.049476318093232
+    },
+    {
+      "itemcode": 7290010650705,
+      "itemname": "אפונת שלג",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650712,
+      "itemname": "רוברב.",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650798,
+      "itemname": "לקט בורגול ופטריות 310גרם",
+      "manufacturer": "חוות פטריות תקוע בע\"מ",
+      "brand": "חוות פטריות תקוע",
+      "category": "תבשילים",
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650804,
+      "itemname": "לקט פתיתים ופטריות 235 גרם",
+      "manufacturer": "חוות פטריות תקוע בע\"מ",
+      "brand": "חוות פטריות תקוע",
+      "category": "תבשילים",
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290010650828,
+      "itemname": "פטריות שי-מג'י לבנות 150",
+      "manufacturer": "ביכורי שדה דרום שיווק, עינת תעשיות מזון אגו, שנגחאי פינק פוד קומפני",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 9.9,
+      "average_price": 12.349514198920488,
+      "price_diff_pct": -19.834903296314344
+    },
+    {
+      "itemcode": 7290010650958,
+      "itemname": "פטריות בייבי מלך היע",
+      "manufacturer": "חוות פטריות תקוע בע\"\\מ, פנטה אמפאק בע\"מ",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": 13.584444062974718,
+      "price_diff_pct": -27.12252371826469
+    },
+    {
+      "itemcode": 7290010650996,
+      "itemname": "פטריות שי-מג'י חומות 150",
+      "manufacturer": "ביכורי שדה דרום שיווק, עינת תעשיות מזון אגו, שנגחאי פינק פוד קומפני",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 9.9,
+      "average_price": 12.444522608295346,
+      "price_diff_pct": -20.446928246160297
+    },
+    {
+      "itemcode": 7290011090432,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011090913,
+      "itemname": "פלפל צילי יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011090920,
+      "itemname": "כרוב סיני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011090944,
+      "itemname": "סלק עלים יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011094874,
+      "itemname": "לבבות חסה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235024,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235048,
+      "itemname": "שיבה יחידה",
+      "manufacturer": "קטיף.",
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235055,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235062,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235079,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235109,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235147,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235161,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235178,
+      "itemname": "חסה אייסברג יחידה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235574,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011235581,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011312381,
+      "itemname": "סטייק פורטבלה יח",
+      "manufacturer": "מרינה, מרינה פטריות, קונס`-מרינה פטריות הגליל בעמ *",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": 15.930973069857707,
+      "price_diff_pct": -6.471500926759869
+    },
+    {
+      "itemcode": 7290011379018,
+      "itemname": "מארז פטריות צמד חמד",
+      "manufacturer": "מרינה, קונס`-מרינה פטריות הגליל בעמ *",
+      "brand": null,
+      "category": null,
+      "price": 16.9,
+      "average_price": 18.49819131958118,
+      "price_diff_pct": -8.639716672675043
+    },
+    {
+      "itemcode": 7290011424442,
+      "itemname": "זרעים טימין",
+      "manufacturer": null,
+      "brand": null,
+      "category": "תבלינים",
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011424503,
+      "itemname": "זרעים מיקס ציניות",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011424602,
+      "itemname": "זרעים עירית",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011424749,
+      "itemname": "זרעים גזר",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011424787,
+      "itemname": "זרעים אפונה ריחנית",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011515683,
+      "itemname": "אקסטרים וניל מאגדת 6יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "אקסטרים",
+      "category": "גלידות",
+      "price": 34.2,
+      "average_price": 34.324396540044425,
+      "price_diff_pct": -0.3624143541731192
+    },
+    {
+      "itemcode": 7290011515911,
+      "itemname": "מאגדת לייט ריבת חלב 6יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "גלידות נסטלה",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 30.615948508525715,
+      "price_diff_pct": -1.3586007580653119
+    },
+    {
+      "itemcode": 7290011725006,
+      "itemname": "פטרוזיליה מהדרין - א",
+      "manufacturer": "קונספסיון/ פניסקור/",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725013,
+      "itemname": "כוסברה ברכת דוד",
+      "manufacturer": "קונסרבאס פרדו",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725037,
+      "itemname": "נענע ברכת דוד",
+      "manufacturer": "ברכת קטיף, קונסרווס אל.ג'י. זאס",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725044,
+      "itemname": "סלרי ברכת דוד",
+      "manufacturer": "ברכת קטיף",
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725051,
+      "itemname": "חסה ערבית מהדרין - א",
+      "manufacturer": "קוסטר - תורכיה",
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725068,
+      "itemname": "מנגולד -סלק עלים מהד",
+      "manufacturer": "ברכת קטיף, קוסמופארם",
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725075,
+      "itemname": "כרוב לבן מהדרין - מש",
+      "manufacturer": "קוסמופול",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725082,
+      "itemname": "כרוב אדום מהדרין - מ",
+      "manufacturer": "קוסקוס",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725143,
+      "itemname": "לבבות חסה - מהדרין",
+      "manufacturer": "ברכת קטיף, קילט ניהול פרוייקטים",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011725167,
+      "itemname": "בצל ירוק מהדרין - אר",
+      "manufacturer": "קלדש הולמן",
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011989019,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011989040,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011989262,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290011989293,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290012009105,
+      "itemname": "אוכמניות טריות 125גרם",
+      "manufacturer": "אגרקסקו בליברי",
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": 18.855638719142828,
+      "price_diff_pct": 5.538721315215394
+    },
+    {
+      "itemcode": 7290012779220,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290012779275,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290012779626,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290012779916,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290013267665,
+      "itemname": "סולרו מיני מאגדת5 *59ג",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "סולרו",
+      "category": "גלידות",
+      "price": 24.2,
+      "average_price": 27.030926293833055,
+      "price_diff_pct": -10.472916329467092
+    },
+    {
+      "itemcode": 7290013366047,
+      "itemname": "כרובית פיורטי",
+      "manufacturer": "כרמלים שדות חדשים, שיפקה",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290013366085,
+      "itemname": "תירס מתוק במיוחד",
+      "manufacturer": "כרמלים שדות חדשים",
+      "brand": null,
+      "category": null,
+      "price": 22.9,
+      "average_price": 21.360359999510617,
+      "price_diff_pct": 7.207930954930795
+    },
+    {
+      "itemcode": 7290013366108,
+      "itemname": "אספרגוס ירוק",
+      "manufacturer": "כרמלים שדות חדשים",
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": 32.91147588510982,
+      "price_diff_pct": -9.150230441267784
+    },
+    {
+      "itemcode": 7290013366191,
+      "itemname": "תירס לבן מתוק במיוחד",
+      "manufacturer": "כרמלים שדות חדשים",
+      "brand": null,
+      "category": null,
+      "price": 22.9,
+      "average_price": 21.258139171156774,
+      "price_diff_pct": 7.723445667675915
+    },
+    {
+      "itemcode": 7290013366634,
+      "itemname": "חסה סלנובה",
+      "manufacturer": "כרמלים שדות חדשים, שמיניית מעדן חלב שוק",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 13.492726892991499,
+      "price_diff_pct": -4.392936266273776
+    },
+    {
+      "itemcode": 7290013366658,
+      "itemname": "עלי סלנובה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290013366689,
+      "itemname": "חסה לאליק",
+      "manufacturer": "כרמלים שדות חדשים, שמיניית מעדן חלב שוק",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 14.177108052265213,
+      "price_diff_pct": -9.00824094418295
+    },
+    {
+      "itemcode": 7290013440648,
+      "itemname": "אבטיח קרחונים מאגדת 5 יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "גלידות נסטלה",
+      "category": "גלידות",
+      "price": 26.2,
+      "average_price": 28.552441522067774,
+      "price_diff_pct": -8.239020541376842
+    },
+    {
+      "itemcode": 7290013558824,
+      "itemname": "שורש רוקט",
+      "manufacturer": "תאי",
+      "brand": null,
+      "category": "תבלינים",
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290014015180,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290014079076,
+      "itemname": "אלפלפא",
+      "manufacturer": "מרינה, תאי פרידה אינדסטרי ב",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": 6.890961587429047,
+      "price_diff_pct": -14.380599497707616
+    },
+    {
+      "itemcode": 7290014462342,
+      "itemname": "אבוקדו האס בשל",
+      "manufacturer": "אראל תוצרת חקלאית",
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": 11.931978007319174,
+      "price_diff_pct": -0.2680025667123905
+    },
+    {
+      "itemcode": 7290014931190,
+      "itemname": "חסה פאקצוי זוגות",
+      "manufacturer": "לאונרדו ממתקים",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015597210,
+      "itemname": "קורנטו וניל - פרווה טבעוני 6 יח",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "קורנטו",
+      "category": "גלידות",
+      "price": 31.9,
+      "average_price": 36.08225555260644,
+      "price_diff_pct": -11.590892776946513
+    },
+    {
+      "itemcode": 7290015695800,
+      "itemname": "נבטי ברוקולי אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695817,
+      "itemname": "נבטי קייל אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695824,
+      "itemname": "נבטי חרדל אורגני יח",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695848,
+      "itemname": "נבטי אלפלפא אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695855,
+      "itemname": "נבטי חמניה אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695879,
+      "itemname": "עשב חיטה אורגני יח",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695886,
+      "itemname": "מיקס נבטים אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695893,
+      "itemname": "מיקס נבטוטים אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695916,
+      "itemname": "מיקס נבטים ענק אורגנ",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 15.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695923,
+      "itemname": "נבטים סיניים אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015695947,
+      "itemname": "נבטי אפונה אורגני",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015761109,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015761154,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015761178,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015790017,
+      "itemname": "פלחי פומלה מוכנים לאכילה",
+      "manufacturer": "רון שיווק תוצרת חקלאית",
+      "brand": "לא ידוע",
+      "category": "שימורים",
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015855242,
+      "itemname": "שום קלוף בצנצנת 1 קג`",
+      "manufacturer": "א.אדמה (2007) בעמ קונסיגנציה",
+      "brand": null,
+      "category": null,
+      "price": 29.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859004,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859028,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859042,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 10.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859066,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859073,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859080,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859103,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859110,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859127,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859202,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859219,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859233,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859240,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859301,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290015859325,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 11.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016150117,
+      "itemname": "סלק אדום מבושל בוואקום לירון 500 גרם",
+      "manufacturer": "אראל תוצרת חקלאית",
+      "brand": "לירון",
+      "category": "ירקות ופירות",
+      "price": 6.0,
+      "average_price": 7.981421925605984,
+      "price_diff_pct": -24.82542514447444
+    },
+    {
+      "itemcode": 7290016150384,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016270013,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016270570,
+      "itemname": "מלפפון בייבי יחי'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016270709,
+      "itemname": "עגבניות שרי קלמר",
+      "manufacturer": "ביכורי השקמה",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": 10.872064468831669,
+      "price_diff_pct": -45.732477792839795
+    },
+    {
+      "itemcode": 7290016270716,
+      "itemname": "שרי תמר ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016270877,
+      "itemname": "פלפל טינקרבל",
+      "manufacturer": "ביכורי שדה",
+      "brand": null,
+      "category": "ירקות ופירות",
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016270907,
+      "itemname": "ברוקולי גן הירוק",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016452242,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016584004,
+      "itemname": "חטיפוני גזר 130 גרם",
+      "manufacturer": "מרינה פטריות הגליל",
+      "brand": "מרינה",
+      "category": "ירקות ופירות",
+      "price": 5.9,
+      "average_price": 7.556220145887165,
+      "price_diff_pct": -21.918632780817564
+    },
+    {
+      "itemcode": 7290016584011,
+      "itemname": "חטיפוני גזר 350 גרם",
+      "manufacturer": "מרינה פטריות הגליל",
+      "brand": "מרינה",
+      "category": "ירקות ופירות",
+      "price": 9.9,
+      "average_price": 14.398683829056589,
+      "price_diff_pct": -31.243715623356007
+    },
+    {
+      "itemcode": 7290016634877,
+      "itemname": "זרעים כרובית",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290016634914,
+      "itemname": "זרעים אבטיח",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024003,
+      "itemname": "חסה ערבית ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024027,
+      "itemname": "סלק עלים מנגולד ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024034,
+      "itemname": "סלרי עלים ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024041,
+      "itemname": "סלרי ראש ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024058,
+      "itemname": "פטרוזיליה ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024065,
+      "itemname": "כוסברה ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024072,
+      "itemname": "נענע ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024089,
+      "itemname": "שמיר ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024096,
+      "itemname": "שורש פטרוזיליה ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024102,
+      "itemname": "בצל ירוק ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024256,
+      "itemname": "לבבות קיסר ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024263,
+      "itemname": "רוזמרין ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024287,
+      "itemname": "בזיליקום קטן ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024294,
+      "itemname": "עירית ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024300,
+      "itemname": "טימין(קורנית) ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": "תבלינים",
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024317,
+      "itemname": "אורגנו ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024324,
+      "itemname": "מרווה ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024331,
+      "itemname": "טרגון",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 4.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024379,
+      "itemname": "עלי רוקולה ארוז",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024430,
+      "itemname": "שיבא",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 3.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024447,
+      "itemname": "לבבות  חסה",
+      "manufacturer": "פיור דיזיין",
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018024645,
+      "itemname": "סלרי חתוך יח'",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018131312,
+      "itemname": "לה קרמריה ושוקו וניל 1.4ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.749899866100318,
+      "price_diff_pct": -11.157520162359422
+    },
+    {
+      "itemcode": 7290018131343,
+      "itemname": "לה קרמריה 1.4 וניל שוקו",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.83880276109261,
+      "price_diff_pct": -11.488843582206304
+    },
+    {
+      "itemcode": 7290018131879,
+      "itemname": "אקסטרים טילון ריבת חלב בדצ 6*72ג",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "אקסטרים",
+      "category": "גלידות",
+      "price": 34.2,
+      "average_price": 33.981006467808555,
+      "price_diff_pct": 0.6444586401491907
+    },
+    {
+      "itemcode": 7290018192658,
+      "itemname": "פטריות טריות מיקס מרינה זוגי 250X2ג'",
+      "manufacturer": "מרינה פטריות, קונס`-מרינה פטריות הגליל בעמ *",
+      "brand": null,
+      "category": null,
+      "price": 16.9,
+      "average_price": 18.912665323586104,
+      "price_diff_pct": -10.641891500486174
+    },
+    {
+      "itemcode": 7290018394021,
+      "itemname": "פטריות מלך היער",
+      "manufacturer": "חוות פטריות תקוע",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 14.429953535580964,
+      "price_diff_pct": -10.602622744476953
+    },
+    {
+      "itemcode": 7290018394038,
+      "itemname": "פטריות שיטאקה מיובשו",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394069,
+      "itemname": "ביצי שליו 12 יח",
+      "manufacturer": "חוות פטריות תקוע בע\"מ",
+      "brand": "חוות פטריות תקוע",
+      "category": "ביצים",
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394083,
+      "itemname": "שום פנינה 200גרם",
+      "manufacturer": "גורמה",
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": 13.121713921683176,
+      "price_diff_pct": -1.6896719666841757
+    },
+    {
+      "itemcode": 7290018394113,
+      "itemname": "פטריות דואט שימג'י 300ג",
+      "manufacturer": "שנגחאי פינק פוד קומפני",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": 21.231063453187335,
+      "price_diff_pct": -29.81981315795501
+    },
+    {
+      "itemcode": 7290018394144,
+      "itemname": "בצלצלי איזי שאלוט חו",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394151,
+      "itemname": "מיקס פטריות אקזוטי י",
+      "manufacturer": "DUOYING HANAN, פנטה אמפאק בע\"מ",
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": 24.15847423521139,
+      "price_diff_pct": -17.627248284598174
+    },
+    {
+      "itemcode": 7290018394342,
+      "itemname": "פרחי כרובית",
+      "manufacturer": "חוות תקוע, פמילי",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": 15.155405038111919,
+      "price_diff_pct": -1.6852405954815532
+    },
+    {
+      "itemcode": 7290018394359,
+      "itemname": "מיני מיקס אקזוטי 250",
+      "manufacturer": "עינת תעשיות מזון אגו",
+      "brand": null,
+      "category": null,
+      "price": 15.9,
+      "average_price": 16.240908709439363,
+      "price_diff_pct": -2.0990741068646224
+    },
+    {
+      "itemcode": 7290018394366,
+      "itemname": "פטריות מאי טאקי טרי",
+      "manufacturer": "פנטה אמפאק בע\"מ, שנגחאי פינק פוד קומפני",
+      "brand": null,
+      "category": null,
+      "price": 17.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394380,
+      "itemname": "גזרים צבעוניים",
+      "manufacturer": "פמילי",
+      "brand": null,
+      "category": null,
+      "price": 8.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394397,
+      "itemname": "תפרחות כרובית וברוקולי",
+      "manufacturer": "ספק כללי",
+      "brand": "לא ידוע",
+      "category": "פירות וירקות קפואים",
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394441,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394458,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 12.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018394465,
+      "itemname": "תקוע דואט פרחי כרובי",
+      "manufacturer": "שטראוס גרופ",
+      "brand": null,
+      "category": null,
+      "price": 14.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018441473,
+      "itemname": "פיינט סורבה פרי תשוקה 500מל",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.207479972538987,
+      "price_diff_pct": 4.100055142406102
+    },
+    {
+      "itemcode": 7290018441480,
+      "itemname": "פיינט סורבה פינה קולדה 500מל",
+      "manufacturer": "מוצרי איכות אמריקאיים בע\"מ",
+      "brand": "בן&גריס",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 24.362192064323683,
+      "price_diff_pct": 3.438967780338673
+    },
+    {
+      "itemcode": 7290018441541,
+      "itemname": "גלידת פיינט בננה אגוזים גריס, 500 מ\"ל",
+      "manufacturer": "AQP",
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": 24.367339097469223,
+      "price_diff_pct": -18.333307053346665
+    },
+    {
+      "itemcode": 7290018441558,
+      "itemname": "גלידת פיינט שוקולד אגוזים בן גריס, 500 מ\"ל",
+      "manufacturer": "AQP",
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": 24.352243813834885,
+      "price_diff_pct": -18.282684125006575
+    },
+    {
+      "itemcode": 7290018441565,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 25.2,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018652657,
+      "itemname": "מאגדת לייט מנגו 6יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "גלידות נסטלה",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 29.82954552266505,
+      "price_diff_pct": 1.2419045307058756
+    },
+    {
+      "itemcode": 7290018652886,
+      "itemname": "מאגדת מצופים שוקו בננה 8 יח כשל\"פ",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "גלידות נסטלה",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 29.793555107037392,
+      "price_diff_pct": 1.364204075352535
+    },
+    {
+      "itemcode": 7290018652923,
+      "itemname": "מאגדת 99 תות עוגת גבינה 5*43גר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "גלידות נסטלה",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 30.818072575641924,
+      "price_diff_pct": -2.0055523398644954
+    },
+    {
+      "itemcode": 7290018732205,
+      "itemname": "אוכמניות חורף ישראלי",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 19.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018823040,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018823248,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018823446,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018825020,
+      "itemname": "תפוח אדמה גורמה דוד",
+      "manufacturer": "חבל מעון, תוצרת הנגב אגודה שיתופית *60*",
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": 10.387370800234608,
+      "price_diff_pct": -23.94610578625371
+    },
+    {
+      "itemcode": 7290018825228,
+      "itemname": "תפוא אדום לטיגון דוד משה גורמה",
+      "manufacturer": "תוצרת הנגב אגודה שיתופית *60*",
+      "brand": null,
+      "category": null,
+      "price": 7.9,
+      "average_price": 10.988235024844899,
+      "price_diff_pct": -28.104923291704797
+    },
+    {
+      "itemcode": 7290018825419,
+      "itemname": "תפוח אדמה אדום לאפיה",
+      "manufacturer": "תוצרת הנגב אגודה שיתופית *60*",
+      "brand": null,
+      "category": null,
+      "price": 5.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290018825822,
+      "itemname": "תפוח אדמה דוד משה",
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 6.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290019293408,
+      "itemname": "מאגדת פסטוק לבן לייט 5*43ג'בדצ",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "גלידות נסטלה",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 30.997143180029735,
+      "price_diff_pct": -2.5716666061771263
+    },
+    {
+      "itemcode": 7290019293415,
+      "itemname": "מאגדת מיני מילקה וניל 6*50גר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "מילקה",
+      "category": "גלידות",
+      "price": 33.2,
+      "average_price": 32.87077518248222,
+      "price_diff_pct": 1.0015730255526087
+    },
+    {
+      "itemcode": 7290019293613,
+      "itemname": "לה קרמריה באבלגאם 1.4 ל בדצ",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.777777450253264,
+      "price_diff_pct": -11.261681020673954
+    },
+    {
+      "itemcode": 7290019462538,
+      "itemname": "פטריות שימאגי לבנות",
+      "manufacturer": "מרינה פטריות, קונס`-מרינה פטריות הגליל בעמ *",
+      "brand": null,
+      "category": null,
+      "price": 9.9,
+      "average_price": 13.512280332414727,
+      "price_diff_pct": -26.733314019168148
+    },
+    {
+      "itemcode": 7290019816058,
+      "itemname": "קראנץ מיני אלפחורס 5*55 בדץ",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "קראנץ",
+      "category": "גלידות",
+      "price": 33.2,
+      "average_price": 31.65601061555126,
+      "price_diff_pct": 4.877397228601655
+    },
+    {
+      "itemcode": 7290019816218,
+      "itemname": "אקסטרים טילון בייגלה 6*72ג",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "אקסטרים",
+      "category": "גלידות",
+      "price": 34.2,
+      "average_price": 34.29766173111765,
+      "price_diff_pct": -0.2847474906111169
+    },
+    {
+      "itemcode": 7290019816416,
+      "itemname": "קראנץ מיני קורנפלקס 5*55 בדץ",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "קראנץ",
+      "category": "גלידות",
+      "price": 33.2,
+      "average_price": 31.691026059990254,
+      "price_diff_pct": 4.761518093965473
+    },
+    {
+      "itemcode": 7290101112228,
+      "itemname": "גלידל פרי שמיניה אננס 8יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 27.2,
+      "average_price": 28.716494632340787,
+      "price_diff_pct": -5.280918342425043
+    },
+    {
+      "itemcode": 7290101112921,
+      "itemname": "גלידל פירות טרופים 8*80גר",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 27.2,
+      "average_price": 28.53623167673747,
+      "price_diff_pct": -4.682579297345542
+    },
+    {
+      "itemcode": 7290101113157,
+      "itemname": "גלידל וניל עוגיות 8*50גר",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 26.2,
+      "average_price": 30.05967761624244,
+      "price_diff_pct": -12.840049935056197
+    },
+    {
+      "itemcode": 7290101113447,
+      "itemname": "גלידל מיני קסטה שוקו וניל 10יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 33.2,
+      "average_price": 36.788715888713966,
+      "price_diff_pct": -9.75493653969833
+    },
+    {
+      "itemcode": 7290101113638,
+      "itemname": "מאגדת סנקור ארוך 8יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "סנקור פלדמן",
+      "category": "גלידות",
+      "price": 29.2,
+      "average_price": 31.747287025747372,
+      "price_diff_pct": -8.023636865983217
+    },
+    {
+      "itemcode": 7290101113836,
+      "itemname": "טילון גלידל שוקו 5יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 33.2,
+      "average_price": 36.31271806617693,
+      "price_diff_pct": -8.571977620910264
+    },
+    {
+      "itemcode": 7290101113874,
+      "itemname": "גו בוטנים שקדים ושוקולד 3*85גר",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "GO",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 32.07486650395521,
+      "price_diff_pct": -5.845282329465079
+    },
+    {
+      "itemcode": 7290101113881,
+      "itemname": "גו קרמל ושוקולד 3*85גר",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "GO",
+      "category": "גלידות",
+      "price": 30.2,
+      "average_price": 31.734259649559302,
+      "price_diff_pct": -4.834710708559445
+    },
+    {
+      "itemcode": 7290101113935,
+      "itemname": "בליסימו וניל צרפתי 900מל",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "בליסימו",
+      "category": "גלידות",
+      "price": 16.1,
+      "average_price": 17.241739082336426,
+      "price_diff_pct": -6.621948498838483
+    },
+    {
+      "itemcode": 7290101113959,
+      "itemname": "בליסימו וניל פליק 1.3 ליטר",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "בליסימו",
+      "category": "גלידות",
+      "price": 16.1,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290101113966,
+      "itemname": "בליסימו פאדג פקאן 1.3 ליטר",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "בליסימו",
+      "category": "גלידות",
+      "price": 16.1,
+      "average_price": 17.00701752043607,
+      "price_diff_pct": -5.3331956608274895
+    },
+    {
+      "itemcode": 7290101114338,
+      "itemname": "שלגון וניל עם שוקולד פיסטוק 99 קלוריות 5יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 26.2,
+      "average_price": 27.84888038350575,
+      "price_diff_pct": -5.92081390992776
+    },
+    {
+      "itemcode": 7290101114345,
+      "itemname": "שלגון וניל עם שוקולד מריר 99 קלוריות 5יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 26.2,
+      "average_price": 27.535457968236916,
+      "price_diff_pct": -4.849957352361498
+    },
+    {
+      "itemcode": 7290101114352,
+      "itemname": "שלגון וניל עם שוקולד בלונדי 99 קלוריות 5יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "גלידל",
+      "category": "גלידות",
+      "price": 26.2,
+      "average_price": 27.660299415445508,
+      "price_diff_pct": -5.279405669159449
+    },
+    {
+      "itemcode": 7290101114369,
+      "itemname": "גלית",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.945864610205916,
+      "price_diff_pct": 0.5443004898592011
+    },
+    {
+      "itemcode": 7290101114376,
+      "itemname": "שלגון מצופה בננה",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.960573425429697,
+      "price_diff_pct": 0.3958263534270591
+    },
+    {
+      "itemcode": 7290101114383,
+      "itemname": "שלגון מצופה שוקו",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.958679192021208,
+      "price_diff_pct": 0.4149225733860161
+    },
+    {
+      "itemcode": 7290101114390,
+      "itemname": "גרניטה אייס קפוצ'ינו 4יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.956986843758795,
+      "price_diff_pct": 0.4319896863996201
+    },
+    {
+      "itemcode": 7290101114406,
+      "itemname": "קרח ענבים ואננס 8יח",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.942156791687012,
+      "price_diff_pct": 0.5817973858685576
+    },
+    {
+      "itemcode": 7290101114611,
+      "itemname": "מאגדת פופ פירות לימון, 4 גלילים",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.976851843021533,
+      "price_diff_pct": 0.23201865019833848
+    },
+    {
+      "itemcode": 7290101114628,
+      "itemname": "מאגדת ג'לי פופ לימון דובדבן, 4 גלילים",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 9.987171041338067,
+      "price_diff_pct": 0.12845438021269717
+    },
+    {
+      "itemcode": 7290101114635,
+      "itemname": "מאגדת גרניטה תות, רביעיה 4 * 80 גרם",
+      "manufacturer": "גלידות פלדמן",
+      "brand": "פלדמן גלידה",
+      "category": "גלידות",
+      "price": 10.0,
+      "average_price": 10.019154211774987,
+      "price_diff_pct": -0.1911759353147422
+    },
+    {
+      "itemcode": 7290103400194,
+      "itemname": "כרוב לבן 400 ג בדצ ירקות שטראוס",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 10.0,
+      "average_price": 10.948711051154383,
+      "price_diff_pct": -8.665047846470982
+    },
+    {
+      "itemcode": 7290103400255,
+      "itemname": "סלט קולסלאו 400 ג בדצ ירקות שטראוס",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות",
+      "price": 10.0,
+      "average_price": 10.748909367950535,
+      "price_diff_pct": -6.9673056336628845
+    },
+    {
+      "itemcode": 7290103408206,
+      "itemname": "עלי חסה ערבית שטופים קופסה 250 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 11.0,
+      "average_price": 12.847152245071863,
+      "price_diff_pct": -14.377912005988922
+    },
+    {
+      "itemcode": 7290104065934,
+      "itemname": "שטראוס עלי רוקט 150גרם",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 11.0,
+      "average_price": 12.608500743072305,
+      "price_diff_pct": -12.75727206469088
+    },
+    {
+      "itemcode": 7290104570131,
+      "itemname": "תמר מגהול 1 ק\"ג",
+      "manufacturer": "חברת ששון ושות",
+      "brand": "ששון מלוינסקי",
+      "category": "פירות יבשים",
+      "price": 19.9,
+      "average_price": 19.68030267050772,
+      "price_diff_pct": 1.1163310502409525
+    },
+    {
+      "itemcode": 7290104721953,
+      "itemname": "לקט מסולסלים ירקות 350 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות",
+      "price": 14.1,
+      "average_price": 15.400628794664106,
+      "price_diff_pct": -8.445296695383885
+    },
+    {
+      "itemcode": 7290106528949,
+      "itemname": "לקט ערוגות",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות",
+      "price": 14.1,
+      "average_price": 13.915903824866467,
+      "price_diff_pct": 1.3229192832201782
+    },
+    {
+      "itemcode": 7290106576797,
+      "itemname": "לה קרמריה וניל איטלקי 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.743076582688552,
+      "price_diff_pct": -11.13198861774998
+    },
+    {
+      "itemcode": 7290106576810,
+      "itemname": "לה קרמריה ריבת חלב 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.658528615984373,
+      "price_diff_pct": -10.814402947509413
+    },
+    {
+      "itemcode": 7290106576834,
+      "itemname": "גלידה קרמריה פונטש בננה 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.65108119310833,
+      "price_diff_pct": -10.786319544037104
+    },
+    {
+      "itemcode": 7290106576858,
+      "itemname": "גלידה קרמריה תותים בשמנת 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.57244492273261,
+      "price_diff_pct": -10.488708026837948
+    },
+    {
+      "itemcode": 7290106576919,
+      "itemname": "גלידה קרמריה סורבה תות לימון 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.446057754928145,
+      "price_diff_pct": -10.006192851056266
+    },
+    {
+      "itemcode": 7290106576957,
+      "itemname": "גלידה קרמריה פרווה שוקו וניל פלי 1.4ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.52175699816588,
+      "price_diff_pct": -10.295816755333016
+    },
+    {
+      "itemcode": 7290106576971,
+      "itemname": "לה קרמריה שוקולד בלגי 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.716777066455727,
+      "price_diff_pct": -11.033442946836201
+    },
+    {
+      "itemcode": 7290106653689,
+      "itemname": "טעם הטבע לקט לסלט בסגנון אסייתי 350 גרם",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות",
+      "price": 11.0,
+      "average_price": 13.067428259168352,
+      "price_diff_pct": -15.821232901874213
+    },
+    {
+      "itemcode": 7290106723689,
+      "itemname": "שטראוס תרד בייבי 200 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 13.1,
+      "average_price": 12.924444079928929,
+      "price_diff_pct": 1.358324729368448
+    },
+    {
+      "itemcode": 7290107875400,
+      "itemname": "לה קרמריה פיסטוק מוקה פרווה 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.431547286018493,
+      "price_diff_pct": -9.950462329944877
+    },
+    {
+      "itemcode": 7290107879521,
+      "itemname": "לה פרוטה תות 5 יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה פרוטה",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 28.44299459548921,
+      "price_diff_pct": -11.401734035429305
+    },
+    {
+      "itemcode": 7290107879569,
+      "itemname": "לה פרוטה מנגו 5 יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה פרוטה",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 28.39908956308834,
+      "price_diff_pct": -11.264760991656402
+    },
+    {
+      "itemcode": 7290107933155,
+      "itemname": "שטראוס לקט סלנובה 200 גרם טעם הטבע",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות",
+      "price": 14.1,
+      "average_price": 14.480515395331178,
+      "price_diff_pct": -2.6277752203064852
+    },
+    {
+      "itemcode": 7290107939027,
+      "itemname": "שטראוס גזר דק דק 250 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 8.0,
+      "average_price": 8.124369748166295,
+      "price_diff_pct": -1.5308233379501919
+    },
+    {
+      "itemcode": 7290109062129,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 5.0,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 7290109354057,
+      "itemname": "לה פרוטה מאגדת אננס תפוז 5יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה פרוטה",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 28.631210582271503,
+      "price_diff_pct": -11.984161732917139
+    },
+    {
+      "itemcode": 7290110558925,
+      "itemname": "מיקס ארוגולה צבעוני 300 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות",
+      "price": 11.0,
+      "average_price": 12.500799633026123,
+      "price_diff_pct": -12.005629056409552
+    },
+    {
+      "itemcode": 7290110572549,
+      "itemname": "טעם הטבע מיקס בייבי מנגולד 120 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 11.0,
+      "average_price": 11.687892007186274,
+      "price_diff_pct": -5.8855096091179275
+    },
+    {
+      "itemcode": 7290111564239,
+      "itemname": "מאגדת מיני קראנץ וניל 5*55גר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "קראנץ",
+      "category": "גלידות",
+      "price": 33.2,
+      "average_price": 31.92488518288608,
+      "price_diff_pct": 3.9941093282223368
+    },
+    {
+      "itemcode": 7290111565038,
+      "itemname": "גלידה לה קרמריה קוקילידה 1.4 ליטר",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה קרמריה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 23.570427015907743,
+      "price_diff_pct": -10.48104480347532
+    },
+    {
+      "itemcode": 7290112351524,
+      "itemname": "טעם הטבע עלי חסה סלנובה 200 גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 14.1,
+      "average_price": 14.377291317780813,
+      "price_diff_pct": -1.9286756569916543
+    },
+    {
+      "itemcode": 7290112498915,
+      "itemname": "מיני מגנום שקדים מובחרים 5*50גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "מגנום",
+      "category": "גלידות",
+      "price": 24.9,
+      "average_price": 33.35196467227272,
+      "price_diff_pct": -25.341729506265924
+    },
+    {
+      "itemcode": 7290112498922,
+      "itemname": "מיני מגנום לבן 5*50גר",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "מגנום",
+      "category": "גלידות",
+      "price": 24.9,
+      "average_price": 33.358380745715046,
+      "price_diff_pct": -25.356089104539475
+    },
+    {
+      "itemcode": 7290112499844,
+      "itemname": "מגנום מיני דואט שוקולד ונוגט",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "מגנום",
+      "category": "גלידות",
+      "price": 24.9,
+      "average_price": 33.689076284200205,
+      "price_diff_pct": -26.088801634262033
+    },
+    {
+      "itemcode": 7290112499943,
+      "itemname": "מגנום מיני חוף השנהב שוקולד",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "מגנום",
+      "category": "גלידות",
+      "price": 24.9,
+      "average_price": 33.71570227140839,
+      "price_diff_pct": -26.147170835840157
+    },
+    {
+      "itemcode": 7290112962546,
+      "itemname": "לה פרוטה מלון תפוח 5 יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "לה פרוטה",
+      "category": "גלידות",
+      "price": 25.2,
+      "average_price": 28.472079524427357,
+      "price_diff_pct": -11.49223934142256
+    },
+    {
+      "itemcode": 7290112963529,
+      "itemname": "טילון אקסטרים שוקו וניל פרווה מאגדת 6 יח",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "אקסטרים",
+      "category": "גלידות",
+      "price": 34.2,
+      "average_price": 33.86363723754883,
+      "price_diff_pct": 0.9932859842893849
+    },
+    {
+      "itemcode": 7290115678598,
+      "itemname": "חסה אייסברג חיתוך גס 300 שטראוס טעם הטבע",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "טעם הטבע",
+      "category": "ירקות ופירות",
+      "price": 10.0,
+      "average_price": 12.23647030101103,
+      "price_diff_pct": -18.277086823201323
+    },
+    {
+      "itemcode": 7290116532264,
+      "itemname": "גודיז פרי אפרסק 6יח",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "גודיז",
+      "category": "גלידות",
+      "price": 29.2,
+      "average_price": 30.80516382503017,
+      "price_diff_pct": -5.2106972524065105
+    },
+    {
+      "itemcode": 7290116532271,
+      "itemname": "גודיז סנדוויץ 6יח",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "גודיז",
+      "category": "גלידות",
+      "price": 32.2,
+      "average_price": 33.75279270694946,
+      "price_diff_pct": -4.600486603971425
+    },
+    {
+      "itemcode": 8000380213504,
+      "itemname": "גלידה לואקר טורטינה 264גר",
+      "manufacturer": "ליימן שליסל",
+      "brand": "לואקר",
+      "category": "גלידות",
+      "price": 31.0,
+      "average_price": 40.82477191610074,
+      "price_diff_pct": -24.065711711241626
+    },
+    {
+      "itemcode": 8437005015005,
+      "itemname": null,
+      "manufacturer": null,
+      "brand": null,
+      "category": null,
+      "price": 39.9,
+      "average_price": NaN,
+      "price_diff_pct": NaN
+    },
+    {
+      "itemcode": 8606018615827,
+      "itemname": "פיינט אוראו",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "אוראו",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 24.39291632970174,
+      "price_diff_pct": -13.499477820502175
+    },
+    {
+      "itemcode": 8606018615841,
+      "itemname": "פיינט מילקה וניל ליבת שוקולד",
+      "manufacturer": "אסם-נסטלה",
+      "brand": "מילקה",
+      "category": "גלידות",
+      "price": 21.1,
+      "average_price": 24.51313524731135,
+      "price_diff_pct": -13.923699326407904
+    },
+    {
+      "itemcode": 8711327628861,
+      "itemname": "גלידה פיינט מגנום מנגו וקוקוס",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "מגנום",
+      "category": "גלידות",
+      "price": 24.2,
+      "average_price": 25.994827328057124,
+      "price_diff_pct": -6.904555684891604
+    },
+    {
+      "itemcode": 8711327628915,
+      "itemname": "גלידה פיינט מגנום פופקורן קרמל",
+      "manufacturer": "שטראוס גרופ",
+      "brand": "מגנום",
+      "category": "גלידות",
+      "price": 24.2,
+      "average_price": 26.03621597290039,
+      "price_diff_pct": -7.052545480539887
+    }
+  ]
+}
