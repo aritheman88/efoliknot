@@ -1,6 +1,8 @@
 # Israel Supermarket Price Map
 
 An interactive web map for visualizing and comparing supermarket prices across Israel.
+The map is on the URL https://efoliknot.net/, and hosted on github: 
+https://github.com/aritheman88/efoliknot/
 
 ## Project Structure
 

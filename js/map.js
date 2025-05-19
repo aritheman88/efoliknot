@@ -252,9 +252,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         ${formattedPriceDiff > 0 ? '+' : ''}${formattedPriceDiff}%
                     </span>
                 </p>` : ''}
-//                <a href="#" class="popup-link" data-store-id="${props.storeid || props.store_code}" data-store-code="${props.store_code}">הצג פרטים נוספים</a>
+                <!-- Temporarily disabled:
+                <a href="#" class="popup-link" data-store-id="${props.storeid || props.store_code}" data-store-code="${props.store_code}">הצג פרטים נוספים</a>
+                -->
             </div>
         `;
+
 
         // Add popup to marker
         marker.bindPopup(popupContent);

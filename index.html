@@ -233,13 +233,54 @@ window.showStorePrices = function(storeCode) {
 };
 </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add functionality to toggle the legend
+    const toggleButton = document.getElementById('toggle-legend');
+    const legendContent = document.getElementById('legend-content');
+    const legendIcon = toggleButton.querySelector('i');
+
+    toggleButton.addEventListener('click', function() {
+        // Toggle content visibility
+        if (legendContent.style.display === 'none') {
+            legendContent.style.display = 'block';
+            legendIcon.classList.remove('fa-chevron-up');
+            legendIcon.classList.add('fa-chevron-down');
+            localStorage.setItem('legendVisible', 'true');
+        } else {
+            legendContent.style.display = 'none';
+            legendIcon.classList.remove('fa-chevron-down');
+            legendIcon.classList.add('fa-chevron-up');
+            localStorage.setItem('legendVisible', 'false');
+        }
+    });
+
+    // Check if user previously set legend visibility
+    const legendVisible = localStorage.getItem('legendVisible');
+    if (legendVisible === 'false') {
+        legendContent.style.display = 'none';
+        legendIcon.classList.remove('fa-chevron-down');
+        legendIcon.classList.add('fa-chevron-up');
+    }
+});
+</script>
+
+
 <div id="map-legend" class="map-legend leaflet-control">
-    <h4>מקרא צבעים למחיר</h4>
-    <div><span class="legend-color legend-red"></span> יקר ביותר</div>
-    <div><span class="legend-color legend-orange"></span> יקר</div>
-    <div><span class="legend-color legend-yellow"></span> ממוצע</div>
-    <div><span class="legend-color legend-light-green"></span> זול</div>
-    <div><span class="legend-color legend-dark-green"></span> זול ביותר</div>
+    <div class="legend-header">
+        <h4>מקרא צבעים למחיר</h4>
+        <button id="toggle-legend" class="legend-toggle" aria-label="הסתר/הצג מקרא">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+    <div id="legend-content" class="legend-content">
+        <div><span class="legend-color legend-red"></span> יקר ביותר</div>
+        <div><span class="legend-color legend-orange"></span> יקר</div>
+        <div><span class="legend-color legend-yellow"></span> ממוצע</div>
+        <div><span class="legend-color legend-light-green"></span> זול</div>
+        <div><span class="legend-color legend-dark-green"></span> זול ביותר</div>
+    </div>
 </div>
 
 
