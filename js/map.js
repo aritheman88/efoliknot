@@ -207,13 +207,19 @@ document.addEventListener('DOMContentLoaded', function() {
             : 0;
 
         // Determine marker color based on price difference
-        let markerColor = '#3498db'; // default blue
-        if (formattedPriceDiff > 5) {
-            markerColor = '#ff463c'; // Red (orange) for higher prices
-        } else if (formattedPriceDiff < -5) {
-            markerColor = '#2ecc71'; // green for lower prices
+        let markerColor;
+        const priceDiff = parseFloat(props.average_price_diff);
+
+        if (priceDiff <= -8) {
+            markerColor = '#006400'; // Dark green for below -8%
+        } else if (priceDiff <= -3) {
+            markerColor = '#32CD32'; // Light green for -8% to -3%
+        } else if (priceDiff <= 3) {
+            markerColor = '#FFFF00'; // Yellow for -3% to 3%
+        } else if (priceDiff <= 8) {
+            markerColor = '#FF8C00'; // Orange for 3% to 8%
         } else {
-            markerColor = '#f39c12'; // yellow for neutral
+            markerColor = '#FF0000'; // Red for above 8%
         }
 
         // Create custom icon
@@ -248,7 +254,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>${props.address || ''}, ${props.city || ''}</p>
                 ${formattedPriceDiff ? `
                 <p>הפרש מחירים ממוצע:
-                    <span class="price-indicator ${formattedPriceDiff < 0 ? 'price-lower' : formattedPriceDiff > 0 ? 'price-higher' : 'price-neutral'}">
+                    <span class="price-indicator ${
+                        priceDiff <= -8 ? 'price-dark-green' :
+                        priceDiff <= -3 ? 'price-light-green' :
+                        priceDiff <= 3 ? 'price-neutral' :
+                        priceDiff <= 8 ? 'price-orange' :
+                        'price-higher'
+                    }">
                         <span class="number-wrapper">${formattedPriceDiff < 0 ? '-' : formattedPriceDiff > 0 ? '+' : ''}${Math.abs(formattedPriceDiff)}%</span>
                     </span>
                 </p>` : ''}
@@ -330,18 +342,25 @@ document.addEventListener('DOMContentLoaded', function() {
             ? parseFloat(props.average_price_diff).toFixed(1)
             : 0;
 
+        const priceDiff = parseFloat(formattedPriceDiff);
         let priceClass = '';
         let priceText = '';
 
-        if (formattedPriceDiff < 0) {
-            priceClass = 'price-lower';
-            priceText = `${formattedPriceDiff < 0 ? '-' : ''}${Math.abs(formattedPriceDiff)}% (מחיר נמוך מהממוצע)`;
-        } else if (formattedPriceDiff > 0) {
-            priceClass = 'price-higher';
-            priceText = `+${formattedPriceDiff}% (מחיר גבוה מהממוצע)`;
-        } else {
+        if (priceDiff <= -8) {
+            priceClass = 'price-dark-green';
+            priceText = `${priceDiff < 0 ? '-' : ''}${Math.abs(priceDiff)}% (מחיר נמוך מאוד מהממוצע)`;
+        } else if (priceDiff <= -3) {
+            priceClass = 'price-light-green';
+            priceText = `${priceDiff < 0 ? '-' : ''}${Math.abs(priceDiff)}% (מחיר נמוך מהממוצע)`;
+        } else if (priceDiff <= 3) {
             priceClass = 'price-neutral';
-            priceText = `${formattedPriceDiff}% (דומה לממוצע)`;
+            priceText = `${priceDiff < 0 ? '-' : ''}${Math.abs(priceDiff)}% (דומה לממוצע)`;
+        } else if (priceDiff <= 8) {
+            priceClass = 'price-orange';
+            priceText = `+${priceDiff}% (מחיר גבוה מהממוצע)`;
+        } else {
+            priceClass = 'price-higher';
+            priceText = `+${priceDiff}% (מחיר גבוה מאוד מהממוצע)`;
         }
 
         // Get chain logo path
@@ -620,7 +639,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Format price and difference values
                 const formattedPrice = item.price ? item.price.toFixed(2) : '-';
                 const formattedAvgPrice = item.average_price ? item.average_price.toFixed(2) : '-';
-                const formattedDiff = item.price_diff_pct ? item.price_diff_pct.toFixed(1) : '-';
+                let formattedDiff;
+                if (item.price_diff_pct !== null && item.price_diff_pct !== undefined) {
+                    const absDiff = Math.abs(item.price_diff_pct).toFixed(1);
+                    formattedDiff = item.price_diff_pct < 0 ? `-${absDiff}` : item.price_diff_pct > 0 ? `+${absDiff}` : '0.0';
+                } else {
+                    formattedDiff = '-';
+                }
 
                 // Add the row
                 tableHTML += `
@@ -631,7 +656,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td>${item.category || '-'}</td>
                         <td>${formattedPrice}</td>
                         <td>${formattedAvgPrice}</td>
-                        <td class="price-diff-cell ${diffClass}">${formattedDiff}</td>
+                        <td class="price-diff-cell ${diffClass}">
+                            <span class="number-wrapper">${formattedDiff}</span>
+                        </td>
                     </tr>
                 `;
             });

@@ -219,7 +219,14 @@ output {
     display: block;
 }
 
-/* Price Indicator Styles */
+/* RTL Number Fix */
+.number-wrapper {
+    direction: ltr;  /* Force left-to-right direction for numbers */
+    display: inline-block;
+    unicode-bidi: embed; /* Preserves the bidirectional algorithm's behavior */
+}
+
+/* Price Indicator Styles with consistent color scheme */
 .price-indicator {
     display: inline-block;
     padding: 0.2rem 0.5rem;
@@ -227,18 +234,33 @@ output {
     color: white;
     font-weight: bold;
     margin-top: 0.3rem;
+    text-align: center;
 }
 
-.price-lower {
-    background-color: var(--success-color);
+.price-dark-green {
+    background-color: #006400; /* Dark green for below -8% */
 }
 
-.price-higher {
-    background-color: var(--secondary-color);
+.price-light-green {
+    background-color: #32CD32; /* Light green for -8% to -3% */
 }
 
 .price-neutral {
-    background-color: var(--warning-color);
+    background-color: #FFFF00; /* Yellow for -3% to 3% */
+    color: black; /* Better visibility on yellow background */
+}
+
+.price-orange {
+    background-color: #FF8C00; /* Orange for 3% to 8% */
+}
+
+.price-higher {
+    background-color: #FF0000; /* Red for above 8% */
+}
+
+/* Legacy classes - keep for backward compatibility */
+.price-lower {
+    background-color: var(--success-color);
 }
 
 /* Footer Styles */
@@ -250,29 +272,62 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Marker Cluster Custom Styles */
-.marker-cluster-small {
-    background-color: rgba(0, 45, 127, 0.6);
+/* Cluster marker base styles */
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
 }
 
-.marker-cluster-small div {
-    background-color: rgba(0, 45, 127, 0.8);
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.marker-cluster-medium {
-    background-color: rgba(241, 196, 15, 0.6);
+/* Cluster color classes */
+.marker-cluster-dark-green {
+    background-color: rgba(0, 100, 0, 0.6);
+}
+.marker-cluster-dark-green div {
+    background-color: rgba(0, 100, 0, 0.8);
 }
 
-.marker-cluster-medium div {
-    background-color: rgba(241, 196, 15, 0.8);
+.marker-cluster-light-green {
+    background-color: rgba(50, 205, 50, 0.6);
+}
+.marker-cluster-light-green div {
+    background-color: rgba(50, 205, 50, 0.8);
 }
 
-.marker-cluster-large {
-    background-color: rgba(255, 70, 60, 0.6);
+.marker-cluster-yellow {
+    background-color: rgba(255, 255, 0, 0.6);
+}
+.marker-cluster-yellow div {
+    background-color: rgba(255, 255, 0, 0.8);
+    color: #000; /* Dark text for better visibility on yellow */
 }
 
-.marker-cluster-large div {
-    background-color: rgba(255, 70, 60, 0.8);
+.marker-cluster-orange {
+    background-color: rgba(255, 140, 0, 0.6);
+}
+.marker-cluster-orange div {
+    background-color: rgba(255, 140, 0, 0.8);
+}
+
+.marker-cluster-red {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+.marker-cluster-red div {
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 /* Leaflet Popup Custom Styles */
@@ -304,106 +359,6 @@ footer {
 
 .popup-link:hover {
     text-decoration: underline;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        max-height: 200px;
-        overflow-y: auto;
-    }
-
-    #map {
-        height: calc(100vh - 280px); /* header + sidebar + some buffer */
-        min-height: 400px;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0.5rem 1rem;
-    }
-
-    .logo-container {
-        margin: 0 auto 1rem;
-    }
-
-    .title-container h1 {
-        font-size: 1.1rem;
-    }
-
-    .subtitle {
-        font-size: 0.8rem;
-    }
-}
-
-
-/* Cluster marker base styles */
-.marker-cluster {
-    background-clip: padding-box;
-    border-radius: 20px;
-}
-
-.marker-cluster div {
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
-    margin-top: 5px;
-    text-align: center;
-    border-radius: 15px;
-    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Dark green clusters (below -8%) */
-.marker-cluster-dark-green {
-    background-color: rgba(0, 100, 0, 0.6);
-}
-.marker-cluster-dark-green div {
-    background-color: rgba(0, 100, 0, 0.8);
-}
-
-/* Light green clusters (-8% to -3%) */
-.marker-cluster-light-green {
-    background-color: rgba(50, 205, 50, 0.6);
-}
-.marker-cluster-light-green div {
-    background-color: rgba(50, 205, 50, 0.8);
-}
-
-/* Yellow clusters (-3% to 3%) */
-.marker-cluster-yellow {
-    background-color: rgba(255, 255, 0, 0.6);
-}
-.marker-cluster-yellow div {
-    background-color: rgba(255, 255, 0, 0.8);
-    color: #000; /* Dark text for better visibility on yellow */
-}
-
-/* Orange clusters (3% to 8%) */
-.marker-cluster-orange {
-    background-color: rgba(255, 140, 0, 0.6);
-}
-.marker-cluster-orange div {
-    background-color: rgba(255, 140, 0, 0.8);
-}
-
-/* Red clusters (above 8%) */
-.marker-cluster-red {
-    background-color: rgba(255, 0, 0, 0.6);
-}
-.marker-cluster-red div {
-    background-color: rgba(255, 0, 0, 0.8);
 }
 
 /* Price Modal Styles */
@@ -496,22 +451,39 @@ footer {
     background-color: #f0f4f9;
 }
 
+/* Price table cell styles */
 .price-diff-cell {
     font-weight: 600;
 }
 
-.price-lower-cell {
-    color: var(--success-color);
+.price-diff-cell.price-lower-cell {
+    color: #006400; /* Dark green for below -8% */
 }
 
-.price-higher-cell {
-    color: var(--danger-color);
+.price-diff-cell.price-light-green-cell {
+    color: #32CD32; /* Light green for -8% to -3% */
 }
 
-.price-neutral-cell {
-    color: var(--warning-color);
+.price-diff-cell.price-neutral-cell {
+    color: #000000; /* Black text for readability on yellow */
+    background-color: rgba(255, 255, 0, 0.2); /* Light yellow background */
 }
 
+.price-diff-cell.price-orange-cell {
+    color: #FF8C00; /* Orange for 3% to 8% */
+}
+
+.price-diff-cell.price-higher-cell {
+    color: #FF0000; /* Red for above 8% */
+}
+
+.price-diff-cell .number-wrapper {
+    direction: ltr;
+    display: inline-block;
+    unicode-bidi: embed;
+}
+
+/* Table controls */
 .table-controls {
     display: flex;
     justify-content: space-between;
@@ -552,79 +524,7 @@ footer {
     color: white;
 }
 
-@media (max-width: 768px) {
-    .price-modal-content {
-        width: 95%;
-        margin: 5% auto;
-    }
-
-    .table-controls {
-        flex-direction: column;
-    }
-
-    .search-control {
-        margin-bottom: 10px;
-        margin-left: 0;
-    }
-
-    .sort-controls {
-        justify-content: space-between;
-    }
-
-    .sort-btn {
-        font-size: 0.8rem;
-        padding: 6px 8px;
-    }
-}
-
-.map-legend {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    background-color: white;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    color: #333;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    direction: rtl;
-    line-height: 1.6;
-}
-
-.map-legend h4 {
-    margin: 0 0 8px;
-    font-size: 0.95rem;
-    color: var(--primary-color);
-}
-
-.legend-color {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin-left: 6px;
-    vertical-align: middle;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-.legend-red {
-    background-color: rgba(255, 0, 0, 0.8);
-}
-.legend-orange {
-    background-color: rgba(255, 140, 0, 0.8);
-}
-.legend-yellow {
-    background-color: rgba(255, 255, 0, 0.8);
-}
-.legend-light-green {
-    background-color: rgba(50, 205, 50, 0.8);
-}
-.legend-dark-green {
-    background-color: rgba(0, 100, 0, 0.8);
-}
-
-
+/* Map Legend Styles */
 .map-legend {
     position: absolute;
     bottom: 20px;
@@ -704,8 +604,65 @@ footer {
     background-color: rgba(0, 100, 0, 0.8);
 }
 
-/* Responsive styles for mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    #map {
+        height: calc(100vh - 280px); /* header + sidebar + some buffer */
+        min-height: 400px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .logo-container {
+        margin: 0 auto 1rem;
+    }
+
+    .title-container h1 {
+        font-size: 1.1rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .price-modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .table-controls {
+        flex-direction: column;
+    }
+
+    .search-control {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .sort-controls {
+        justify-content: space-between;
+    }
+
+    .sort-btn {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+
     .map-legend {
         bottom: 50px;
         left: 10px;
@@ -721,16 +678,4 @@ footer {
         width: 12px;
         height: 12px;
     }
-}
-
-/* This ensures proper display of numbers with minus signs in RTL context */
-.number-wrapper {
-    direction: ltr;  /* Force left-to-right direction for numbers */
-    display: inline-block;
-    unicode-bidi: embed; /* Preserves the bidirectional algorithm's behavior */
-}
-
-/* You might also want to ensure consistent alignment for price indicators */
-.price-indicator {
-    text-align: center;
 }
