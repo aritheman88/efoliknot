@@ -25,7 +25,7 @@
                 <img src="img/Lobby 99 logo.png" alt="Logo" class="logo">
             </div>
             <div class="title-container">
-                <h1>מפת מחירי הסופרמרקטים בישראל</h1>
+                <h1>מפת מחירי הסופרמרקטים בישראל (גרסה בטא)</h1>
                 <p class="subtitle">מידע השוואתי על מחירי מזון בחנויות שונות</p>
             </div>
         </header>
@@ -232,6 +232,16 @@ window.showStorePrices = function(storeCode) {
         });
 };
 </script>
+
+<div id="map-legend" class="map-legend leaflet-control">
+    <h4>מקרא צבעים למחיר</h4>
+    <div><span class="legend-color legend-red"></span> יקר ביותר</div>
+    <div><span class="legend-color legend-orange"></span> יקר</div>
+    <div><span class="legend-color legend-yellow"></span> ממוצע</div>
+    <div><span class="legend-color legend-light-green"></span> זול</div>
+    <div><span class="legend-color legend-dark-green"></span> זול ביותר</div>
+</div>
+
 
 </body>
 </html>
