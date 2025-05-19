@@ -156,3 +156,5 @@ if __name__ == "__main__":
     output_file = "data/stores.geojson"
 
     csv_to_geojson(csv_file,output_file)
+
+## Test
