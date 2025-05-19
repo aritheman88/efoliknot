@@ -722,3 +722,15 @@ footer {
         height: 12px;
     }
 }
+
+/* This ensures proper display of numbers with minus signs in RTL context */
+.number-wrapper {
+    direction: ltr;  /* Force left-to-right direction for numbers */
+    display: inline-block;
+    unicode-bidi: embed; /* Preserves the bidirectional algorithm's behavior */
+}
+
+/* You might also want to ensure consistent alignment for price indicators */
+.price-indicator {
+    text-align: center;
+}

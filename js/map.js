@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ${formattedPriceDiff ? `
                 <p>הפרש מחירים ממוצע:
                     <span class="price-indicator ${formattedPriceDiff < 0 ? 'price-lower' : formattedPriceDiff > 0 ? 'price-higher' : 'price-neutral'}">
-                        ${formattedPriceDiff > 0 ? '+' : ''}${formattedPriceDiff}%
+                        <span class="number-wrapper">${formattedPriceDiff < 0 ? '-' : formattedPriceDiff > 0 ? '+' : ''}${Math.abs(formattedPriceDiff)}%</span>
                     </span>
                 </p>` : ''}
                 <!-- Temporarily disabled:
@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (formattedPriceDiff < 0) {
             priceClass = 'price-lower';
-            priceText = `${formattedPriceDiff}% (מחיר נמוך מהממוצע)`;
+            priceText = `${formattedPriceDiff < 0 ? '-' : ''}${Math.abs(formattedPriceDiff)}% (מחיר נמוך מהממוצע)`;
         } else if (formattedPriceDiff > 0) {
             priceClass = 'price-higher';
             priceText = `+${formattedPriceDiff}% (מחיר גבוה מהממוצע)`;
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="store-detail-item">
                 <span class="detail-label">הפרש מחירים:</span>
                 <span class="detail-value">
-                    <span class="price-indicator ${priceClass}">${priceText}</span>
+                    <span class="price-indicator ${priceClass}"><span class="number-wrapper">${priceText}</span></span>
                 </span>
             </div>
             <div class="store-detail-item">
