@@ -679,3 +679,75 @@ footer {
         height: 12px;
     }
 }
+
+<style>
+  .info-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #002d7f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  }
+
+  .info-popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    max-width: 300px;
+    text-align: right;
+    direction: rtl;
+    right: 30px;
+    top: 0;
+  }
+
+  .info-popup-content {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .close-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #999;
+  }
+
+  .close-info:hover {
+    color: #555;
+  }
+
+  .info-popup a {
+    color: #002d7f;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .info-popup a:hover {
+    text-decoration: underline;
+    color: #ff463c;
+  }
+
+  /* Make sure the popup appears above other map elements */
+  #info-button {
+    position: relative;
+    margin: 10px;
+    z-index: 800;
+  }
+</style>
