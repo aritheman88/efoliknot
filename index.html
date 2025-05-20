@@ -29,16 +29,17 @@
                 <p class="subtitle">מידע השוואתי על מחירי מזון בחנויות שונות</p>
             </div>
             <div id="info-button" class="leaflet-control">
-          <button class="info-icon" aria-label="מידע נוסף">i</button>
-          <div id="info-popup" class="info-popup">
-            <div class="info-popup-content">
-              <span class="close-info">&times;</span>
-              <p>מפה המשווה כל סופרמרקט אשר קיים במאגר לממוצע הכללי. הממוצע חושב על ידי השוואת המחירים בסניף למחיר הממוצע של כ-20,000 מוצרים נפוצים, כאשר הציון המספרי של הסניף הוא הממוצע של הפערים הללו.</p>
-              <p>מה אין בשכבה: מכולות; בתי מרקחת; סניפים שאינם מחויבים בדיווח לפי פרק שקיפות מחירים בחוק התחרות במזון (מרשתות קטנות יותר).</p>
-              <p>מצאתם טעות / יש הצעה לשיפור? <a href="https://docs.google.com/forms/d/e/1FAIpQLScFTAI98_d1DsTIEHTmFeHnFAOZx35LtrSo72w4Urw0UxWFiw/viewform?usp=sharing" target="_blank">כתבו לנו</a>.</p>
+              <button class="info-icon" aria-label="מידע נוסף">i</button>
             </div>
+          <div id="info-popup" class="info-popup">
+              <div class="info-popup-content">
+                <span class="close-info">&times;</span>
+                <p>מפה המשווה כל סופרמרקט אשר קיים במאגר לממוצע הכללי. הממוצע חושב על ידי השוואת המחירים בסניף למחיר הממוצע של כ-20,000 מוצרים נפוצים, כאשר הציון המספרי של הסניף הוא הממוצע של הפערים הללו.</p>
+                <p>מה אין בשכבה: מכולות; בתי מרקחת; סניפים שאינם מחויבים בדיווח לפי פרק שקיפות מחירים בחוק התחרות במזון (מרשתות קטנות יותר).</p>
+                <p>מצאתם טעות / יש הצעה לשיפור? <a href="https://docs.google.com/forms/d/e/1FAIpQLScFTAI98_d1DsTIEHTmFeHnFAOZx35LtrSo72w4Urw0UxWFiw/viewform?usp=sharing" target="_blank">כתבו לנו</a>.</p>
+              </div>
           </div>
-        </div>
+
         </header>
 
         <div class="content">
@@ -282,21 +283,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoButton = document.querySelector('.info-icon');
     const infoPopup = document.getElementById('info-popup');
     const closeInfo = document.querySelector('.close-info');
+    const overlay = document.getElementById('popup-overlay');
 
     // Open popup when button is clicked
-    infoButton.addEventListener('click', function() {
+    infoButton.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent event from bubbling
       infoPopup.style.display = 'block';
+      overlay.style.display = 'block';
     });
 
     // Close popup when X is clicked
     closeInfo.addEventListener('click', function() {
       infoPopup.style.display = 'none';
+      overlay.style.display = 'none';
     });
 
-    // Close popup when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!infoButton.contains(event.target) && !infoPopup.contains(event.target)) {
+    // Close popup when clicking on the overlay
+    overlay.addEventListener('click', function() {
+      infoPopup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+
+    // Prevent closing when clicking inside the popup
+    infoPopup.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && infoPopup.style.display === 'block') {
         infoPopup.style.display = 'none';
+        overlay.style.display = 'none';
       }
     });
   });
@@ -317,6 +334,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div><span class="legend-color legend-dark-green"></span> זול ביותר</div>
     </div>
 </div>
+
+<div id="popup-overlay" class="popup-overlay"></div>
+
 
 
 </body>
