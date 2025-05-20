@@ -719,6 +719,7 @@ footer {
     position: relative;
     font-size: 14px;
     line-height: 1.5;
+    color: #002d7f; /* Add this line to make text dark blue */
   }
 
   .close-info {
