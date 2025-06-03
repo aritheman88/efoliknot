@@ -698,13 +698,13 @@ footer {
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-    /* 1. Smaller, reorganized header */
+    /* Smaller, reorganized header */
     header {
-        flex-direction: row; /* Keep horizontal layout */
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 8px 15px; /* Much smaller padding */
-        min-height: 50px; /* Reduced from default */
+        padding: 8px 15px;
+        min-height: 50px;
     }
 
     .logo-container {
@@ -714,28 +714,28 @@ footer {
     }
 
     .logo {
-        height: 35px; /* Much smaller logo */
+        height: 35px;
         width: auto;
     }
 
     .title-container {
         flex: 1;
-        text-align: right; /* Align with logo */
+        text-align: right;
         margin-right: 12px;
     }
 
     .title-container h1 {
-        font-size: 1rem; /* Smaller title */
+        font-size: 1rem;
         margin-bottom: 0;
         line-height: 1.2;
     }
 
     .subtitle {
-        font-size: 0.75rem; /* Smaller subtitle */
+        font-size: 0.75rem;
         opacity: 0.9;
     }
 
-    /* 2. Better positioned info button */
+    /* Better positioned info button */
     #info-button {
         margin: 0;
         flex-shrink: 0;
@@ -747,14 +747,14 @@ footer {
         font-size: 14px;
     }
 
-    /* 3. Better filter layout - side by side dropdowns */
+    /* Better filter layout */
     .content {
         flex-direction: column;
     }
 
     .sidebar {
         width: 100%;
-        max-height: 160px; /* Reduced height since removing store info */
+        max-height: 160px;
         padding: 12px;
         border-bottom: 1px solid #ddd;
     }
@@ -770,12 +770,12 @@ footer {
         margin-bottom: 8px;
     }
 
-    /* Create grid layout for filters */
+    /* Better grid layout for filters */
     .filter-groups-mobile {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two columns for dropdowns */
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .filter-group {
@@ -793,52 +793,59 @@ footer {
         border-radius: 6px;
     }
 
-    /* Price range filter spans full width below */
+    /* Price range + reset button on same row */
     .price-range-mobile {
-        grid-column: 1 / -1; /* Span both columns */
-        margin-bottom: 8px;
-    }
-
-    .range-slider {
-        flex-direction: row;
-        align-items: center;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
         gap: 10px;
-    }
-
-    .range-slider input[type="range"] {
-        flex: 1;
+        align-items: end;
         margin-bottom: 0;
     }
 
-    .range-slider output {
-        font-size: 0.75rem;
-        min-width: 35px;
+    .price-range-mobile .range-slider {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .price-range-mobile .range-slider input[type="range"] {
+        margin-bottom: 3px;
+    }
+
+    .price-range-mobile .range-slider output {
+        font-size: 0.7rem;
+        min-width: 30px;
         text-align: center;
         background: var(--secondary-color);
         color: white;
-        padding: 2px 6px;
+        padding: 1px 4px;
         border-radius: 3px;
+        align-self: center;
     }
 
-    /* Reset button spans full width */
+    /* Reset button styled for same row */
     .reset-button-mobile {
-        grid-column: 1 / -1;
-        margin-top: 5px;
+        grid-column: unset;
+        margin-top: 0;
+        display: flex;
+        align-items: flex-end;
     }
 
-    .btn {
-        padding: 8px 12px;
-        font-size: 0.8rem;
+    .reset-button-mobile .btn {
+        padding: 6px 8px;
+        font-size: 0.75rem;
+        height: fit-content;
+        white-space: nowrap;
     }
 
-    /* 4. Hide store info section completely on mobile */
+    /* Hide store info section completely on mobile */
     .store-info {
         display: none;
     }
 
     /* Adjust map height accordingly */
     #map {
-        height: calc(100vh - 210px); /* header (50px) + sidebar (160px) */
+        height: calc(100vh - 210px);
         min-height: 300px;
     }
 
@@ -958,15 +965,19 @@ footer {
         font-size: 0.8rem;
     }
 
-    .range-slider output {
-        font-size: 0.7rem;
-        min-width: 32px;
-        padding: 1px 4px;
+    .price-range-mobile {
+        gap: 8px;
     }
 
-    .btn {
-        padding: 6px 10px;
-        font-size: 0.75rem;
+    .price-range-mobile .range-slider output {
+        font-size: 0.65rem;
+        min-width: 28px;
+        padding: 1px 3px;
+    }
+
+    .reset-button-mobile .btn {
+        padding: 5px 6px;
+        font-size: 0.7rem;
     }
 
     #map {

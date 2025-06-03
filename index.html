@@ -67,8 +67,9 @@
                             </select>
                         </div>
 
+                        <!-- UPDATED: Price range and reset button on same row -->
                         <div class="filter-group price-range-mobile">
-                            <label for="price-diff-filter">עד כמה יקר\זול מהממוצע (תורידו בשביל רק הזולים):</label>
+                            <label for="price-diff-filter">רמת מחירים מקסימלית</label>
                             <div class="range-slider">
                                 <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
                                 <output id="price-diff-output">20%</output>
@@ -76,11 +77,10 @@
                         </div>
 
                         <div class="reset-button-mobile">
-                            <button id="reset-filters" class="btn">איפוס מסננים</button>
+                            <button id="reset-filters" class="btn">איפוס</button>
                         </div>
                     </div>
                 </div>
-
                 <div class="store-info">
                     <h2>מידע על החנות</h2>
                     <div id="store-details">
