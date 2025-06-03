@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'שפע ברכת השם': 'shefa.png',
         'שפע שוק': 'shefa.png',
         'אלמשהדאוי קינג סטור בע"מ': 'kingstore.png',
-        'פרש מרקט': 'shefa.png'
+        'פרש מרקט': 'freshmarket.png'
         // Add more chains as needed
     };
 
