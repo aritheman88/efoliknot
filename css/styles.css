@@ -697,6 +697,7 @@ footer {
 }
 
 /* Enhanced Mobile Responsive Styles */
+
 @media (max-width: 768px) {
     /* Smaller, reorganized header */
     header {
@@ -754,9 +755,10 @@ footer {
 
     .sidebar {
         width: 100%;
-        max-height: 160px;
-        padding: 12px;
+        max-height: 140px; /* Reduced even more */
+        padding: 10px;
         border-bottom: 1px solid #ddd;
+        overflow-y: auto;
     }
 
     .filter-container {
@@ -766,76 +768,91 @@ footer {
     }
 
     .filter-container h2 {
-        font-size: 1rem;
-        margin-bottom: 8px;
+        font-size: 0.9rem;
+        margin-bottom: 6px;
     }
 
-    /* Better grid layout for filters */
+    /* FIXED: Simpler mobile grid layout */
     .filter-groups-mobile {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-bottom: 8px;
+        grid-template-rows: auto auto;
+        gap: 8px;
+        align-items: start;
     }
 
     .filter-group {
-        margin-bottom: 8px;
-    }
-
-    .filter-group label {
-        font-size: 0.8rem;
-        margin-bottom: 3px;
-    }
-
-    .filter-group select {
-        padding: 6px 8px;
-        font-size: 0.85rem;
-        border-radius: 6px;
-    }
-
-    /* Price range + reset button on same row */
-    .price-range-mobile {
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 10px;
-        align-items: end;
         margin-bottom: 0;
     }
 
-    .price-range-mobile .range-slider {
+    .filter-group label {
+        font-size: 0.75rem;
+        margin-bottom: 2px;
+        display: block;
+    }
+
+    .filter-group select {
+        padding: 5px 6px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    /* FIXED: Price range takes full width of second row */
+    .price-range-mobile {
+        grid-column: 1 / -1; /* Span both columns */
+        grid-row: 2; /* Second row */
+        display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 3px;
+    }
+
+    .price-range-mobile label {
+        font-size: 0.75rem;
+        margin-bottom: 2px;
+    }
+
+    /* FIXED: Horizontal layout for slider and button */
+    .price-control-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .price-range-mobile .range-slider {
+        flex: 3; /* Takes 3/4 of space */
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
     }
 
     .price-range-mobile .range-slider input[type="range"] {
-        margin-bottom: 3px;
+        width: 100%;
+        margin-bottom: 0;
     }
 
     .price-range-mobile .range-slider output {
-        font-size: 0.7rem;
-        min-width: 30px;
+        font-size: 0.65rem;
         text-align: center;
         background: var(--secondary-color);
         color: white;
-        padding: 1px 4px;
-        border-radius: 3px;
-        align-self: center;
+        padding: 1px 3px;
+        border-radius: 2px;
     }
 
-    /* Reset button styled for same row */
+    /* FIXED: Reset button in same row as slider */
     .reset-button-mobile {
-        grid-column: unset;
-        margin-top: 0;
+        flex: 1; /* Takes 1/4 of space */
         display: flex;
         align-items: flex-end;
     }
 
     .reset-button-mobile .btn {
-        padding: 6px 8px;
-        font-size: 0.75rem;
-        height: fit-content;
+        padding: 4px 6px;
+        font-size: 0.7rem;
         white-space: nowrap;
+        width: 100%;
+        height: fit-content;
     }
 
     /* Hide store info section completely on mobile */
@@ -845,7 +862,7 @@ footer {
 
     /* Adjust map height accordingly */
     #map {
-        height: calc(100vh - 210px);
+        height: calc(100vh - 190px); /* Reduced sidebar height */
         min-height: 300px;
     }
 

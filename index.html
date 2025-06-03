@@ -51,6 +51,7 @@
 
                     <!-- Mobile-optimized filter layout -->
                     <div class="filter-groups-mobile">
+                        <!-- Row 1: Two dropdowns side by side -->
                         <div class="filter-group">
                             <label for="chain-filter">רשת:</label>
                             <select id="chain-filter">
@@ -67,24 +68,19 @@
                             </select>
                         </div>
 
-                        <!-- UPDATED: Price range and reset button on same row -->
+                        <!-- Row 2: Price range label, then slider + reset button on same line -->
                         <div class="filter-group price-range-mobile">
                             <label for="price-diff-filter">רמת מחירים מקסימלית</label>
-                            <div class="range-slider">
-                                <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
-                                <output id="price-diff-output">20%</output>
+                            <div class="price-control-row">
+                                <div class="range-slider">
+                                    <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
+                                    <output id="price-diff-output">20%</output>
+                                </div>
+                                <div class="reset-button-mobile">
+                                    <button id="reset-filters" class="btn">איפוס</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="reset-button-mobile">
-                            <button id="reset-filters" class="btn">איפוס</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="store-info">
-                    <h2>מידע על החנות</h2>
-                    <div id="store-details">
-                        <p class="info-placeholder">בחר חנות במפה לקבלת מידע</p>
                     </div>
                 </div>
             </div>
