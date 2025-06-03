@@ -698,6 +698,8 @@ footer {
 
 /* Enhanced Mobile Responsive Styles */
 
+/* Enhanced Mobile Responsive Styles */
+
 @media (max-width: 768px) {
     /* Smaller, reorganized header */
     header {
@@ -755,7 +757,7 @@ footer {
 
     .sidebar {
         width: 100%;
-        max-height: 140px;
+        max-height: 160px; /* Increased from 140px */
         padding: 10px;
         border-bottom: 1px solid #ddd;
         overflow-y: auto;
@@ -769,15 +771,15 @@ footer {
 
     .filter-container h2 {
         font-size: 0.9rem;
-        margin-bottom: 6px;
+        margin-bottom: 5px; /* Reduced from 6px */
     }
 
-    /* Mobile grid layout - RTL friendly */
+    /* Mobile grid layout - tighter spacing */
     .filter-groups-mobile {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto; /* Three rows */
-        gap: 8px;
+        grid-template-rows: auto auto auto;
+        gap: 6px; /* Reduced from 8px */
         align-items: start;
     }
 
@@ -787,78 +789,81 @@ footer {
 
     .filter-group label {
         font-size: 0.75rem;
-        margin-bottom: 2px;
+        margin-bottom: 1px; /* Reduced from 2px */
         display: block;
     }
 
     .filter-group select {
-        padding: 5px 6px;
+        padding: 4px 6px; /* Reduced from 5px 6px */
         font-size: 0.8rem;
         border-radius: 4px;
         width: 100%;
     }
 
-    /* FIXED: Price range takes full width of row 2 with proper RTL layout */
+    /* Price range section - more compact */
     .price-range-mobile {
-        grid-column: 1 / -1; /* Span both columns */
-        grid-row: 2; /* Second row */
-        margin-bottom: 4px;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-bottom: 2px; /* Reduced from 4px */
     }
 
     .price-range-mobile label {
         font-size: 0.75rem;
-        margin-bottom: 4px;
+        margin-bottom: 2px; /* Reduced from 4px */
         display: block;
-        text-align: right; /* RTL alignment */
+        text-align: right;
     }
 
-    /* FIXED: Horizontal layout for slider and button - RTL corrected */
+    /* Horizontal layout for slider and button - tighter */
     .price-control-row {
         display: flex;
         align-items: center;
-        gap: 8px;
-        direction: rtl; /* Force RTL direction */
+        gap: 6px; /* Reduced from 8px */
+        direction: rtl;
     }
 
-    /* FIXED: Range slider takes most space and is properly aligned */
+    /* Range slider - ensure output fits */
     .price-range-mobile .range-slider {
-        flex: 3; /* Takes 3/4 of space */
+        flex: 3;
         display: flex;
         flex-direction: column;
-        gap: 2px;
-        order: 1; /* First in RTL (appears on right) */
+        gap: 1px; /* Reduced from 2px */
+        order: 1;
     }
 
     .price-range-mobile .range-slider input[type="range"] {
         width: 100%;
         margin-bottom: 0;
-        direction: ltr; /* Slider itself should be LTR for proper behavior */
+        direction: ltr;
+        height: 20px; /* Explicit height to control spacing */
     }
 
     .price-range-mobile .range-slider output {
-        font-size: 0.65rem;
+        font-size: 0.6rem; /* Reduced from 0.65rem */
         text-align: center;
         background: var(--secondary-color);
         color: white;
-        padding: 1px 3px;
+        padding: 1px 2px; /* Reduced padding */
         border-radius: 2px;
-        direction: ltr; /* Numbers should be LTR */
+        direction: ltr;
+        line-height: 1; /* Tight line height */
     }
 
-    /* FIXED: Reset button positioned properly in RTL */
+    /* Reset button - more compact */
     .reset-button-mobile {
-        flex: 1; /* Takes 1/4 of space */
+        flex: 1;
         display: flex;
         align-items: center;
-        order: 2; /* Second in RTL (appears on left) */
+        order: 2;
     }
 
     .reset-button-mobile .btn {
-        padding: 4px 6px;
-        font-size: 0.7rem;
+        padding: 3px 5px; /* Reduced from 4px 6px */
+        font-size: 0.65rem; /* Reduced from 0.7rem */
         white-space: nowrap;
         width: 100%;
         height: fit-content;
+        line-height: 1.1; /* Tight line height */
     }
 
     /* Hide store info section completely on mobile */
@@ -866,9 +871,9 @@ footer {
         display: none;
     }
 
-    /* Adjust map height accordingly */
+    /* Adjust map height for larger sidebar */
     #map {
-        height: calc(100vh - 190px);
+        height: calc(100vh - 210px); /* Increased from 190px */
         min-height: 300px;
     }
 
