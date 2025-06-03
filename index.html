@@ -49,31 +49,36 @@
                 <div class="filter-container">
                     <h2>מסננים</h2>
 
-                    <div class="filter-group">
-                        <label for="chain-filter">רשת:</label>
-                        <select id="chain-filter">
-                            <option value="all">הכל</option>
-                            <!-- Will be populated via JavaScript -->
-                        </select>
-                    </div>
+                    <!-- Mobile-optimized filter layout -->
+                    <div class="filter-groups-mobile">
+                        <div class="filter-group">
+                            <label for="chain-filter">רשת:</label>
+                            <select id="chain-filter">
+                                <option value="all">הכל</option>
+                                <!-- Will be populated via JavaScript -->
+                            </select>
+                        </div>
 
-                    <div class="filter-group">
-                        <label for="city-filter">עיר:</label>
-                        <select id="city-filter">
-                            <option value="all">הכל</option>
-                            <!-- Will be populated via JavaScript -->
-                        </select>
-                    </div>
+                        <div class="filter-group">
+                            <label for="city-filter">עיר:</label>
+                            <select id="city-filter">
+                                <option value="all">הכל</option>
+                                <!-- Will be populated via JavaScript -->
+                            </select>
+                        </div>
 
-                    <div class="filter-group">
-                        <label for="price-diff-filter">עד כמה יקר\זול מהממוצע (תורידו בשביל רק הזולים):</label>
-                        <div class="range-slider">
-                            <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
-                            <output id="price-diff-output">20%</output>
+                        <div class="filter-group price-range-mobile">
+                            <label for="price-diff-filter">עד כמה יקר\זול מהממוצע (תורידו בשביל רק הזולים):</label>
+                            <div class="range-slider">
+                                <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
+                                <output id="price-diff-output">20%</output>
+                            </div>
+                        </div>
+
+                        <div class="reset-button-mobile">
+                            <button id="reset-filters" class="btn">איפוס מסננים</button>
                         </div>
                     </div>
-
-                    <button id="reset-filters" class="btn">איפוס מסננים</button>
                 </div>
 
                 <div class="store-info">

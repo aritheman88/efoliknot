@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'קרפור': 'carrefour.png',
         'שפע ברכת השם': 'shefa.png',
         'שפע שוק': 'shefa.png',
+        'אלמשהדאוי קינג סטור בע"מ': 'kingstore.png',
+        'פרש מרקט': 'freshmarket.png'
         // Add more chains as needed
     };
 
