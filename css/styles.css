@@ -849,6 +849,53 @@ footer {
         line-height: 1; /* Tight line height */
     }
 
+/* Force LTR direction for the range input itself */
+#price-diff-filter {
+    direction: ltr !important;
+}
+
+/* Fix the container direction while keeping labels RTL */
+.range-slider {
+    direction: ltr;
+}
+
+.slider-labels {
+    direction: rtl; /* Keep labels in RTL for proper Hebrew text flow */
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+
+    /* Ensure the price control row maintains proper direction */
+    .price-control-row {
+        direction: rtl; /* Overall container RTL */
+    }
+
+    /* But the slider itself should be LTR */
+    .price-range-mobile .range-slider {
+        direction: ltr !important;
+    }
+
+    /* Keep the output (percentage display) in LTR for numbers */
+    .price-range-mobile .range-slider output {
+        direction: ltr !important;
+    }
+
+    /* Ensure labels stay RTL */
+    .price-range-mobile .slider-labels {
+        direction: rtl !important;
+    }
+}
+
+/* Additional mobile fix for very small screens */
+@media (max-width: 480px) {
+    #price-diff-filter {
+        direction: ltr !important;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
     /* Reset button - more compact */
     .reset-button-mobile {
         flex: 1;
