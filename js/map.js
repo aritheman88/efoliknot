@@ -120,18 +120,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let storesData = [];
     let visibleMarkers = [];
 
-    // Store filter values
+    // Simplified store filter - only price difference
     const filters = {
-        chain: 'all',
-        city: 'all',
-        priceDiff: 20 // Changed initial value to 20 to show all stores
+        priceDiff: 20 // Default to show all stores
     };
 
     // DOM elements for filters
-    const chainFilter = document.getElementById('chain-filter');
-    const cityFilter = document.getElementById('city-filter');
     const priceDiffFilter = document.getElementById('price-diff-filter');
-    const priceDiffOutput = document.getElementById('price-diff-output');
     const resetFiltersBtn = document.getElementById('reset-filters');
     const storeDetails = document.getElementById('store-details');
 
@@ -140,44 +135,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             storesData = data.features;
-            initializeFilters(storesData);
             addMarkersToMap(storesData);
         })
         .catch(error => {
             console.error('Error loading GeoJSON data:', error);
             alert('שגיאה בטעינת נתוני המפה. אנא נסה שוב מאוחר יותר.');
         });
-
-    // Initialize filter values
-    function initializeFilters(data) {
-        // Get unique chains
-        const chains = [...new Set(data.map(store => store.properties.chainname).filter(Boolean))].sort();
-
-        // Log all unique chain names to help identify missing logos
-        console.log('Unique chain names in data:', chains);
-
-        // Populate chain select
-        chains.forEach(chain => {
-            const option = document.createElement('option');
-            option.value = chain;
-            option.textContent = chain;
-            chainFilter.appendChild(option);
-        });
-
-        // Get unique cities
-        const cities = [...new Set(data.map(store => store.properties.city).filter(Boolean))].sort();
-
-        // Populate city select
-        cities.forEach(city => {
-            const option = document.createElement('option');
-            option.value = city;
-            option.textContent = city;
-            cityFilter.appendChild(option);
-        });
-
-        // Initialize range slider outputs
-        updateRangeOutputs();
-    }
 
     // Helper function to get chain logo
     function getChainLogo(chainname) {
@@ -245,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const logoPath = `img/${getChainLogo(props.chainname)}`;
 
         // Create popup content with formatted price difference
-        // UPDATED: Added store_code to the popup link
         const popupContent = `
             <div class="popup-header">${props.store_name || 'חנות'}</div>
             <div class="popup-content">
@@ -266,12 +228,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="number-wrapper">${formattedPriceDiff < 0 ? '-' : formattedPriceDiff > 0 ? '+' : ''}${Math.abs(formattedPriceDiff)}%</span>
                     </span>
                 </p>` : ''}
-                <!-- Temporarily disabled:
-                <a href="#" class="popup-link" data-store-id="${props.storeid || props.store_code}" data-store-code="${props.store_code}">הצג פרטים נוספים</a>
-                -->
             </div>
         `;
-
 
         // Add popup to marker
         marker.bindPopup(popupContent);
@@ -290,10 +248,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (data && data.length > 0) {
             console.log("First store properties:", data[0].properties);
             console.log("store_code exists:", data[0].properties.hasOwnProperty('store_code'));
+        }
+
         // Clear existing markers
         markers.clearLayers();
         visibleMarkers = [];
-        }
+
         // Add new markers
         data.forEach(store => {
             if (matchesFilters(store)) {
@@ -315,21 +275,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Check if store matches current filters
+    // Check if store matches current filters - simplified to only check price difference
     function matchesFilters(store) {
         const props = store.properties;
 
-        // Chain filter
-        if (filters.chain !== 'all' && props.chainname !== filters.chain) {
-            return false;
-        }
-
-        // City filter
-        if (filters.city !== 'all' && props.city !== filters.city) {
-            return false;
-        }
-
-        // Price difference filter - changed to show stores with price difference LESS THAN the max value
+        // Price difference filter - show stores with price difference LESS THAN the max value
         if (props.average_price_diff === undefined || props.average_price_diff === null || props.average_price_diff > filters.priceDiff) {
             return false;
         }
@@ -409,32 +359,16 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
 
-        storeDetails.innerHTML = detailsHTML;
-    }
-
-    // Update range slider output values
-    function updateRangeOutputs() {
-        priceDiffOutput.textContent = `${filters.priceDiff}%`;
+        if (storeDetails) {
+            storeDetails.innerHTML = detailsHTML;
+        }
     }
 
     // Event Listeners
 
-    // Chain filter
-    chainFilter.addEventListener('change', function() {
-        filters.chain = this.value;
-        addMarkersToMap(storesData);
-    });
-
-    // City filter
-    cityFilter.addEventListener('change', function() {
-        filters.city = this.value;
-        addMarkersToMap(storesData);
-    });
-
     // Price difference filter - now filters stores with price difference LESS THAN the max value
     priceDiffFilter.addEventListener('input', function() {
         filters.priceDiff = parseInt(this.value);
-        updateRangeOutputs();
     });
 
     priceDiffFilter.addEventListener('change', function() {
@@ -444,17 +378,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset filters
     resetFiltersBtn.addEventListener('click', function() {
         // Reset filter values
-        filters.chain = 'all';
-        filters.city = 'all';
         filters.priceDiff = 20; // Reset to 20 to show all stores
 
         // Reset DOM elements
-        chainFilter.value = 'all';
-        cityFilter.value = 'all';
         priceDiffFilter.value = 20;
-
-        // Update outputs
-        updateRangeOutputs();
 
         // Update map
         addMarkersToMap(storesData);
@@ -501,10 +428,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to fetch and display store price data
-
     window.showStorePrices = function(storeCode) {
         console.log('showStorePrices called with store code:', storeCode);
-        
+
         // Get elements
         const modal = document.getElementById('price-modal');
         const modalTitle = document.getElementById('price-modal-title');
@@ -512,24 +438,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const tableContainer = document.getElementById('price-table-container');
         const searchInput = document.getElementById('price-search');
         const sortButtons = document.querySelectorAll('.sort-btn');
-        
+
         console.log('Modal element exists:', !!modal);
         console.log('Table container exists:', !!tableContainer);
-        
+
         if (!modal || !tableContainer) {
             console.error('Required modal elements not found in the DOM');
             return;
-
         }
-        
+
         // Show loading state and display modal
         tableContainer.innerHTML = '<p class="text-center">טוען נתונים...</p>';
         modal.style.display = 'block';
-        
+
         // Log the full URL we're fetching from
-        const fetchUrl = `/data/store_files/${storeCode}.json`;
+        const fetchUrl = `data/store_files/${storeCode}.json`;
         console.log('Fetching from URL:', fetchUrl);
-        
+
         // Fetch the store price data
         fetch(fetchUrl)
             .then(response => {
@@ -542,14 +467,14 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Data received:', data);
                 console.log('Number of prices:', data.prices ? data.prices.length : 0);
-                
+
                 // Update modal title and store info
                 if (modalTitle) modalTitle.textContent = `טבלת מחירים - ${data.store_name}`;
                 if (modalStoreInfo) modalStoreInfo.textContent = `${data.chainname}${data.subchainname ? ' - ' + data.subchainname : ''}, ${data.city}`;
-                
+
                 // Create table with the price data
                 createPriceTable(data, tableContainer);
-                
+
                 // Setup search functionality
                 if (searchInput && sortButtons) {
                     setupSearchAndSort(data, tableContainer, searchInput, sortButtons);
@@ -566,7 +491,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             });
     };
-    
 
     // Create the price table
     function createPriceTable(data, container, sortBy = 'name', sortDir = 'asc', searchTerm = '') {

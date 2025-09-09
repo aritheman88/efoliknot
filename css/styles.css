@@ -1019,3 +1019,100 @@ footer {
         max-width: 120px;
     }
 }
+
+/* Slider labels styling - add this to your existing CSS */
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #666;
+    direction: rtl;
+}
+
+.slider-label-left {
+    text-align: left;
+    font-weight: bold;
+    color: #006400; /* Green color for "cheap only" */
+    font-size: 0.75em;
+}
+
+.slider-label-right {
+    text-align: right;
+    font-weight: bold;
+    color: #ff463c; /* Orange/red color for "including expensive" */
+    font-size: 0.75em;
+}
+
+/* Mobile responsive adjustments */
+.filter-groups-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price-range-mobile {
+    width: 100%;
+}
+
+.price-control-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.price-control-row .range-slider {
+    flex: 1;
+}
+
+.reset-button-mobile {
+    flex-shrink: 0;
+}
+
+.reset-button-mobile .btn {
+    padding: 8px 16px;
+    background-color: #ff463c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.reset-button-mobile .btn:hover {
+    background-color: #e03d35;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .price-control-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .price-control-row .range-slider {
+        width: 100%;
+    }
+
+    .reset-button-mobile {
+        align-self: center;
+    }
+
+    .slider-labels {
+        font-size: 0.8em;
+    }
+}
+
+/* Remove styles for removed elements */
+/* These selectors ensure no styling conflicts remain from removed city/chain filters */
+#chain-filter,
+#city-filter {
+    display: none !important;
+}
+
+/* Hide any remaining filter group elements that were for city/chain */
+.filter-group:has(#chain-filter),
+.filter-group:has(#city-filter) {
+    display: none !important;
+}

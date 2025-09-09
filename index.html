@@ -47,34 +47,18 @@
         <div class="content">
             <div class="sidebar">
                 <div class="filter-container">
-                    <h2>מסננים</h2>
+                    <h2>אילו סופרמרקטים להראות?</h2>
 
-                    <!-- Mobile-optimized filter layout -->
+                    <!-- Simplified filter with only price range -->
                     <div class="filter-groups-mobile">
-                        <!-- Row 1: Two dropdowns side by side -->
-                        <div class="filter-group">
-                            <label for="chain-filter">רשת:</label>
-                            <select id="chain-filter">
-                                <option value="all">הכל</option>
-                                <!-- Will be populated via JavaScript -->
-                            </select>
-                        </div>
-
-                        <div class="filter-group">
-                            <label for="city-filter">עיר:</label>
-                            <select id="city-filter">
-                                <option value="all">הכל</option>
-                                <!-- Will be populated via JavaScript -->
-                            </select>
-                        </div>
-
-                        <!-- Row 2: Price range label, then slider + reset button on same line -->
                         <div class="filter-group price-range-mobile">
-                            <label for="price-diff-filter">רמת מחירים מקסימלית</label>
                             <div class="price-control-row">
                                 <div class="range-slider">
                                     <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
-                                    <output id="price-diff-output">20%</output>
+                                    <div class="slider-labels">
+                                        <span class="slider-label-left">רק הזולים</span>
+                                        <span class="slider-label-right">כולל יקרים</span>
+                                    </div>
                                 </div>
                                 <div class="reset-button-mobile">
                                     <button id="reset-filters" class="btn">איפוס</button>
@@ -256,27 +240,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const legendContent = document.getElementById('legend-content');
     const legendIcon = toggleButton.querySelector('i');
 
-    toggleButton.addEventListener('click', function() {
-        // Toggle content visibility
-        if (legendContent.style.display === 'none') {
-            legendContent.style.display = 'block';
-            legendIcon.classList.remove('fa-chevron-up');
-            legendIcon.classList.add('fa-chevron-down');
-            localStorage.setItem('legendVisible', 'true');
-        } else {
+    if (toggleButton && legendContent && legendIcon) {
+        toggleButton.addEventListener('click', function() {
+            // Toggle content visibility
+            if (legendContent.style.display === 'none') {
+                legendContent.style.display = 'block';
+                legendIcon.classList.remove('fa-chevron-up');
+                legendIcon.classList.add('fa-chevron-down');
+                localStorage.setItem('legendVisible', 'true');
+            } else {
+                legendContent.style.display = 'none';
+                legendIcon.classList.remove('fa-chevron-down');
+                legendIcon.classList.add('fa-chevron-up');
+                localStorage.setItem('legendVisible', 'false');
+            }
+        });
+
+        // Check if user previously set legend visibility
+        const legendVisible = localStorage.getItem('legendVisible');
+        if (legendVisible === 'false') {
             legendContent.style.display = 'none';
             legendIcon.classList.remove('fa-chevron-down');
             legendIcon.classList.add('fa-chevron-up');
-            localStorage.setItem('legendVisible', 'false');
         }
-    });
-
-    // Check if user previously set legend visibility
-    const legendVisible = localStorage.getItem('legendVisible');
-    if (legendVisible === 'false') {
-        legendContent.style.display = 'none';
-        legendIcon.classList.remove('fa-chevron-down');
-        legendIcon.classList.add('fa-chevron-up');
     }
 });
 </script>
@@ -302,10 +288,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close popup when clicking on the overlay
-    overlay.addEventListener('click', function() {
-      infoPopup.style.display = 'none';
-      overlay.style.display = 'none';
-    });
+    if (overlay) {
+        overlay.addEventListener('click', function() {
+          infoPopup.style.display = 'none';
+          overlay.style.display = 'none';
+        });
+    }
 
     // Prevent closing when clicking inside the popup
     infoPopup.addEventListener('click', function(e) {
@@ -316,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && infoPopup.style.display === 'block') {
         infoPopup.style.display = 'none';
-        overlay.style.display = 'none';
+        if (overlay) overlay.style.display = 'none';
       }
     });
   });
@@ -339,8 +327,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div id="popup-overlay" class="popup-overlay"></div>
-
-
 
 </body>
 </html>
