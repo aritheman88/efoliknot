@@ -866,24 +866,30 @@ footer {
 /* Mobile-specific fixes */
 @media (max-width: 768px) {
 
-    /* Ensure the price control row maintains proper direction */
-    .price-control-row {
-        direction: rtl; /* Overall container RTL */
+    /* Swap the label positions to match mobile slider behavior */
+    .slider-labels {
+        flex-direction: row-reverse; /* This swaps "רק הזולים" and "כולל יקרים" positions */
+        direction: rtl !important;
     }
 
-    /* But the slider itself should be LTR */
-    .price-range-mobile .range-slider {
+    /* Ensure the slider itself works in LTR direction */
+    .price-range-mobile .range-slider input[type="range"] {
         direction: ltr !important;
     }
 
-    /* Keep the output (percentage display) in LTR for numbers */
+    /* Keep the output (percentage display) in LTR for proper number display */
     .price-range-mobile .range-slider output {
         direction: ltr !important;
     }
 
-    /* Ensure labels stay RTL */
-    .price-range-mobile .slider-labels {
-        direction: rtl !important;
+    /* Overall container maintains RTL for proper Hebrew layout */
+    .price-control-row {
+        direction: rtl;
+    }
+
+    /* Range slider container should be LTR to avoid conflicts */
+    .price-range-mobile .range-slider {
+        direction: ltr !important;
     }
 }
 
