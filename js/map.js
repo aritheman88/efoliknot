@@ -21,38 +21,26 @@ document.addEventListener('DOMContentLoaded', function() {
             let totalPriceDiff = 0;
             let validMarkers = 0;
 
-            // Debug - log cluster size and marker details
-            console.log("Processing cluster with " + childMarkers.length + " markers");
+// Check each marker for average_price_diff data
+childMarkers.forEach(function(marker) {
+    let priceDiff;
+    if (marker.options && marker.options.priceDiff !== undefined) {
+        priceDiff = parseFloat(marker.options.priceDiff);
+    } else if (marker.feature &&
+              marker.feature.properties &&
+              marker.feature.properties.average_price_diff !== undefined &&
+              marker.feature.properties.average_price_diff !== null) {
+        priceDiff = parseFloat(marker.feature.properties.average_price_diff);
+    }
 
-            // Check each marker for average_price_diff data
-            childMarkers.forEach(function(marker, index) {
-                let priceDiff;
-                if (marker.options && marker.options.priceDiff !== undefined) {
-                    // Get price diff from options if available
-                    priceDiff = parseFloat(marker.options.priceDiff);
-                    console.log(`Marker ${index} - from options:`, priceDiff);
-                } else if (marker.feature &&
-                          marker.feature.properties &&
-                          marker.feature.properties.average_price_diff !== undefined &&
-                          marker.feature.properties.average_price_diff !== null) {
-                    // Get price diff from feature properties
-                    priceDiff = parseFloat(marker.feature.properties.average_price_diff);
-                    console.log(`Marker ${index} - from properties:`, priceDiff);
-                }
+    if (!isNaN(priceDiff)) {
+        totalPriceDiff += priceDiff;
+        validMarkers++;
+    }
+});
 
-                if (!isNaN(priceDiff)) {
-                    totalPriceDiff += priceDiff;
-                    validMarkers++;
-                }
-            });
-
-            // Calculate average
-            const avgPriceDiff = validMarkers > 0 ? totalPriceDiff / validMarkers : 0;
-
-            // Debug - log calculations
-            console.log("Total price diff:", totalPriceDiff);
-            console.log("Valid markers:", validMarkers);
-            console.log("Average price diff:", avgPriceDiff.toFixed(2) + "%");
+// Calculate average
+const avgPriceDiff = validMarkers > 0 ? totalPriceDiff / validMarkers : 0;
 
             // Determine icon color based on average price difference
             let className;
@@ -69,15 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 className = 'marker-cluster-red'; // Above 8% - red
             }
 
-            // Debug - log selected class and criteria
-            console.log("Average price diff:", avgPriceDiff, "Class selected:", className);
-            console.log("Criteria check:", {
-                "≤ -8%": avgPriceDiff <= -8,
-                "≤ -3%": avgPriceDiff <= -3,
-                "≤ 3%": avgPriceDiff <= 3,
-                "≤ 8%": avgPriceDiff <= 8,
-                "> 8%": avgPriceDiff > 8
-            });
 
             return new L.DivIcon({
                 html: '<div><span>' + cluster.getChildCount() + '</span></div>',
@@ -244,11 +223,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add markers to map
     function addMarkersToMap(data) {
-        // Add debug to check the first store's properties
-        if (data && data.length > 0) {
-            console.log("First store properties:", data[0].properties);
-            console.log("store_code exists:", data[0].properties.hasOwnProperty('store_code'));
-        }
 
         // Clear existing markers
         markers.clearLayers();
@@ -366,14 +340,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event Listeners
 
-    // Price difference filter - now filters stores with price difference LESS THAN the max value
-    priceDiffFilter.addEventListener('input', function() {
-        filters.priceDiff = parseInt(this.value);
-    });
+// Add debouncing for better mobile performance
+let sliderTimeout;
 
-    priceDiffFilter.addEventListener('change', function() {
+// Price difference filter - now filters stores with price difference LESS THAN the max value
+priceDiffFilter.addEventListener('input', function() {
+    filters.priceDiff = parseInt(this.value);
+    clearTimeout(sliderTimeout);
+    sliderTimeout = setTimeout(() => {
         addMarkersToMap(storesData);
-    });
+    }, 300); // Wait 300ms after user stops sliding
+});
+
+priceDiffFilter.addEventListener('change', function() {
+    addMarkersToMap(storesData);
+});
 
     // Reset filters
     resetFiltersBtn.addEventListener('click', function() {
