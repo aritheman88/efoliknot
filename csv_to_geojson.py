@@ -11,6 +11,31 @@ def is_valid_number(value):
     return True
 
 
+def is_numeric_string(s):
+    """Check if a string represents a number (not text with periods like addresses)"""
+    if not isinstance(s,str):
+        return False
+
+    s = s.strip()
+    if not s:
+        return False
+
+    # Check if it's all digits, with optional minus sign and ONE decimal point
+    has_decimal = False
+    for i,c in enumerate(s):
+        if c == '-':
+            if i != 0:  # Minus only at start
+                return False
+        elif c == '.':
+            if has_decimal:  # Only one decimal allowed
+                return False
+            has_decimal = True
+        elif not c.isdigit():
+            return False
+
+    return True
+
+
 def csv_to_geojson(csv_file,output_file):
     """
     Convert a CSV file with latitude and longitude columns to GeoJSON format.
@@ -36,7 +61,7 @@ def csv_to_geojson(csv_file,output_file):
             row_num += 1
             # Skip if latitude or longitude are missing or invalid
             if not row['latitude'] or not row['longitude']:
-                print(f"Skipping row {row_num} with missing coordinates: {row}")
+                print(f"Skipping row {row_num} with missing coordinates: {row['store_code']}")
                 continue
 
             try:
@@ -66,22 +91,27 @@ def csv_to_geojson(csv_file,output_file):
                         if not value or str(value).upper() == "NULL" or str(value).upper() == "NAN":
                             feature["properties"][key] = None
                         else:
-                            # Try to convert numeric values
-                            try:
-                                if isinstance(value,str) and '.' in value:
-                                    num_value = float(value)
-                                    # Check if it's a valid number
-                                    if math.isnan(num_value) or math.isinf(num_value):
-                                        print(f"Invalid numeric value in row {row_num}, key {key}: {value}")
-                                        feature["properties"][key] = None
-                                    else:
-                                        feature["properties"][key] = num_value
-                                elif isinstance(value,str) and value.lstrip('-').isdigit():
-                                    feature["properties"][key] = int(value)
+                            # Try to convert numeric values intelligently
+                            if isinstance(value,str):
+                                # Only try to convert to number if it looks like a number
+                                if is_numeric_string(value):
+                                    try:
+                                        if '.' in value:
+                                            num_value = float(value)
+                                            # Check if it's a valid number
+                                            if math.isnan(num_value) or math.isinf(num_value):
+                                                feature["properties"][key] = None
+                                            else:
+                                                feature["properties"][key] = num_value
+                                        else:
+                                            feature["properties"][key] = int(value)
+                                    except ValueError:
+                                        # Not actually a number, keep as string
+                                        feature["properties"][key] = value
                                 else:
+                                    # Keep as string (addresses, names, etc.)
                                     feature["properties"][key] = value
-                            except (ValueError,TypeError) as e:
-                                print(f"Error converting value in row {row_num}, key {key}: {value}, Error: {e}")
+                            else:
                                 feature["properties"][key] = value
 
                 # Validate the feature to ensure all values are valid for JSON
@@ -95,7 +125,7 @@ def csv_to_geojson(csv_file,output_file):
 
             except (ValueError,KeyError) as e:
                 print(f"Skipping row {row_num} due to error: {e}")
-                print(f"Problematic row: {row}")
+                print(f"Problematic row: {row['store_code']}")
 
     # Validate the entire GeoJSON before writing
     try:
@@ -150,11 +180,9 @@ if __name__ == "__main__":
     os.makedirs("data",exist_ok=True)
 
     # Path to your CSV file - update this to your actual path
-    csv_file = "data/store_price_comparisons.csv"
+    csv_file = "data/store_price_comp_2025-11-02.csv"
 
     # Path to write the GeoJSON output
     output_file = "data/stores.geojson"
 
     csv_to_geojson(csv_file,output_file)
-
-## Test

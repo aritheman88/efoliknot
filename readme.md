@@ -60,11 +60,10 @@ leaflet/
 - **Clustering**: Markers are clustered for better performance and readability
 - **Detailed Information**: Click on markers to view detailed store information
 - **Chain Logos**: Displays supermarket chain logos in store details and popups
-- **Advanced Filtering**:
-  - Filter by supermarket chain
-  - Filter by city
-  - Filter by maximum price difference percentage (filter out expensive stores)
-- **Responsive Design**: Works on desktop and mobile devices
+- **Simplified Filtering**: Single price range filter to control which stores to display
+  - Hebrew interface: "אילו סופרמרקטים להראות?" (Which supermarkets to show?)
+  - Range from "רק הזולים" (only cheap ones) to "כולל יקרים" (including expensive ones)
+  - Mobile-optimized with swapped label positions for proper functionality- **Responsive Design**: Works on desktop and mobile devices
 - **Consistent Color-Coded System**: Easily identify stores with higher/lower prices using a consistent color system:
   - Dark Green: Prices below -8% of average (much cheaper)
   - Light Green: Prices between -8% and -3% of average (cheaper)
@@ -191,6 +190,15 @@ The stylesheet is organized into logical sections:
 5. **Media Queries**: Responsive design adjustments for different screen sizes
 
 When modifying the CSS, maintain this organization to keep the code clean and maintainable.
+
+## Performance Optimizations
+
+The application includes several mobile performance optimizations:
+- Debounced slider input to reduce frequent map updates
+- Minimized console logging for faster mobile rendering
+- Optimized marker clustering calculations
+- Mobile-specific UI adaptations for Hebrew RTL layout
+
 
 ## Future Enhancements
 
