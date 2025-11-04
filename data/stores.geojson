@@ -12840,6 +12840,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          35.23514535,
+          31.75267762
+        ]
+      },
+      "properties": {
+        "store_code": "ram_706",
+        "chainname": "רמי לוי",
+        "subchainname": "רמי לוי",
+        "storename": "ב.הפירות ארמון הנציב",
+        "storeid": 706,
+        "address": "unknown",
+        "city": "unknown",
+        "zipcode": 0,
+        "average_price_diff": 0.251085629,
+        "popular_item_count": 1602,
+        "total_items": 1628
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           35.10655,
           31.6910075
         ]
@@ -14742,29 +14765,6 @@
         "average_price_diff": -11.22306718,
         "popular_item_count": 3705,
         "total_items": 3992
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          100.7762883,
-          18.7874192
-        ]
-      },
-      "properties": {
-        "store_code": "shu_112",
-        "chainname": "שופרסל",
-        "subchainname": null,
-        "storename": null,
-        "storeid": null,
-        "address": null,
-        "city": null,
-        "zipcode": null,
-        "average_price_diff": -0.789868528,
-        "popular_item_count": 679,
-        "total_items": 990
       }
     },
     {
@@ -21573,6 +21573,29 @@
         "average_price_diff": 10.26338928,
         "popular_item_count": 1923,
         "total_items": 1947
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.86149929,
+          32.06453791
+        ]
+      },
+      "properties": {
+        "store_code": "shu_741",
+        "chainname": "שופרסל",
+        "subchainname": "שופרסל אקספרס",
+        "storename": "אקספרס יצחק רבין",
+        "storeid": 741,
+        "address": "34 יצחק רבין",
+        "city": "קרית אונו",
+        "zipcode": null,
+        "average_price_diff": 10.25082247,
+        "popular_item_count": 1822,
+        "total_items": 1855
       }
     },
     {
