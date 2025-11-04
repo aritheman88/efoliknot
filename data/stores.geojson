@@ -6906,29 +6906,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.0,
-          0.0
-        ]
-      },
-      "properties": {
-        "store_code": "mah_096",
-        "chainname": "מחסני השוק",
-        "subchainname": "אונליין",
-        "storename": "96 אינטרנט אילת",
-        "storeid": 96,
-        "address": " ",
-        "city": null,
-        "zipcode": null,
-        "average_price_diff": -15.73903015,
-        "popular_item_count": 1634,
-        "total_items": 1709
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           34.9588279,
           29.5712356
         ]
