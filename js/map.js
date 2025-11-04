@@ -1,4 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
+// Legal Disclaimer Modal
+const disclaimerModal = document.getElementById('disclaimer-modal');
+const acceptBtn = document.getElementById('accept-disclaimer');
+
+// Check if user has already accepted
+const hasAccepted = localStorage.getItem('disclaimerAccepted');
+
+if (hasAccepted === 'true') {
+    // User has already accepted, hide modal
+    disclaimerModal.style.display = 'none';
+} else {
+    // Show modal and prevent interaction with the page
+    disclaimerModal.style.display = 'block';
+
+    // Disable map interaction until accepted
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+        mapElement.style.pointerEvents = 'none';
+    }
+}
+
+// Handle accept button click
+acceptBtn.addEventListener('click', function() {
+    // Save acceptance to localStorage
+    localStorage.setItem('disclaimerAccepted', 'true');
+
+    // Hide modal
+    disclaimerModal.style.display = 'none';
+
+    // Re-enable map interaction
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+        mapElement.style.pointerEvents = 'auto';
+    }
+});
+
     // Initialize map centered at Israel
     const map = L.map('map').setView([31.7683, 35.2137], 8);
     
