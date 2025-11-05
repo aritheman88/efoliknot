@@ -7,6 +7,8 @@ def quick_debug():
     """
     Quick debug to find the specific issue with the views
     """
+    # Date to test with (can be changed as needed)
+    test_date = '2025-06-01'
 
     try:
         print("Connecting to PostgreSQL database...")
@@ -28,7 +30,7 @@ def quick_debug():
                         SELECT allprices.itemcode
                         FROM allprices
                         JOIN all_stores ON allprices.store_code = all_stores.store_code
-                        WHERE allprices.upload_date = '2025-06-01'
+                        WHERE allprices.upload_date = %s
                             AND allprices.itemprice > 0
                             AND allprices.itemprice IS NOT NULL
                             AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
@@ -38,7 +40,7 @@ def quick_debug():
                         HAVING count(DISTINCT allprices.store_code) > 10
                     )
                     SELECT COUNT(*) as popular_count FROM popular_items;
-                """)
+                """, (test_date,))
                 popular_cte_count = pg_cursor.fetchone()['popular_count']
                 print(f"   Popular items CTE: {popular_cte_count:,} items")
 
@@ -49,7 +51,7 @@ def quick_debug():
                             SELECT allprices.itemcode
                             FROM allprices
                             JOIN all_stores ON allprices.store_code = all_stores.store_code
-                            WHERE allprices.upload_date = '2025-06-01'
+                            WHERE allprices.upload_date = %s
                                 AND allprices.itemprice > 0
                                 AND allprices.itemprice IS NOT NULL
                                 AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
@@ -58,10 +60,10 @@ def quick_debug():
                             GROUP BY allprices.itemcode
                             HAVING count(DISTINCT allprices.store_code) > 10
                         )
-                        SELECT COUNT(*) as join_count 
+                        SELECT COUNT(*) as join_count
                         FROM popular_items pi
                         JOIN items_new i ON pi.itemcode = i.itemcode;
-                    """)
+                    """, (test_date,))
                     join_count = pg_cursor.fetchone()['join_count']
                     print(f"   After JOIN with items_new: {join_count:,} items")
             else:

@@ -73,22 +73,22 @@ def debug_database():
             print("=" * 60)
 
             # Test the popular_items CTE with latest date
-            pg_cursor.execute(f"""
+            pg_cursor.execute("""
                 WITH popular_items AS (
                     SELECT allprices.itemcode
                     FROM allprices
                     JOIN all_stores ON allprices.store_code = all_stores.store_code
-                    WHERE allprices.upload_date = '{latest_date}' 
-                        AND allprices.itemprice > 0 
-                        AND allprices.itemprice IS NOT NULL 
-                        AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון'])) 
-                        AND all_stores.subchainname <> 'Be' 
+                    WHERE allprices.upload_date = %s
+                        AND allprices.itemprice > 0
+                        AND allprices.itemprice IS NOT NULL
+                        AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
+                        AND all_stores.subchainname <> 'Be'
                         AND all_stores.subchainname <> 'אונליין'
                     GROUP BY allprices.itemcode
                     HAVING count(DISTINCT allprices.store_code) > 10
                 )
                 SELECT COUNT(*) as popular_item_count FROM popular_items;
-            """)
+            """, (latest_date,))
 
             popular_count = pg_cursor.fetchone()['popular_item_count']
             print(f"Popular items (>10 stores) with latest date: {popular_count:,}")
@@ -97,26 +97,26 @@ def debug_database():
                 print("\n⚠️  No popular items found! Let's check with lower threshold...")
 
                 # Test with lower threshold
-                pg_cursor.execute(f"""
+                pg_cursor.execute("""
                     WITH popular_items AS (
                         SELECT allprices.itemcode, count(DISTINCT allprices.store_code) as store_count
                         FROM allprices
                         JOIN all_stores ON allprices.store_code = all_stores.store_code
-                        WHERE allprices.upload_date = '{latest_date}' 
-                            AND allprices.itemprice > 0 
-                            AND allprices.itemprice IS NOT NULL 
-                            AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון'])) 
-                            AND all_stores.subchainname <> 'Be' 
+                        WHERE allprices.upload_date = %s
+                            AND allprices.itemprice > 0
+                            AND allprices.itemprice IS NOT NULL
+                            AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
+                            AND all_stores.subchainname <> 'Be'
                             AND all_stores.subchainname <> 'אונליין'
                         GROUP BY allprices.itemcode
                     )
-                    SELECT 
+                    SELECT
                         COUNT(*) as total_items,
                         COUNT(CASE WHEN store_count >= 5 THEN 1 END) as items_5_plus_stores,
                         COUNT(CASE WHEN store_count >= 3 THEN 1 END) as items_3_plus_stores,
                         MAX(store_count) as max_stores_per_item
                     FROM popular_items;
-                """)
+                """, (latest_date,))
 
                 threshold_stats = pg_cursor.fetchone()
                 print(f"Items with 5+ stores: {threshold_stats['items_5_plus_stores']:,}")
@@ -128,7 +128,7 @@ def debug_database():
             print("=" * 60)
 
             # Update the view to use the latest date temporarily for testing
-            test_query = f"""
+            test_query = """
                 WITH store_item_price_diffs AS (
                     SELECT s.store_code,
                         s.storename AS store_name,
@@ -154,11 +154,11 @@ def debug_database():
                             SELECT allprices.itemcode
                             FROM allprices
                             JOIN all_stores ON allprices.store_code = all_stores.store_code
-                            WHERE allprices.upload_date = '{latest_date}' 
-                                AND allprices.itemprice > 0 
-                                AND allprices.itemprice IS NOT NULL 
-                                AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון'])) 
-                                AND all_stores.subchainname <> 'Be' 
+                            WHERE allprices.upload_date = %s
+                                AND allprices.itemprice > 0
+                                AND allprices.itemprice IS NOT NULL
+                                AND (all_stores.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
+                                AND all_stores.subchainname <> 'Be'
                                 AND all_stores.subchainname <> 'אונליין'
                             GROUP BY allprices.itemcode
                             HAVING count(DISTINCT allprices.store_code) > 5  -- Lower threshold for testing
@@ -168,27 +168,27 @@ def debug_database():
                         JOIN items_new i ON pi.itemcode = i.itemcode
                         JOIN allprices p ON i.itemcode = p.itemcode
                         JOIN all_stores s ON p.store_code = s.store_code
-                        WHERE p.upload_date = '{latest_date}' 
-                            AND p.itemprice > 0 
-                            AND p.itemprice IS NOT NULL 
-                            AND (s.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון'])) 
-                            AND s.subchainname <> 'Be' 
+                        WHERE p.upload_date = %s
+                            AND p.itemprice > 0
+                            AND p.itemprice IS NOT NULL
+                            AND (s.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
+                            AND s.subchainname <> 'Be'
                             AND s.subchainname <> 'אונליין'
                         GROUP BY i.itemcode
                     ) pi ON p.itemcode = pi.itemcode
-                    WHERE p.upload_date = '{latest_date}' 
-                        AND p.itemprice > 0 
-                        AND p.itemprice IS NOT NULL 
-                        AND (s.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון'])) 
-                        AND s.subchainname <> 'Be' 
+                    WHERE p.upload_date = %s
+                        AND p.itemprice > 0
+                        AND p.itemprice IS NOT NULL
+                        AND (s.chainname <> ALL (ARRAY['סופר פארם', 'Yellow', 'דור אלון']))
+                        AND s.subchainname <> 'Be'
                         AND s.subchainname <> 'אונליין'
                 )
-                SELECT COUNT(*) as total_store_items 
-                FROM store_item_price_diffs 
+                SELECT COUNT(*) as total_store_items
+                FROM store_item_price_diffs
                 WHERE price_diff_percent IS NOT NULL;
             """
 
-            pg_cursor.execute(test_query)
+            pg_cursor.execute(test_query, (latest_date, latest_date, latest_date))
             test_count = pg_cursor.fetchone()['total_store_items']
             print(f"Store-item combinations with valid price differences: {test_count:,}")
 
