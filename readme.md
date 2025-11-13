@@ -1,8 +1,27 @@
 # Israel Supermarket Price Map
 
 An interactive web map for visualizing and comparing supermarket prices across Israel.
-The map is available at https://efoliknot.net/, and the source code is hosted on GitHub:
-https://github.com/aritheman88/efoliknot/
+- **Live map**: https://efoliknot.net/
+- **Source code**: https://github.com/aritheman88/efoliknot/
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Setup Instructions](#setup-instructions)
+- [Scripts Guide](#scripts-guide)
+  - [Update Popular Items View](#1-update_popular_items_viewpy)
+  - [Update Store Comparisons & Export](#2-update_and_export_storespy-recommended)
+  - [Update Store Comparisons Only](#3-update_store_comparisons_viewpy)
+- [Complete Workflow](#complete-workflow)
+- [Database Structure](#database-structure)
+- [Map Features](#map-features)
+- [Troubleshooting](#troubleshooting)
+- [Security & Best Practices](#security--best-practices)
+
+---
 
 ## Overview
 
@@ -14,6 +33,24 @@ This project combines a **Python data processing backend** with an **interactive
 - **Frontend**: HTML5, CSS3, JavaScript (Leaflet.js)
 - **Data Format**: GeoJSON, CSV, JSON
 
+### How It Works
+
+```
+PostgreSQL Database (Price Data)
+    ↓
+1. Define "Popular Items" → popular_items_avg_prices view
+    ↓
+2. Calculate Store Grades → store_price_comparisons view
+    ↓
+3. Export to CSV → store_price_comparisons.csv
+    ↓
+4. Convert to GeoJSON → stores.geojson
+    ↓
+Interactive Map Visualization
+```
+
+---
+
 ## Project Structure
 
 ```
@@ -21,254 +58,381 @@ efoliknot/
 │
 ├── leaflet/                           # Frontend web application
 │   ├── css/
-│   │   └── styles.css                 # Styles for the map and UI
+│   │   └── styles.css                 # Map and UI styles
 │   ├── data/
-│   │   ├── stores_map_sample.csv      # Sample CSV data
 │   │   ├── store_price_comparisons.csv # Main CSV data source
 │   │   ├── stores.geojson             # Generated GeoJSON from CSV
-│   │   └── store_files/               # Individual store price JSON files (256 stores)
-│   ├── img/                           # Image assets directory (19 chain logos)
-│   │   ├── lobby99 water.png          # Organization logo
-│   │   ├── ramiLevi.png               # Supermarket chain logos
-│   │   ├── shufersal.png
-│   │   ├── victory.png
-│   │   └── ...
+│   │   └── store_files/               # Individual store price JSON files
+│   ├── img/                           # Chain logos (19 logos)
 │   ├── js/
-│   │   └── map.js                     # Main JavaScript for interactive map (658 lines)
-│   └── index.html                     # Main HTML page (349 lines)
+│   │   └── map.js                     # Main JavaScript for interactive map
+│   └── index.html                     # Main HTML page
 │
 ├── Python Backend Scripts:
 ├── config.py                          # Database configuration (loads from .env)
-├── pg_to_geojson.py                   # PostgreSQL → GeoJSON converter (220 lines)
-├── csv_to_geojson.py                  # CSV → GeoJSON converter (188 lines)
-├── export_store_data.py               # Export store price data to CSV (250 lines)
-├── update_popular_items_view.py       # Update popular items view with custom parameters ⭐ NEW
-├── debug_database.py                  # Database diagnostic tool (209 lines)
-├── pg_quick_debug.py                  # Quick database view tester (114 lines)
+│
+├── View Update Scripts (NEW):
+├── update_popular_items_view.py       # Updates popular items view ⭐
+├── update_and_export_stores.py        # Updates view + exports CSV ⭐⭐⭐ RECOMMENDED
+├── update_store_comparisons_view.py   # Updates store comparisons view only ⭐
+│
+├── Data Processing Scripts:
+├── export_store_data.py               # Legacy export script (slower)
+├── csv_to_geojson.py                  # CSV → GeoJSON converter
+├── pg_to_geojson.py                   # PostgreSQL → GeoJSON converter
+│
+├── Debugging Tools:
+├── debug_database.py                  # Database diagnostic tool
+├── pg_quick_debug.py                  # Quick database view tester
 │
 ├── Configuration Files:
 ├── .env                               # Environment variables (NOT in git)
-├── .env.example                       # Environment template (safe to commit)
+├── .env.example                       # Environment template
 ├── .gitignore                         # Git ignore rules
 ├── requirements.txt                   # Python dependencies
-└── README.md                          # This documentation file
+└── README.md                          # This file
 ```
+
+---
 
 ## Setup Instructions
 
-### Initial Setup
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/aritheman88/efoliknot.git
-   cd efoliknot
-   ```
-
-2. **Set up Python environment** (recommended: use conda):
-   ```bash
-   conda activate basic  # or your preferred environment
-   pip install -r requirements.txt
-   ```
-
-   This installs:
-   - `psycopg2-binary` - PostgreSQL database adapter
-   - `pandas` - Data processing library
-   - `python-dotenv` - Environment variable management
-
-3. **Configure database credentials**:
-   ```bash
-   cp .env.example .env
-   ```
-
-   Edit `.env` and add your database credentials:
-   ```
-   DB_NAME=your_database_name
-   DB_USER=your_database_user
-   DB_PASSWORD=your_database_password
-   DB_HOST=your_database_host
-   DB_PORT=5432
-   ```
-
-   **IMPORTANT**: Never commit `.env` to git. It's already in `.gitignore`.
-
-4. **Prepare your data**:
-   - Place your CSV file in the `data` directory
-   - Make sure it has the required columns (latitude, longitude, etc.)
-   - Add supermarket chain logos to the `img` directory (PNG format recommended)
-
-### Running the Application
-
-1. **Update the popular items view** (recommended first step):
-   ```bash
-   # Interactive mode (recommended for first-time users)
-   python update_popular_items_view.py
-   
-   # Command-line mode with specific parameters
-   python update_popular_items_view.py --date 2025-11-02 --min-stores 10
-   
-   # Dry run to preview SQL without executing
-   python update_popular_items_view.py --dry-run -d 2025-11-02 -m 10
-   ```
-   
-   This updates the database view that determines which items are "popular" based on:
-   - **Date**: Which day's price data to use
-   - **Min stores**: Minimum number of stores an item must appear in (e.g., 10 means item must be in 10+ stores)
-
-2. **Export data from PostgreSQL to CSV**:
-   ```bash
-   python export_store_data.py
-   ```
-   This creates `data/store_price_comparisons.csv` with price comparison data.
-
-3. **Convert data to GeoJSON**:
-
-   From PostgreSQL:
-   ```bash
-   python pg_to_geojson.py
-   ```
-
-   Or from CSV:
-   ```bash
-   python csv_to_geojson.py
-   ```
-
-   This creates `data/stores.geojson` that the map will use.
-
-4. **Start a local web server**:
-   ```bash
-   cd leaflet
-   python -m http.server
-   ```
-   Then open `http://localhost:8000` in your browser.
-
-### Debugging
-
-If you encounter issues with the database views:
+### 1. Clone the Repository
 
 ```bash
-python debug_database.py      # Comprehensive diagnostics
-python pg_quick_debug.py      # Quick view testing
+git clone https://github.com/aritheman88/efoliknot.git
+cd efoliknot
 ```
 
-## Features
+### 2. Set Up Python Environment
 
-- **Interactive Map**: View all supermarkets across Israel with custom markers
-- **Clustering**: Markers are clustered for better performance and readability
-- **Detailed Information**: Click on markers to view detailed store information
-- **Chain Logos**: Displays supermarket chain logos in store details and popups
-- **Simplified Filtering**: Single price range filter to control which stores to display
-  - Hebrew interface: "אילו סופרמרקטים להראות?" (Which supermarkets to show?)
-  - Range from "רק הזולים" (only cheap ones) to "כולל יקרים" (including expensive ones)
-  - Mobile-optimized with swapped label positions for proper functionality
-- **Responsive Design**: Works on desktop and mobile devices
-- **Consistent Color-Coded System**: Easily identify stores with higher/lower prices using a consistent color system:
-  - Dark Green: Prices below -8% of average (much cheaper)
-  - Light Green: Prices between -8% and -3% of average (cheaper)
-  - Yellow: Prices between -3% and +3% of average (average)
-  - Orange: Prices between +3% and +8% of average (more expensive)
-  - Red: Prices above +8% of average (much more expensive)
-- **Collapsible Legend**: Interactive legend with toggle functionality to save screen space
-- **Price Comparison Table**: View and compare individual product prices within each store
-- **Multilingual Support**: Full Hebrew interface with proper RTL (right-to-left) text handling
-- **Custom Color Scheme**: Blue (#002d7f) and orange (#ff463c) branded color scheme
+```bash
+# Using conda (recommended)
+conda activate basic  # or your preferred environment
 
-## Chain Logo System
-
-The application automatically maps supermarket chain names to their corresponding logo images:
-
-```javascript
-const chainLogos = {
-    'רמי לוי': 'ramiLevi.png',
-    'שופרסל': 'shufersal.png',
-    'ויקטורי': 'victory.png',
-    // Additional chains...
-};
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-To add support for a new supermarket chain:
-1. Add the chain's logo to the `img` directory (PNG format with transparent background recommended)
-2. Add a mapping in the `chainLogos` object in `map.js`
+**Dependencies installed**:
+- `psycopg2-binary` - PostgreSQL database adapter
+- `pandas` - Data processing library
+- `python-dotenv` - Environment variable management
 
-The system also supports partial matching for chain names, so "רמי לוי שיווק" would match "רמי לוי" and display the correct logo.
+### 3. Configure Database Credentials
 
-## Color-Coding System
+```bash
+# Copy the example environment file
+cp .env.example .env
 
-The map uses a consistent color-coding system across all components:
-
-- **Map Markers**: Individual store markers on the map
-- **Marker Clusters**: Groups of stores when zoomed out
-- **Price Indicators**: In store popups and detail panels
-- **Price Comparison Table**: When viewing individual product prices
-
-The color thresholds are:
-- **Dark Green** (#006400): Below -8% (much cheaper than average)
-- **Light Green** (#32CD32): Between -8% and -3% (cheaper than average)
-- **Yellow** (#FFFF00): Between -3% and +3% (around average)
-- **Orange** (#FF8C00): Between +3% and +8% (more expensive than average)
-- **Red** (#FF0000): Above +8% (much more expensive than average)
-
-To modify these thresholds, edit the color determination logic in the following functions in `map.js`:
-- `createMarker` function (for individual store markers)
-- `iconCreateFunction` in the marker cluster configuration (for clustered markers)
-- Price indicator class determination in popup content and store details
-- Price cell color determination in the `createPriceTable` function
-
-## RTL Number Display
-
-The application properly handles the display of negative numbers in RTL (right-to-left) context using special CSS:
-
-```css
-.number-wrapper {
-    direction: ltr;  /* Force left-to-right direction for numbers */
-    display: inline-block;
-    unicode-bidi: embed; /* Preserves the bidirectional algorithm's behavior */
-}
+# Edit .env and add your credentials
 ```
 
-This ensures that negative signs always appear on the left side of numbers rather than the right, making price differences more intuitive to read.
+Your `.env` file should contain:
+```
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_HOST=your_database_host
+DB_PORT=5432
+```
 
-## Collapsible Legend
+**⚠️ IMPORTANT**: Never commit `.env` to git! It's already in `.gitignore`.
 
-The map includes a collapsible legend that can be toggled to save screen space:
+### 4. Verify Setup
 
-- The legend is fully customizable and shows the color-coding system
-- User preferences for the legend state (expanded/collapsed) are saved in localStorage
-- The legend is positioned to avoid interference with map controls
+Test your database connection:
+```bash
+python debug_database.py
+```
 
-## Known Issues and Troubleshooting
+---
 
-- **JSON Parsing Errors**: If you encounter "Unexpected token 'N'" errors or other JSON parsing issues, check your GeoJSON file for NaN, NULL, or other invalid JSON values. Use the enhanced `csv_to_geojson.py` script provided to handle these cases.
+## Scripts Guide
 
-- **Hebrew Text with Periods**: The CSV parser may have issues with Hebrew text containing periods (e.g., "ד.מ.", "ק.אתא"). These will generate warnings but should still create a valid GeoJSON file.
+### 1. `update_popular_items_view.py`
 
-- **Missing Logos**: If a chain logo doesn't appear, check the console log for a list of unique chain names in your data and ensure they're all mapped in the `chainLogos` object in `map.js`.
+**Purpose**: Updates the `popular_items_avg_prices` database view  
+**When to use**: First step when updating with new price data  
+**Run time**: ~15 seconds
 
-- **Missing Markers**: If markers aren't appearing, check browser console logs (F12) for errors. You can also try creating a test GeoJSON file with a few points to verify the basic functionality.
+This script defines which items are "popular" (appear in many stores) and calculates their national average prices. An item is "popular" if it appears in a minimum number of stores (e.g., 10+ stores).
 
-- **CORS Issues**: If accessing via a local file rather than a server, you might encounter Cross-Origin Resource Sharing (CORS) restrictions. Use the provided Python HTTP server to avoid these issues.
+#### Basic Usage
 
-- **Browser Cache**: If you don't see your changes after updating files, try a hard refresh (Ctrl+Shift+R) or clear your browser cache. For development, you can add version numbers to your resource URLs (e.g., `styles.css?v=1.1`).
+**Interactive mode** (recommended for beginners):
+```bash
+python update_popular_items_view.py
+```
 
-## CSV Format Requirements
+**Command-line mode** (faster for regular use):
+```bash
+python update_popular_items_view.py --date 2025-11-10 --min-stores 10
+# Or short form:
+python update_popular_items_view.py -d 2025-11-10 -m 10
+```
 
-The CSV file should include the following columns:
+**Test mode** (preview SQL without executing):
+```bash
+python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+```
 
-- `store_code`: Unique identifier for each store
-- `store_name`: Name of the store
-- `chainname`: Name of the supermarket chain
-- `subchainname`: Sub-chain name (if applicable)
-- `storeid`: Numeric ID for the store
-- `address`: Store address
-- `city`: City name
-- `zipcode`: Postal code
-- `latitude`: Geographic latitude (decimal)
-- `longitude`: Geographic longitude (decimal)
-- `average_price_diff`: Average price difference percentage compared to market average
-- `popular_item_count`: Number of popular items available in the store
+#### Parameters
+
+- **`--date`** / **`-d`**: Upload date (YYYY-MM-DD format)
+  - Example: `2025-11-10`
+  - Must match the date in your `allprices` table
+
+- **`--min-stores`** / **`-m`**: Minimum number of stores for an item to be "popular"
+  - `10` = Standard (recommended)
+  - `15` = Stricter (fewer items, more widely available)
+  - `5` = More inclusive (more items, less common)
+
+#### Example Output
+
+```
+============================================================
+Updating popular_items_avg_prices view
+============================================================
+Date: 2025-11-10
+Minimum stores threshold: 10
+============================================================
+
+Connecting to database...
+Executing view update...
+Verifying view creation...
+
+✓ View successfully updated!
+✓ Number of popular items: 847
+
+Sample of popular items (first 5):
+  - 7290000066684: חלב 3% 1 ליטר (avg: ₪6.45)
+  - 7290006587213: לחם פרוס שיפון 750 גרם (avg: ₪5.90)
+  - 7290000004013: ביצים M 12 יח' (avg: ₪13.20)
+  ...
+```
+
+---
+
+### 2. `update_and_export_stores.py` ⭐⭐⭐ **RECOMMENDED**
+
+**Purpose**: Updates the `store_price_comparisons` view AND exports to CSV  
+**When to use**: Your primary script for regular updates  
+**Run time**: ~30 seconds  
+**Why it's the best**: Combines view update + CSV export in one fast script
+
+This is the **ultimate solution** that combines the best features:
+- ✅ Fast database view updates with configurable parameters
+- ✅ Detailed progress tracking and statistics
+- ✅ Creates both dated and standard CSV files
+- ✅ 30-60x faster than the legacy export script
+
+#### Basic Usage
+
+**Standard update** (most common):
+```bash
+python update_and_export_stores.py --date 2025-11-10
+# Or short form:
+python update_and_export_stores.py -d 2025-11-10
+```
+
+**Interactive mode**:
+```bash
+python update_and_export_stores.py
+```
+
+**Re-export without updating view** (if view is already current):
+```bash
+python update_and_export_stores.py -d 2025-11-10 --skip-view-update
+```
+
+**Custom exclusions**:
+```bash
+python update_and_export_stores.py -d 2025-11-10 \
+  --exclude-chains "Yellow,דור אלון" \
+  --exclude-subchains "Be,אונליין"
+```
+
+#### Parameters
+
+- **`--date`** / **`-d`**: Upload date (YYYY-MM-DD format)
+- **`--exclude-chains`**: Comma-separated list of chains to exclude
+  - Default: `סופר פארם, Yellow, דור אלון`
+- **`--exclude-subchains`**: Comma-separated list of subchains to exclude
+  - Default: `Be, אונליין`
+- **`--exclude-cities`**: Comma-separated list of cities to exclude
+  - Default: `unknown`
+- **`--skip-view-update`**: Skip view update, only export CSV
+- **`--output-dir`**: Custom output directory
+
+#### Output Files
+
+The script creates **TWO CSV files**:
+
+1. **Dated file**: `store_price_comparisons_2025-11-10.csv`
+   - For archiving and version history
+   - Includes date in filename
+
+2. **Standard file**: `store_price_comparisons.csv`
+   - For the map to use (always latest data)
+   - No date in filename
+
+**Default location**: `C:\Users\ariel\MyPythonScripts\efoliknot\data\`
+
+#### Example Output
+
+```
+======================================================================
+[2025-11-13 10:30:15] Starting process for 2025-11-10
+======================================================================
+
+[2025-11-13 10:30:15] Connecting to PostgreSQL database...
+[2025-11-13 10:30:15]   ✓ Connected successfully!
+
+[2025-11-13 10:30:15] Step 1: Updating store_price_comparisons view...
+[2025-11-13 10:30:18]   ✓ View updated successfully in 3.2 seconds
+
+[2025-11-13 10:30:18] Step 2: Exporting view to CSV...
+[2025-11-13 10:30:21]   ✓ Loaded 847 stores in 2.8 seconds
+[2025-11-13 10:30:22]   ✓ Export completed in 3.5 seconds
+
+======================================================================
+✓ Export completed successfully!
+======================================================================
+
+Output files:
+  1. store_price_comparisons_2025-11-10.csv
+  2. store_price_comparisons.csv (for map)
+
+Summary:
+  - Total stores: 847
+  - Unique chains: 12
+  - Date: 2025-11-10
+
+Price difference statistics:
+  - Cheapest store: -12.45% below average
+  - Most expensive store: +15.32% above average
+  - Mean difference: +0.02%
+  - Median difference: -0.15%
+
+Popular items per store:
+  - Minimum: 125 items
+  - Maximum: 892 items
+  - Average: 547 items
+
+Top 5 cheapest stores:
+  רמי לוי דרך בגין      (רמי לוי, תל אביב): -8.23% | 678 items
+  ...
+
+Top 5 most expensive stores:
+  מחסני השוק גאולה      (מחסני השוק, ירושלים): +9.87% | 423 items
+  ...
+
+Stores by chain:
+  שופרסל: 256 stores | avg +1.23%
+  רמי לוי: 178 stores | avg -3.45%
+  ...
+
+Total runtime: 0.6 minutes
+======================================================================
+```
+
+---
+
+### 3. `update_store_comparisons_view.py`
+
+**Purpose**: Updates the `store_price_comparisons` view only (no CSV export)  
+**When to use**: When you only want to update the database view  
+**Run time**: ~5 seconds
+
+Use this script when:
+- You only want to update the database view
+- Other tools will read from the view directly
+- You need to test with dry-run mode
+
+#### Basic Usage
+
+```bash
+# Standard update
+python update_store_comparisons_view.py -d 2025-11-10
+
+# Test with dry-run
+python update_store_comparisons_view.py --dry-run -d 2025-11-10
+
+# Interactive mode
+python update_store_comparisons_view.py
+```
+
+---
+
+## Complete Workflow
+
+### Standard Weekly Update (Recommended)
+
+When you receive new price data:
+
+```bash
+# Step 1: Update popular items view (defines "popular")
+python update_popular_items_view.py -d 2025-11-10 -m 10
+
+# Step 2: Update store comparisons AND export CSV
+python update_and_export_stores.py -d 2025-11-10
+
+# Step 3: Convert to GeoJSON for map
+python csv_to_geojson.py
+
+# Step 4: Test locally
+cd leaflet
+python -m http.server
+# Visit http://localhost:8000
+```
+
+**Total time**: ~1 minute
+
+### Quick One-Liner
+
+```bash
+python update_popular_items_view.py -d 2025-11-10 -m 10 && \
+python update_and_export_stores.py -d 2025-11-10 && \
+python csv_to_geojson.py
+```
+
+### Batch Script (Windows)
+
+Create `update_map.bat`:
+```batch
+@echo off
+set DATE=%1
+if "%DATE%"=="" (
+    echo Usage: update_map.bat YYYY-MM-DD
+    exit /b 1
+)
+python update_popular_items_view.py -d %DATE% -m 10 || exit /b 1
+python update_and_export_stores.py -d %DATE% || exit /b 1
+python csv_to_geojson.py || exit /b 1
+echo Complete! Test at: http://localhost:8000
+```
+
+Usage: `update_map.bat 2025-11-10`
+
+### Shell Script (Linux/Mac)
+
+Create `update_map.sh`:
+```bash
+#!/bin/bash
+DATE=$1
+[ -z "$DATE" ] && { echo "Usage: update_map.sh YYYY-MM-DD"; exit 1; }
+python update_popular_items_view.py -d $DATE -m 10 || exit 1
+python update_and_export_stores.py -d $DATE || exit 1
+python csv_to_geojson.py || exit 1
+echo "Complete! Test at: http://localhost:8000"
+```
+
+Usage: `chmod +x update_map.sh && ./update_map.sh 2025-11-10`
+
+---
 
 ## Database Structure
-
-The project uses a PostgreSQL database with the following key tables and views:
 
 ### Tables
 
@@ -280,271 +444,311 @@ The project uses a PostgreSQL database with the following key tables and views:
 **`all_stores`**
 - Master table of all supermarket locations
 - Key columns: `store_code`, `storename`, `chainname`, `subchainname`, `latitude`, `longitude`, `address`, `city`, `zipcode`
-- Includes geographic coordinates for mapping
 
-**`items_new`** (or `items`)
+**`items`** (or `items_new`)
 - Product catalog with item details
 - Key columns: `itemcode`, `itemname`, `supplier`, `brand`, `category`
 
 ### Views
 
 **`popular_items_avg_prices`**
-- Calculates average prices for popular items (items sold in a configurable number of stores)
-- Excludes specific chains: Super-Pharm, Yellow, Dor Alon
-- Excludes subchains: Be, Online stores
-- Used as baseline for price comparisons
-- **Can be updated using `update_popular_items_view.py`** ⭐
+- Calculates average prices for popular items
+- Filters out: Super-Pharm, Yellow, Dor Alon chains
+- Filters out: Be, Online subchains
+- Updated by: `update_popular_items_view.py`
 
 **`store_price_comparisons`**
-- Main view that compares each store's prices to market averages
-- Calculates `average_price_diff` (percentage deviation from average)
-- Counts `popular_item_count` (number of popular items in stock)
-- Output columns match CSV format requirements above
-- Powers the interactive map visualization
+- Main view comparing each store's prices to national average
+- Calculates: `average_price_diff` (percentage), `popular_item_count`
+- Powers the interactive map
+- Updated by: `update_and_export_stores.py` or `update_store_comparisons_view.py`
 
-### Data Flow
+### View Logic
 
+The `store_price_comparisons` view:
+1. Finds all popular items in each store
+2. Compares each item's price to the national average
+3. Calculates percentage difference for each item
+4. Averages all differences to grade the store
+
+Example: Store with `-8.23%` is 8.23% cheaper than the national average.
+
+---
+
+## Map Features
+
+### Interactive Map
+- **Clustering**: Markers cluster when zoomed out for better performance
+- **Click markers**: View detailed store information
+- **Color-coded**: Easy visual identification of price levels
+
+### Price Color System
+
+Consistent across all map components:
+- **Dark Green** (#006400): Below -8% (much cheaper)
+- **Light Green** (#32CD32): -8% to -3% (cheaper)
+- **Yellow** (#FFFF00): -3% to +3% (average)
+- **Orange** (#FF8C00): +3% to +8% (more expensive)
+- **Red** (#FF0000): Above +8% (much more expensive)
+
+### Price Filtering
+- **Hebrew interface**: "אילו סופרמרקטים להראות?"
+- **Range slider**: From "רק הזולים" (only cheap) to "כולל יקרים" (including expensive)
+- **Mobile-optimized**: Proper RTL handling
+
+### Other Features
+- **Chain logos**: Automatically displays supermarket chain logos
+- **Collapsible legend**: Save screen space
+- **Price comparison table**: View individual product prices
+- **RTL support**: Full Hebrew interface with proper text handling
+- **Responsive design**: Works on desktop and mobile
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+#### "Invalid date format"
+**Solution**: Use YYYY-MM-DD format
+- ✅ Correct: `2025-11-10`
+- ❌ Wrong: `11/10/2025` or `10-11-2025`
+
+#### "View doesn't exist" or "popular_items_avg_prices not found"
+**Solution**: Run the popular items update first:
+```bash
+python update_popular_items_view.py -d 2025-11-10 -m 10
 ```
-PostgreSQL Database
-     ↓
-[update_popular_items_view.py] → Update popular items view (optional but recommended)
-     ↓
-[export_store_data.py] → CSV export
-     ↓
-[csv_to_geojson.py] → GeoJSON conversion
-     ↓
-Leaflet Map (index.html + map.js)
+
+#### Very few stores in output
+**Check**:
+1. Does the date exist in your `allprices` table?
+2. Did you use the same date for both scripts?
+3. Are your exclusions too strict?
+
+**Debug**:
+```bash
+python debug_database.py
 ```
 
-Or directly:
-
-```
-PostgreSQL Database
-     ↓
-[update_popular_items_view.py] → Update popular items view (optional but recommended)
-     ↓
-[pg_to_geojson.py] → GeoJSON conversion
-     ↓
-Leaflet Map (index.html + map.js)
+#### Map shows old data
+**Solution**: Make sure you ran all steps:
+```bash
+python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_and_export_stores.py -d 2025-11-10
+python csv_to_geojson.py
+# Hard refresh browser: Ctrl+Shift+R
 ```
 
-## Customization
+#### Database connection failed
+**Check**:
+- `.env` file exists and has correct credentials
+- Database server is accessible
+- Your IP is allowed by AWS security groups
 
-- **Styles**: Modify the CSS in `css/styles.css` to change the appearance
-- **Map Settings**: Adjust the map configuration in `js/map.js`
-- **Adding Data**: Convert additional data using the Python script
-- **Adding Layers**: Modify the JavaScript to include additional map layers
-- **Chain Logos**: Add more supermarket chain logos to the `img` directory and update the `chainLogos` mapping in `map.js`
-- **Price Difference Thresholds**: Modify the color thresholds in the relevant functions in `map.js`
-- **Legend**: Customize the legend in `index.html` and its toggle behavior in the accompanying JavaScript
-- **Popular Items Definition**: Use `update_popular_items_view.py` to adjust what constitutes a "popular" item
+#### Store grades seem wrong
+**Check**:
+- Did you use the same date for both view updates?
+- Is the minimum stores threshold reasonable? (try 10)
+- Verify exclusions are correct
 
-## CSS Organization
+**Test**:
+```bash
+python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+python update_and_export_stores.py --dry-run -d 2025-11-10
+```
 
-The stylesheet is organized into logical sections:
+### Diagnostic Commands
 
-1. **Global/Reset Styles**: Basic styles that apply to the entire application
-2. **Layout/Structure**: Styles for the container, header, content areas
-3. **Component-Specific Styles**: Styles for filters, map elements, popups, etc.
-4. **Utility Classes**: Reusable styles for common patterns
-5. **Media Queries**: Responsive design adjustments for different screen sizes
+```bash
+# Comprehensive database diagnostics
+python debug_database.py
 
-When modifying the CSS, maintain this organization to keep the code clean and maintainable.
+# Quick view testing
+python pg_quick_debug.py
 
-## Performance Optimizations
+# Get help for any script
+python SCRIPT_NAME.py --help
+```
 
-The application includes several mobile performance optimizations:
-- Debounced slider input to reduce frequent map updates
-- Minimized console logging for faster mobile rendering
-- Optimized marker clustering calculations
-- Mobile-specific UI adaptations for Hebrew RTL layout
-
-## Python Backend Scripts
-
-### Database Management Scripts
-
-**`update_popular_items_view.py`** ⭐ **NEW**
-- Updates the `popular_items_avg_prices` view with custom parameters
-- Configurable upload date and minimum store threshold
-- Interactive mode or command-line arguments
-- Includes dry-run option for testing
-- Validates inputs and provides detailed feedback
-- Usage examples:
-  ```bash
-  # Interactive mode
-  python update_popular_items_view.py
-  
-  # Command-line mode
-  python update_popular_items_view.py --date 2025-11-02 --min-stores 10
-  
-  # Short form
-  python update_popular_items_view.py -d 2025-11-02 -m 15
-  
-  # Dry run (preview only)
-  python update_popular_items_view.py --dry-run -d 2025-11-02 -m 10
-  ```
-
-### Data Processing Scripts
-
-**`pg_to_geojson.py`** (220 lines)
-- Connects to PostgreSQL database
-- Fetches data from `store_price_comparisons` view
-- Validates coordinates and handles invalid data
-- Processes data in batches of 1000 rows
-- Outputs GeoJSON for map visualization
-
-**`csv_to_geojson.py`** (188 lines)
-- Converts CSV files to GeoJSON format
-- Smart numeric string detection
-- Handles Hebrew text with UTF-8-sig encoding
-- Comprehensive data validation
-
-**`export_store_data.py`** (250 lines)
-- Exports store price comparisons from PostgreSQL to CSV
-- Optimized using pre-loaded average prices
-- Provides detailed progress reporting with timestamps
-- Calculates store rankings based on price differences
-
-### Debugging Tools
-
-**`debug_database.py`** (209 lines)
-- Comprehensive database diagnostics
-- Tests data availability by date
-- Analyzes popular items thresholds
-- Tests database views with different parameters
-
-**`pg_quick_debug.py`** (114 lines)
-- Quick diagnostic tool for database views
-- Tests `popular_items_avg_prices` view
-- Tests `store_price_comparisons` view
-- Query timeout protection (30 seconds)
-
-### Configuration
-
-**`config.py`**
-- Loads database credentials from `.env` file using `python-dotenv`
-- Validates all required environment variables
-- Provides `pg_config` dictionary for psycopg2 connections
-
-## Typical Workflow
-
-Here's a recommended workflow when updating the map with new price data:
-
-1. **Update the popular items view** with the new date:
-   ```bash
-   python update_popular_items_view.py -d 2025-11-10 -m 10
-   ```
-
-2. **Export the store data** to CSV:
-   ```bash
-   python export_store_data.py
-   ```
-
-3. **Convert to GeoJSON**:
-   ```bash
-   python csv_to_geojson.py
-   ```
-
-4. **Test locally**:
-   ```bash
-   cd leaflet
-   python -m http.server
-   ```
-
-5. **Deploy** the updated files to your production server
+---
 
 ## Security & Best Practices
 
-### Recent Security Improvements (2025-11-05)
+### Recent Security Improvements
 
-**Critical vulnerabilities fixed:**
+**Critical vulnerabilities fixed (2025-11-05)**:
 
-1. **Hardcoded Credentials Removed**
-   - Previously: Database password stored in plaintext in `config.py`
-   - Now: All credentials loaded from `.env` file (excluded from git)
-   - Impact: Prevents credential exposure in version control
-
-2. **SQL Injection Vulnerabilities Fixed**
-   - Previously: F-string date interpolation in SQL queries
-   - Now: Parameterized queries using psycopg2 placeholders (`%s`)
-   - Files fixed: `debug_database.py`, `pg_quick_debug.py`, `update_popular_items_view.py`
-   - Impact: Prevents SQL injection attacks
-
-3. **Git Security Improved**
-   - Added comprehensive `.gitignore` file
-   - Excludes: `__pycache__/`, `.env`, `config.py`, sensitive data files
-   - Created `.env.example` as template for developers
-
-### Code Quality Assessment
-
-**Strengths:**
-- Excellent data validation with multiple layers
-- Smart performance optimizations (batch processing, clustering)
-- Proper Hebrew language support (UTF-8, RTL)
-- Rich user experience with interactive features
-- Good documentation and progress logging
-- Parameterized SQL queries throughout
-
-**Areas for Improvement:**
-- ❌ No type hints (planned enhancement)
-- ❌ No unit tests (0% test coverage)
-- ⚠️ Some broad exception handling
-- ⚠️ Code duplication between CSV and PostgreSQL converters
-- ⚠️ Hardcoded file paths in some scripts
-
-**Overall Code Quality: 6.0/10** (improved from 5.5/10)
-- Functionality: 9/10
-- Security: 9/10 (improved from 8/10)
-- Maintainability: 6/10
-- Testing: 0/10
-- Documentation: 8/10 (improved from 7/10)
+1. ✅ **Hardcoded credentials removed** - All credentials now in `.env` file
+2. ✅ **SQL injection fixed** - All queries use parameterized statements
+3. ✅ **Git security improved** - Comprehensive `.gitignore` file
 
 ### Security Checklist
 
-When deploying or contributing to this project:
-
 - [ ] Never commit `.env` file to git
-- [ ] Rotate database passwords if they were ever exposed
 - [ ] Use strong, unique passwords for database access
 - [ ] Restrict AWS RDS security groups to known IPs
 - [ ] Keep dependencies updated (`pip list --outdated`)
-- [ ] Use parameterized queries for all SQL operations ✓
 - [ ] Review git history for accidentally committed secrets
 - [ ] Test new SQL queries with dry-run mode first
 
-## Future Enhancements
+### Best Practices
 
-Potential improvements to consider:
-- Implementing a search function for specific stores
-- Adding data layers for different time periods
-- Creating a heatmap view based on price differences
-- Adding route planning to the nearest cheaper store
-- Implementing user accounts for saving favorite stores
-- Adding a comparison feature to directly compare prices between two stores
-- Developing a mobile app version for offline use
-- Adding automated tests for Python backend scripts
-- Implementing type hints throughout the codebase
-- Creating a CI/CD pipeline for automated deployments
+#### Always Use Same Date
+```bash
+# ✅ CORRECT
+DATE="2025-11-10"
+python update_popular_items_view.py -d $DATE -m 10
+python update_and_export_stores.py -d $DATE
 
-## Hosting
+# ❌ WRONG - Different dates
+python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_and_export_stores.py -d 2025-11-02  # Different date!
+```
 
-To make this map publicly available through your organization's website:
+#### Update Popular Items First
+```bash
+# ✅ CORRECT ORDER
+python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_and_export_stores.py -d 2025-11-10
 
-1. Upload all files to your web server
-2. Ensure the server allows access to the data files
-3. Update any relative paths if necessary
+# ❌ WRONG - Skip popular items update
+python update_and_export_stores.py -d 2025-11-10  # Uses old averages!
+```
+
+#### Test Before Deploying
+```bash
+# Test with dry-run
+python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+
+# Test locally before deploying
+cd leaflet && python -m http.server
+```
+
+#### Keep Defaults
+Use default exclusions unless you have a specific reason to change them:
+- Chains: `סופר פארם, Yellow, דור אלון`
+- Subchains: `Be, אונליין`
+- Cities: `unknown`
+
+---
+
+## Script Comparison
+
+### Performance
+
+| Script | Purpose | Speed | Flexibility |
+|--------|---------|-------|-------------|
+| `export_store_data.py` (legacy) | Export CSV | ⭐⭐ Slow (5-10 min) | ⭐ Limited |
+| `update_store_comparisons_view.py` | Update view | ⭐⭐⭐ Fast (5 sec) | ⭐⭐⭐ High |
+| `update_and_export_stores.py` | Both | ⭐⭐⭐ Fast (30 sec) | ⭐⭐⭐ High |
+
+### When to Use Each Script
+
+**Use `update_and_export_stores.py` for**:
+- ✅ Standard weekly updates (99% of use cases)
+- ✅ When you need CSV output
+- ✅ Maximum speed and convenience
+
+**Use `update_store_comparisons_view.py` for**:
+- ✅ View-only updates (no CSV needed)
+- ✅ When other tools read from view
+- ✅ Testing with dry-run mode
+
+**Use `export_store_data.py` for**:
+- ⚠️ Legacy compatibility only
+- ⚠️ Generally not recommended anymore
+
+---
+
+## Quick Reference
+
+### Most Common Commands
+
+```bash
+# Standard weekly update
+python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_and_export_stores.py -d 2025-11-10
+python csv_to_geojson.py
+
+# Re-export without view update
+python update_and_export_stores.py -d 2025-11-10 --skip-view-update
+
+# Interactive mode (beginner-friendly)
+python update_and_export_stores.py
+
+# Test with dry-run
+python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+
+# Get help
+python update_and_export_stores.py --help
+```
+
+### Parameter Quick Reference
+
+**Popular Items**:
+- `--date`, `-d`: Date (YYYY-MM-DD)
+- `--min-stores`, `-m`: Minimum stores threshold (10 recommended)
+- `--dry-run`: Preview SQL without executing
+
+**Store Comparisons & Export**:
+- `--date`, `-d`: Date (YYYY-MM-DD)
+- `--exclude-chains`: Chains to exclude (comma-separated)
+- `--exclude-subchains`: Subchains to exclude (comma-separated)
+- `--exclude-cities`: Cities to exclude (comma-separated)
+- `--skip-view-update`: Skip view update, only export
+- `--output-dir`: Custom output directory
+
+---
+
+## CSV Format
+
+The exported CSV includes:
+
+- `store_code`: Unique identifier
+- `store_name`: Store name
+- `chainname`: Supermarket chain
+- `subchainname`: Sub-chain name
+- `storeid`: Numeric ID
+- `address`: Store address
+- `city`: City name
+- `zipcode`: Postal code
+- `latitude`: Geographic latitude
+- `longitude`: Geographic longitude
+- `average_price_diff`: Average price difference percentage vs. national average
+- `popular_item_count`: Number of popular items in store
+
+---
 
 ## Dependencies
 
 ### Frontend
-- [Leaflet](https://leafletjs.com/): Open-source JavaScript library for interactive maps
-- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster): Plugin for clustering markers
-- [Font Awesome](https://fontawesome.com/): Icon library for user interface elements
+- [Leaflet](https://leafletjs.com/) - Interactive maps
+- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) - Marker clustering
+- [Font Awesome](https://fontawesome.com/) - Icons
 
 ### Backend (Python)
-- **psycopg2-binary** (2.9.9): PostgreSQL database adapter
-- **pandas** (2.1.4): Data manipulation and analysis
-- **python-dotenv** (1.0.0): Environment variable management
+- **psycopg2-binary** (2.9.9) - PostgreSQL adapter
+- **pandas** (2.1.4) - Data manipulation
+- **python-dotenv** (1.0.0) - Environment variables
+
+---
+
+## Future Enhancements
+
+Potential improvements:
+- Search function for specific stores
+- Data layers for different time periods
+- Heatmap view based on price differences
+- Route planning to nearest cheaper store
+- User accounts for saving favorites
+- Direct store comparison feature
+- Mobile app for offline use
+- Automated tests for Python scripts
+- Type hints throughout codebase
+- CI/CD pipeline for deployments
+
+---
 
 ## License
 
@@ -552,5 +756,15 @@ All rights reserved. Based on publicly available price data from supermarket cha
 
 ---
 
+## Support
+
+For issues or questions:
+- Run diagnostics: `python debug_database.py`
+- Check this README's Troubleshooting section
+- Review error messages carefully
+- Test with `--dry-run` mode first
+
+---
+
 **Last Updated**: 2025-11-13  
-**Version**: 2.1.0 (Added `update_popular_items_view.py`)
+**Version**: 3.0.0 (Consolidated documentation + new scripts)

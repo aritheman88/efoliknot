@@ -124,6 +124,8 @@ const avgPriceDiff = validMarkers > 0 ? totalPriceDiff / validMarkers : 0;
         'שפע ברכת השם': 'shefa.png',
         'שפע שוק': 'shefa.png',
         'אלמשהדאוי קינג סטור בע"מ': 'kingstore.png',
+        'קשת טעמים': 'keshet.png',
+        'דבאח': 'dabah.png',
         'פרש מרקט': 'freshmarket.png'
         // Add more chains as needed
     };
