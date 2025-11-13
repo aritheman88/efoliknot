@@ -126,7 +126,8 @@ const avgPriceDiff = validMarkers > 0 ? totalPriceDiff / validMarkers : 0;
         'אלמשהדאוי קינג סטור בע"מ': 'kingstore.png',
         'קשת טעמים': 'keshet.png',
         'דבאח': 'dabah.png',
-        'פרש מרקט': 'freshmarket.png'
+        'פרש מרקט': 'freshmarket.png',
+        'שוק העיר': 'shuk.png'
         // Add more chains as needed
     };
 
