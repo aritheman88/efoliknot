@@ -180,7 +180,7 @@ if __name__ == "__main__":
     os.makedirs("data",exist_ok=True)
 
     # Path to your CSV file - update this to your actual path
-    csv_file = "data/store_price_comp_2025-11-02.csv"
+    csv_file = "data/store_price_comparisons_2025-11-13.csv"
 
     # Path to write the GeoJSON output
     output_file = "data/stores.geojson"
