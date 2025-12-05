@@ -3020,15 +3020,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.964544,
-          32.099058
+          35.034522,
+          31.891905
         ]
       },
       "properties": {
         "store_code": "car_1150",
-        "store_name": "מגה מכבים ראש העין",
+        "store_name": "קרפור מכבים",
         "chainname": "קרפור",
-        "subchainname": "מגה",
+        "subchainname": "קרפור סיטי",
         "storeid": null,
         "address": "מ.מסחרי רננים מכבים",
         "city": "מודיעין מכבים רעות",
