@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mainContent.style.display = 'block';
 
         // Fix for Leaflet map not rendering properly when container was hidden
-        // Wait a brief moment for the DOM to update, then trigger map resize and re-fit bounds
+        // Wait a brief moment for the DOM to update, then trigger map resize and center on user location
         setTimeout(function() {
             if (window.map) {
                 // Invalidate map size to recalculate dimensions
@@ -413,9 +413,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.map.invalidateSize();
                 }
 
-                // Re-fit the map to show all markers with proper bounds
-                if (window.markers && window.markers.getBounds && window.markers.getLayers().length > 0) {
-                    window.map.fitBounds(window.markers.getBounds(), { padding: [50, 50] });
+                // Try to center map on user's location (will fall back to showing all markers if denied)
+                if (window.centerMapOnUserLocation) {
+                    window.centerMapOnUserLocation();
+                } else {
+                    // Fallback if function not loaded yet - re-fit the map to show all markers
+                    if (window.markers && window.markers.getBounds && window.markers.getLayers().length > 0) {
+                        window.map.fitBounds(window.markers.getBounds(), { padding: [50, 50] });
+                    }
                 }
             }
 

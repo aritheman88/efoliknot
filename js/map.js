@@ -108,6 +108,53 @@ const avgPriceDiff = validMarkers > 0 ? totalPriceDiff / validMarkers : 0;
     // Expose markers globally for password script
     window.markers = markers;
 
+    // Function to center map on user's location
+    window.centerMapOnUserLocation = function() {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    // Success - user granted permission
+                    const userLat = position.coords.latitude;
+                    const userLng = position.coords.longitude;
+
+                    // Center map on user's location with city-level zoom (12-13)
+                    map.setView([userLat, userLng], 12);
+
+                    // Optional: Add a marker to show user's location
+                    const userLocationIcon = L.divIcon({
+                        className: 'user-location-marker',
+                        html: '<div style="background-color:#4285F4; width:16px; height:16px; border-radius:50%; border:3px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.3);"></div>',
+                        iconSize: [16, 16],
+                        iconAnchor: [8, 8]
+                    });
+
+                    L.marker([userLat, userLng], { icon: userLocationIcon })
+                        .addTo(map)
+                        .bindPopup('המיקום שלך')
+                        .openPopup();
+                },
+                function(error) {
+                    // Error or user denied permission - fall back to showing all markers
+                    console.log('Geolocation error:', error.message);
+                    if (window.markers && window.markers.getBounds && window.markers.getLayers().length > 0) {
+                        map.fitBounds(window.markers.getBounds(), { padding: [50, 50] });
+                    }
+                },
+                {
+                    enableHighAccuracy: true,  // Use GPS on mobile devices
+                    timeout: 5000,             // Wait up to 5 seconds
+                    maximumAge: 0              // Don't use cached position
+                }
+            );
+        } else {
+            // Browser doesn't support geolocation - fall back to showing all markers
+            console.log('Geolocation not supported');
+            if (window.markers && window.markers.getBounds && window.markers.getLayers().length > 0) {
+                map.fitBounds(window.markers.getBounds(), { padding: [50, 50] });
+            }
+        }
+    };
+
     // Chain logo mapping
     const chainLogos = {
         'רמי לוי': 'ramiLevi.png',
