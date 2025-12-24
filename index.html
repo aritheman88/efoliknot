@@ -28,6 +28,20 @@
 </head>
 <body>
 
+    <!-- Password Protection Overlay -->
+    <div id="password-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 10000; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 40px; border-radius: 10px; text-align: center; max-width: 400px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <img src="img/Lobby 99 logo.png" alt="Logo" style="max-width: 150px; margin-bottom: 20px;">
+            <h2 style="margin-bottom: 20px; color: #333;">גישה מוגבלת</h2>
+            <p style="margin-bottom: 20px; color: #666;">אתר זה מוגן בסיסמה</p>
+            <input type="password" id="password-input" placeholder="הזן סיסמה" style="width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; box-sizing: border-box;">
+            <div id="password-error" style="color: #d32f2f; margin-bottom: 10px; min-height: 20px; font-size: 14px;"></div>
+            <button id="password-submit" style="width: 100%; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold;">כניסה</button>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+
     <div id="disclaimer-modal" class="disclaimer-modal">
     <div class="disclaimer-content">
         <h2>Disclaimer</h2>
@@ -351,6 +365,73 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div id="popup-overlay" class="popup-overlay"></div>
+
+</div> <!-- End of main-content -->
+
+<!-- Password Protection Script -->
+<script>
+(function() {
+    const CORRECT_PASSWORD = 'Lobby99';
+    const SESSION_KEY = 'efoliknot_authenticated';
+
+    const passwordOverlay = document.getElementById('password-overlay');
+    const mainContent = document.getElementById('main-content');
+    const passwordInput = document.getElementById('password-input');
+    const passwordSubmit = document.getElementById('password-submit');
+    const passwordError = document.getElementById('password-error');
+
+    // Check if already authenticated in this session
+    function checkAuth() {
+        return sessionStorage.getItem(SESSION_KEY) === 'true';
+    }
+
+    // Show password screen or main content based on auth status
+    function initializeAuth() {
+        if (checkAuth()) {
+            showMainContent();
+        } else {
+            showPasswordScreen();
+        }
+    }
+
+    function showPasswordScreen() {
+        passwordOverlay.style.display = 'flex';
+        mainContent.style.display = 'none';
+        passwordInput.focus();
+    }
+
+    function showMainContent() {
+        passwordOverlay.style.display = 'none';
+        mainContent.style.display = 'block';
+    }
+
+    function attemptLogin() {
+        const enteredPassword = passwordInput.value;
+
+        if (enteredPassword === CORRECT_PASSWORD) {
+            sessionStorage.setItem(SESSION_KEY, 'true');
+            passwordError.textContent = '';
+            showMainContent();
+        } else {
+            passwordError.textContent = 'סיסמה שגויה, נסה שוב';
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+    }
+
+    // Event listeners
+    passwordSubmit.addEventListener('click', attemptLogin);
+
+    passwordInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            attemptLogin();
+        }
+    });
+
+    // Initialize on page load
+    initializeAuth();
+})();
+</script>
 
 </body>
 </html>
