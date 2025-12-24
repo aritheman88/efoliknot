@@ -405,12 +405,20 @@ document.addEventListener('DOMContentLoaded', function() {
         mainContent.style.display = 'block';
 
         // Fix for Leaflet map not rendering properly when container was hidden
-        // Wait a brief moment for the DOM to update, then trigger map resize
+        // Wait a brief moment for the DOM to update, then trigger map resize and re-fit bounds
         setTimeout(function() {
-            // Try to invalidate the map size if the map object exists
-            if (window.map && window.map.invalidateSize) {
-                window.map.invalidateSize();
+            if (window.map) {
+                // Invalidate map size to recalculate dimensions
+                if (window.map.invalidateSize) {
+                    window.map.invalidateSize();
+                }
+
+                // Re-fit the map to show all markers with proper bounds
+                if (window.markers && window.markers.getBounds && window.markers.getLayers().length > 0) {
+                    window.map.fitBounds(window.markers.getBounds(), { padding: [50, 50] });
+                }
             }
+
             // Also trigger a window resize event to ensure all components recalculate
             window.dispatchEvent(new Event('resize'));
         }, 100);

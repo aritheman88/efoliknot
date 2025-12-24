@@ -37,13 +37,16 @@ acceptBtn.addEventListener('click', function() {
 
     // Initialize map centered at Israel
     const map = L.map('map').setView([31.7683, 35.2137], 8);
-    
+
+    // Expose map globally so password script can access it
+    window.map = map;
+
     // Add OpenStreetMap tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19
     }).addTo(map);
-    
+
     // Create marker cluster group with custom icons based on average price
     const markers = L.markerClusterGroup({
         disableClusteringAtZoom: 15,
@@ -101,6 +104,9 @@ const avgPriceDiff = validMarkers > 0 ? totalPriceDiff / validMarkers : 0;
             });
         }
     });
+
+    // Expose markers globally for password script
+    window.markers = markers;
 
     // Chain logo mapping
     const chainLogos = {
