@@ -1,25 +1,28 @@
 #!/usr/bin/env python3
 """
-Update Popular Items View Script
-=================================
+Update Popular Items Table Script
+==================================
 
-Updates the popular_items_avg_prices PostgreSQL view with configurable:
+Creates/updates the popular_items_avg_prices TABLE with configurable:
 - Date for price data
 - Minimum number of stores threshold for "popular" items
 
+This produces IDENTICAL results to the view version, but stored as a table.
+
 Usage:
-    python update_popular_items_view.py --date 2025-11-02 --min-stores 10
-    python update_popular_items_view.py -d 2025-11-02 -m 10
+    python update_popular_items_view.py --date 2026-01-11 --min-stores 10
+    python update_popular_items_view.py -d 2026-01-11 -m 10
     python update_popular_items_view.py  (interactive mode)
 
 Author: efoliknot team
-Last Updated: 2025-11-13
+Last Updated: 2026-01-20
 """
 
 import psycopg2
 from psycopg2 import sql
 import argparse
 from datetime import datetime
+import time
 from config import pg_config
 
 
@@ -37,7 +40,7 @@ def validate_date(date_string):
         ValueError: If date format is invalid
     """
     try:
-        datetime.strptime(date_string,'%Y-%m-%d')
+        datetime.strptime(date_string, '%Y-%m-%d')
         return date_string
     except ValueError:
         raise ValueError(f"Invalid date format: {date_string}. Please use YYYY-MM-DD format.")
@@ -61,25 +64,50 @@ def validate_min_stores(min_stores):
         if value < 1:
             raise ValueError("Minimum stores must be at least 1")
         return value
-    except (ValueError,TypeError):
+    except (ValueError, TypeError):
         raise ValueError(f"Invalid minimum stores value: {min_stores}. Must be a positive integer.")
 
 
-def create_view_sql(upload_date,min_stores):
+def update_view(upload_date,min_stores,dry_run=False):
     """
-    Generate the SQL statement to create/replace the popular_items_avg_prices view.
+    Update the popular_items_avg_prices table in the database.
 
     Args:
         upload_date (str): Date in YYYY-MM-DD format
-        min_stores (int): Minimum number of stores for item to be considered popular
+        min_stores (int): Minimum number of stores
+        dry_run (bool): If True, print SQL without executing
 
     Returns:
-        str: SQL statement with placeholders for parameterization
+        bool: True if successful, False otherwise
     """
-    # Using parameterized query to prevent SQL injection
-    # Note: View name and structure cannot be parameterized, but data values are
-    sql_template = """
-    CREATE OR REPLACE VIEW public.popular_items_avg_prices AS
+    print(f"\n{'=' * 60}")
+    print(f"Updating popular_items_avg_prices table")
+    print(f"{'=' * 60}")
+    print(f"Date: {upload_date}")
+    print(f"Minimum stores threshold: {min_stores}")
+    print(f"Dry run: {dry_run}")
+    print(f"{'=' * 60}\n")
+
+    # SQL statements
+    drop_table_sql = "DROP TABLE IF EXISTS public.popular_items_avg_prices;"
+
+    create_table_sql = """
+    CREATE TABLE public.popular_items_avg_prices (
+        itemcode BIGINT,
+        itemname TEXT,
+        supplier TEXT,
+        brand TEXT,
+        category TEXT,
+        average_price DOUBLE PRECISION,
+        upload_date DATE,
+        PRIMARY KEY (itemcode)
+    );
+    """
+
+    # This is IDENTICAL to the view SQL, just wrapped in INSERT INTO
+    # and with upload_date column added to SELECT
+    insert_sql = """
+    INSERT INTO public.popular_items_avg_prices
     WITH popular_items AS (
         SELECT allprices.itemcode
         FROM allprices
@@ -99,7 +127,8 @@ def create_view_sql(upload_date,min_stores):
         i.supplier,
         i.brand,
         i.category,
-        AVG(p.itemprice) AS average_price
+        AVG(p.itemprice) AS average_price,
+        %s::DATE AS upload_date
     FROM popular_items pi
     JOIN items i ON pi.itemcode = i.itemcode
     JOIN allprices p ON i.itemcode = p.itemcode
@@ -113,40 +142,19 @@ def create_view_sql(upload_date,min_stores):
     GROUP BY i.itemcode, i.itemname, i.supplier, i.brand, i.category;
     """
 
-    return sql_template
-
-
-def update_view(upload_date,min_stores,dry_run=False):
-    """
-    Update the popular_items_avg_prices view in the database.
-
-    Args:
-        upload_date (str): Date in YYYY-MM-DD format
-        min_stores (int): Minimum number of stores
-        dry_run (bool): If True, print SQL without executing
-
-    Returns:
-        bool: True if successful, False otherwise
-    """
-    print(f"\n{'=' * 60}")
-    print(f"Updating popular_items_avg_prices view")
-    print(f"{'=' * 60}")
-    print(f"Date: {upload_date}")
-    print(f"Minimum stores threshold: {min_stores}")
-    print(f"Dry run: {dry_run}")
-    print(f"{'=' * 60}\n")
-
-    # Generate SQL
-    view_sql = create_view_sql(upload_date,min_stores)
-
     if dry_run:
         print("DRY RUN - SQL that would be executed:")
         print("-" * 60)
-        print(view_sql)
+        print(drop_table_sql)
+        print()
+        print(create_table_sql)
+        print()
+        print(insert_sql)
         print("\nParameters:")
-        print(f"  upload_date: {upload_date}")
-        print(f"  min_stores: {min_stores}")
-        print(f"  upload_date (repeated): {upload_date}")
+        print(f"  1. upload_date (CTE WHERE): {upload_date}")
+        print(f"  2. min_stores (HAVING): {min_stores}")
+        print(f"  3. upload_date (column): {upload_date}")
+        print(f"  4. upload_date (main WHERE): {upload_date}")
         print("-" * 60)
         return True
 
@@ -156,30 +164,48 @@ def update_view(upload_date,min_stores,dry_run=False):
         conn = psycopg2.connect(**pg_config)
         cursor = conn.cursor()
 
-        # Execute the view creation with parameterized values
-        print("Executing view update...")
-        cursor.execute(view_sql,(upload_date,min_stores,upload_date))
+        # Set longer timeout for this session
+        print("Setting statement timeout to 10 minutes...")
+        cursor.execute("SET statement_timeout = '600000';")  # 10 minutes
+
+        # Drop existing table if it exists
+        print("Dropping old table (if exists)...")
+        cursor.execute(drop_table_sql)
+        conn.commit()
+
+        # Create table with correct structure
+        print("Creating table with new structure...")
+        start_time = time.time()
+        cursor.execute(create_table_sql)
+        conn.commit()
+        create_time = time.time() - start_time
+        print(f"  ✓ Completed in {create_time:.2f} seconds")
+
+        # Insert new data - SAME parameters as original view script
+        print("Populating table with new data (this may take a few minutes)...")
+        start_time = time.time()
+        cursor.execute(insert_sql,(upload_date,min_stores,upload_date,upload_date))
+        insert_time = time.time() - start_time
+        print(f"  ✓ Completed in {insert_time:.2f} seconds")
 
         # Commit the transaction
         conn.commit()
 
-        # Verify the view was created
-        print("Verifying view creation...")
-        cursor.execute("""
-            SELECT COUNT(*) 
-            FROM information_schema.views 
-            WHERE table_schema = 'public' 
-            AND table_name = 'popular_items_avg_prices'
-        """)
-        view_exists = cursor.fetchone()[0] > 0
+        # Verify the data
+        print("Verifying data...")
+        cursor.execute("SELECT COUNT(*) FROM public.popular_items_avg_prices")
+        item_count = cursor.fetchone()[0]
 
-        if view_exists:
-            # Get count of items in the view
-            cursor.execute("SELECT COUNT(*) FROM public.popular_items_avg_prices")
-            item_count = cursor.fetchone()[0]
+        # Verify the date
+        cursor.execute("SELECT DISTINCT upload_date FROM public.popular_items_avg_prices")
+        result = cursor.fetchone()
+        stored_date = result[0] if result else None
 
-            print(f"\n✓ View successfully updated!")
+        if item_count > 0:
+            print(f"\n✓ Table successfully updated!")
             print(f"✓ Number of popular items: {item_count}")
+            print(f"✓ Data date: {stored_date}")
+            print(f"✓ Total time: {create_time + insert_time:.2f} seconds")
 
             # Show sample of results
             print("\nSample of popular items (first 5):")
@@ -190,8 +216,22 @@ def update_view(upload_date,min_stores,dry_run=False):
             """)
             for row in cursor.fetchall():
                 print(f"  - {row[0]}: {row[1]} (avg: ₪{row[2]:.2f})")
+
+            # Show some statistics
+            cursor.execute("""
+                SELECT 
+                    MIN(average_price) as min_price,
+                    MAX(average_price) as max_price,
+                    AVG(average_price) as avg_price
+                FROM public.popular_items_avg_prices
+            """)
+            stats = cursor.fetchone()
+            print(f"\nPrice statistics:")
+            print(f"  Min: ₪{stats[0]:.2f}")
+            print(f"  Max: ₪{stats[1]:.2f}")
+            print(f"  Average: ₪{stats[2]:.2f}")
         else:
-            print("\n✗ View creation failed - view does not exist")
+            print("\n✗ Table update failed - no items inserted")
             return False
 
         cursor.close()
@@ -199,15 +239,20 @@ def update_view(upload_date,min_stores,dry_run=False):
 
         print(f"\n{'=' * 60}")
         print("Update completed successfully!")
+        print("Note: Table contains same data as view, stored physically for fast querying.")
         print(f"{'=' * 60}\n")
 
         return True
 
     except psycopg2.Error as e:
         print(f"\n✗ Database error: {e}")
+        if conn:
+            conn.rollback()
         return False
     except Exception as e:
         print(f"\n✗ Unexpected error: {e}")
+        if conn:
+            conn.rollback()
         return False
 
 
@@ -219,14 +264,14 @@ def interactive_mode():
         tuple: (upload_date, min_stores, dry_run)
     """
     print("\n" + "=" * 60)
-    print("Popular Items View Update - Interactive Mode")
+    print("Popular Items Table Update - Interactive Mode")
     print("=" * 60 + "\n")
 
     # Get date
     while True:
-        date_input = input("Enter upload date (YYYY-MM-DD) [2025-11-02]: ").strip()
+        date_input = input("Enter upload date (YYYY-MM-DD) [2026-01-11]: ").strip()
         if not date_input:
-            date_input = "2025-11-02"
+            date_input = "2026-01-11"
 
         try:
             upload_date = validate_date(date_input)
@@ -248,33 +293,35 @@ def interactive_mode():
 
     # Ask about dry run
     dry_run_input = input("Dry run only? (y/n) [n]: ").strip().lower()
-    dry_run = dry_run_input in ['y','yes']
+    dry_run = dry_run_input in ['y', 'yes']
 
-    return upload_date,min_stores,dry_run
+    return upload_date, min_stores, dry_run
 
 
 def main():
-    """Main function to parse arguments and update the view."""
+    """Main function to parse arguments and update the table."""
     parser = argparse.ArgumentParser(
-        description='Update the popular_items_avg_prices PostgreSQL view',
+        description='Update the popular_items_avg_prices PostgreSQL table (same logic as view)',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s --date 2025-11-02 --min-stores 10
-  %(prog)s -d 2025-11-02 -m 15
-  %(prog)s --dry-run -d 2025-11-02 -m 10
+  %(prog)s --date 2026-01-11 --min-stores 10
+  %(prog)s -d 2026-01-11 -m 15
+  %(prog)s --dry-run -d 2026-01-11 -m 10
   %(prog)s  (interactive mode)
+
+Note: This produces IDENTICAL results to the view version, stored as a table.
         """
     )
 
     parser.add_argument(
-        '-d','--date',
+        '-d', '--date',
         type=str,
-        help='Upload date in YYYY-MM-DD format (e.g., 2025-11-02)'
+        help='Upload date in YYYY-MM-DD format (e.g., 2026-01-11)'
     )
 
     parser.add_argument(
-        '-m','--min-stores',
+        '-m', '--min-stores',
         type=int,
         help='Minimum number of stores for item to be considered popular (e.g., 10)'
     )
@@ -289,7 +336,7 @@ Examples:
 
     # If no arguments provided, run in interactive mode
     if args.date is None and args.min_stores is None:
-        upload_date,min_stores,dry_run = interactive_mode()
+        upload_date, min_stores, dry_run = interactive_mode()
     else:
         # Validate required arguments
         if args.date is None or args.min_stores is None:
@@ -304,16 +351,16 @@ Examples:
 
     # Confirm before execution (unless dry run)
     if not dry_run:
-        print("\nYou are about to update the database view with the following settings:")
+        print("\nYou are about to update the database table with the following settings:")
         print(f"  Date: {upload_date}")
         print(f"  Minimum stores: {min_stores}")
         confirm = input("\nProceed? (y/n): ").strip().lower()
-        if confirm not in ['y','yes']:
+        if confirm not in ['y', 'yes']:
             print("Operation cancelled.")
             return
 
     # Execute the update
-    success = update_view(upload_date,min_stores,dry_run)
+    success = update_view(upload_date, min_stores, dry_run)
 
     if not success:
         exit(1)

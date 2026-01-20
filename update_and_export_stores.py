@@ -58,7 +58,10 @@ def parse_list_input(input_string):
 
 
 def create_view_sql(upload_date,excluded_chains,excluded_subchains,excluded_cities):
-    """Generate SQL to create/replace the store_price_comparisons view"""
+    """Generate SQL to create/replace the store_price_comparisons view
+        Note: This view joins with the popular_items_avg_prices TABLE
+    (not a view anymore), which makes it much faster.
+"""
     where_conditions = []
     params = []
 
