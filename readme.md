@@ -1,4 +1,5 @@
-# Israel Supermarket Price Map
+Here's the updated README with all the changes we made:
+markdown# Israel Supermarket Price Map
 
 An interactive web map for visualizing and comparing supermarket prices across Israel.
 - **Live map**: https://efoliknot.net/
@@ -12,7 +13,7 @@ An interactive web map for visualizing and comparing supermarket prices across I
 - [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
 - [Scripts Guide](#scripts-guide)
-  - [Update Popular Items View](#1-update_popular_items_viewpy)
+  - [Update Popular Items Table](#1-update_popular_items_viewpy)
   - [Update Store Comparisons & Export](#2-update_and_export_storespy-recommended)
   - [Update Store Comparisons Only](#3-update_store_comparisons_viewpy)
 - [Complete Workflow](#complete-workflow)
@@ -34,11 +35,10 @@ This project combines a **Python data processing backend** with an **interactive
 - **Data Format**: GeoJSON, CSV, JSON
 
 ### How It Works
-
 ```
 PostgreSQL Database (Price Data)
     ↓
-1. Define "Popular Items" → popular_items_avg_prices view
+1. Define "Popular Items" → popular_items_avg_prices table
     ↓
 2. Calculate Store Grades → store_price_comparisons view
     ↓
@@ -52,7 +52,6 @@ Interactive Map Visualization
 ---
 
 ## Project Structure
-
 ```
 efoliknot/
 │
@@ -71,8 +70,8 @@ efoliknot/
 ├── Python Backend Scripts:
 ├── config.py                          # Database configuration (loads from .env)
 │
-├── View Update Scripts (NEW):
-├── update_popular_items_view.py       # Updates popular items view ⭐
+├── View/Table Update Scripts (NEW):
+├── update_popular_items_view.py       # Updates popular items table ⭐
 ├── update_and_export_stores.py        # Updates view + exports CSV ⭐⭐⭐ RECOMMENDED
 ├── update_store_comparisons_view.py   # Updates store comparisons view only ⭐
 │
@@ -98,14 +97,12 @@ efoliknot/
 ## Setup Instructions
 
 ### 1. Clone the Repository
-
 ```bash
 git clone https://github.com/aritheman88/efoliknot.git
 cd efoliknot
 ```
 
 ### 2. Set Up Python Environment
-
 ```bash
 # Using conda (recommended)
 conda activate basic  # or your preferred environment
@@ -120,7 +117,6 @@ pip install -r requirements.txt
 - `python-dotenv` - Environment variable management
 
 ### 3. Configure Database Credentials
-
 ```bash
 # Copy the example environment file
 cp .env.example .env
@@ -152,11 +148,11 @@ python debug_database.py
 
 ### 1. `update_popular_items_view.py`
 
-**Purpose**: Updates the `popular_items_avg_prices` database view  
+**Purpose**: Updates the `popular_items_avg_prices` database **table** (not a view)  
 **When to use**: First step when updating with new price data  
-**Run time**: ~15 seconds
+**Run time**: ~5 minutes (one-time table creation)
 
-This script defines which items are "popular" (appear in many stores) and calculates their national average prices. An item is "popular" if it appears in a minimum number of stores (e.g., 10+ stores).
+This script defines which items are "popular" (appear in many stores) and calculates their national average prices. An item is "popular" if it appears in a minimum number of stores (e.g., 10+ stores). The results are stored in a **table** for fast querying.
 
 #### Basic Usage
 
@@ -167,20 +163,20 @@ python update_popular_items_view.py
 
 **Command-line mode** (faster for regular use):
 ```bash
-python update_popular_items_view.py --date 2025-11-10 --min-stores 10
+python update_popular_items_view.py --date 2026-01-11 --min-stores 10
 # Or short form:
-python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_popular_items_view.py -d 2026-01-11 -m 10
 ```
 
 **Test mode** (preview SQL without executing):
 ```bash
-python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+python update_popular_items_view.py --dry-run -d 2026-01-11 -m 10
 ```
 
 #### Parameters
 
 - **`--date`** / **`-d`**: Upload date (YYYY-MM-DD format)
-  - Example: `2025-11-10`
+  - Example: `2026-01-11`
   - Must match the date in your `allprices` table
 
 - **`--min-stores`** / **`-m`**: Minimum number of stores for an item to be "popular"
@@ -189,21 +185,27 @@ python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
   - `5` = More inclusive (more items, less common)
 
 #### Example Output
-
 ```
 ============================================================
-Updating popular_items_avg_prices view
+Updating popular_items_avg_prices table
 ============================================================
-Date: 2025-11-10
+Date: 2026-01-11
 Minimum stores threshold: 10
+Dry run: False
 ============================================================
 
 Connecting to database...
-Executing view update...
-Verifying view creation...
+Setting statement timeout to 10 minutes...
+Dropping old table (if exists)...
+Creating table with new structure...
+  ✓ Completed in 0.04 seconds
+Populating table with new data (this may take a few minutes)...
+  ✓ Completed in 275.50 seconds
 
-✓ View successfully updated!
-✓ Number of popular items: 847
+✓ Table successfully updated!
+✓ Number of popular items: 64,814
+✓ Data date: 2026-01-11
+✓ Total time: 275.54 seconds
 
 Sample of popular items (first 5):
   - 7290000066684: חלב 3% 1 ליטר (avg: ₪6.45)
@@ -225,15 +227,15 @@ This is the **ultimate solution** that combines the best features:
 - ✅ Fast database view updates with configurable parameters
 - ✅ Detailed progress tracking and statistics
 - ✅ Creates both dated and standard CSV files
-- ✅ 30-60x faster than the legacy export script
+- ✅ Much faster now that popular_items_avg_prices is a table
 
 #### Basic Usage
 
 **Standard update** (most common):
 ```bash
-python update_and_export_stores.py --date 2025-11-10
+python update_and_export_stores.py --date 2026-01-11
 # Or short form:
-python update_and_export_stores.py -d 2025-11-10
+python update_and_export_stores.py -d 2026-01-11
 ```
 
 **Interactive mode**:
@@ -243,12 +245,12 @@ python update_and_export_stores.py
 
 **Re-export without updating view** (if view is already current):
 ```bash
-python update_and_export_stores.py -d 2025-11-10 --skip-view-update
+python update_and_export_stores.py -d 2026-01-11 --skip-view-update
 ```
 
 **Custom exclusions**:
 ```bash
-python update_and_export_stores.py -d 2025-11-10 \
+python update_and_export_stores.py -d 2026-01-11 \
   --exclude-chains "Yellow,דור אלון" \
   --exclude-subchains "Be,אונליין"
 ```
@@ -269,7 +271,7 @@ python update_and_export_stores.py -d 2025-11-10 \
 
 The script creates **TWO CSV files**:
 
-1. **Dated file**: `store_price_comparisons_2025-11-10.csv`
+1. **Dated file**: `store_price_comparisons_2026-01-11.csv`
    - For archiving and version history
    - Includes date in filename
 
@@ -280,34 +282,33 @@ The script creates **TWO CSV files**:
 **Default location**: `C:\Users\ariel\MyPythonScripts\efoliknot\data\`
 
 #### Example Output
-
 ```
 ======================================================================
-[2025-11-13 10:30:15] Starting process for 2025-11-10
+[2026-01-20 10:30:15] Starting process for 2026-01-11
 ======================================================================
 
-[2025-11-13 10:30:15] Connecting to PostgreSQL database...
-[2025-11-13 10:30:15]   ✓ Connected successfully!
+[2026-01-20 10:30:15] Connecting to PostgreSQL database...
+[2026-01-20 10:30:15]   ✓ Connected successfully!
 
-[2025-11-13 10:30:15] Step 1: Updating store_price_comparisons view...
-[2025-11-13 10:30:18]   ✓ View updated successfully in 3.2 seconds
+[2026-01-20 10:30:15] Step 1: Updating store_price_comparisons view...
+[2026-01-20 10:30:18]   ✓ View updated successfully in 3.2 seconds
 
-[2025-11-13 10:30:18] Step 2: Exporting view to CSV...
-[2025-11-13 10:30:21]   ✓ Loaded 847 stores in 2.8 seconds
-[2025-11-13 10:30:22]   ✓ Export completed in 3.5 seconds
+[2026-01-20 10:30:18] Step 2: Exporting view to CSV...
+[2026-01-20 10:30:21]   ✓ Loaded 847 stores in 2.8 seconds
+[2026-01-20 10:30:22]   ✓ Export completed in 3.5 seconds
 
 ======================================================================
 ✓ Export completed successfully!
 ======================================================================
 
 Output files:
-  1. store_price_comparisons_2025-11-10.csv
+  1. store_price_comparisons_2026-01-11.csv
   2. store_price_comparisons.csv (for map)
 
 Summary:
   - Total stores: 847
   - Unique chains: 12
-  - Date: 2025-11-10
+  - Date: 2026-01-11
 
 Price difference statistics:
   - Cheapest store: -12.45% below average
@@ -351,13 +352,12 @@ Use this script when:
 - You need to test with dry-run mode
 
 #### Basic Usage
-
 ```bash
 # Standard update
-python update_store_comparisons_view.py -d 2025-11-10
+python update_store_comparisons_view.py -d 2026-01-11
 
 # Test with dry-run
-python update_store_comparisons_view.py --dry-run -d 2025-11-10
+python update_store_comparisons_view.py --dry-run -d 2026-01-11
 
 # Interactive mode
 python update_store_comparisons_view.py
@@ -370,13 +370,12 @@ python update_store_comparisons_view.py
 ### Standard Weekly Update (Recommended)
 
 When you receive new price data:
-
 ```bash
-# Step 1: Update popular items view (defines "popular")
-python update_popular_items_view.py -d 2025-11-10 -m 10
+# Step 1: Update popular items table (defines "popular")
+python update_popular_items_view.py -d 2026-01-11 -m 10
 
 # Step 2: Update store comparisons AND export CSV
-python update_and_export_stores.py -d 2025-11-10
+python update_and_export_stores.py -d 2026-01-11
 
 # Step 3: Convert to GeoJSON for map
 python csv_to_geojson.py
@@ -387,13 +386,12 @@ python -m http.server
 # Visit http://localhost:8000
 ```
 
-**Total time**: ~1 minute
+**Total time**: ~5-6 minutes
 
 ### Quick One-Liner
-
 ```bash
-python update_popular_items_view.py -d 2025-11-10 -m 10 && \
-python update_and_export_stores.py -d 2025-11-10 && \
+python update_popular_items_view.py -d 2026-01-11 -m 10 && \
+python update_and_export_stores.py -d 2026-01-11 && \
 python csv_to_geojson.py
 ```
 
@@ -413,7 +411,7 @@ python csv_to_geojson.py || exit /b 1
 echo Complete! Test at: http://localhost:8000
 ```
 
-Usage: `update_map.bat 2025-11-10`
+Usage: `update_map.bat 2026-01-11`
 
 ### Shell Script (Linux/Mac)
 
@@ -428,7 +426,7 @@ python csv_to_geojson.py || exit 1
 echo "Complete! Test at: http://localhost:8000"
 ```
 
-Usage: `chmod +x update_map.sh && ./update_map.sh 2025-11-10`
+Usage: `chmod +x update_map.sh && ./update_map.sh 2026-01-11`
 
 ---
 
@@ -438,7 +436,7 @@ Usage: `chmod +x update_map.sh && ./update_map.sh 2025-11-10`
 
 **`allprices`**
 - Stores price data for all items across all stores
-- Key columns: `store_code`, `itemcode`, `itemprice`, `upload_date`
+- Key columns: `store_code`, `itemcode` (BIGINT), `itemprice`, `upload_date`
 - Updated regularly with new price data
 
 **`all_stores`**
@@ -447,27 +445,29 @@ Usage: `chmod +x update_map.sh && ./update_map.sh 2025-11-10`
 
 **`items`** (or `items_new`)
 - Product catalog with item details
-- Key columns: `itemcode`, `itemname`, `supplier`, `brand`, `category`
+- Key columns: `itemcode` (BIGINT), `itemname`, `supplier`, `brand`, `category`
+
+**`popular_items_avg_prices`** ⭐ **NEW: Now a TABLE, not a view**
+- Stores average prices for popular items
+- Columns: `itemcode` (BIGINT), `itemname`, `supplier`, `brand`, `category`, `average_price`, `upload_date`
+- Filters out: Super-Pharm, Yellow, Dor Alon chains; Be, Online subchains
+- Updated by: `update_popular_items_view.py`
+- **Benefits**: Much faster querying (pre-computed results), includes upload_date for tracking
 
 ### Views
-
-**`popular_items_avg_prices`**
-- Calculates average prices for popular items
-- Filters out: Super-Pharm, Yellow, Dor Alon chains
-- Filters out: Be, Online subchains
-- Updated by: `update_popular_items_view.py`
 
 **`store_price_comparisons`**
 - Main view comparing each store's prices to national average
 - Calculates: `average_price_diff` (percentage), `popular_item_count`
 - Powers the interactive map
 - Updated by: `update_and_export_stores.py` or `update_store_comparisons_view.py`
+- **Now fast**: Joins with popular_items_avg_prices table (not a view)
 
 ### View Logic
 
 The `store_price_comparisons` view:
 1. Finds all popular items in each store
-2. Compares each item's price to the national average
+2. Compares each item's price to the national average (from popular_items_avg_prices table)
 3. Calculates percentage difference for each item
 4. Averages all differences to grade the store
 
@@ -511,13 +511,19 @@ Consistent across all map components:
 
 #### "Invalid date format"
 **Solution**: Use YYYY-MM-DD format
-- ✅ Correct: `2025-11-10`
-- ❌ Wrong: `11/10/2025` or `10-11-2025`
+- ✅ Correct: `2026-01-11`
+- ❌ Wrong: `11/01/2026` or `01-11-2026`
 
-#### "View doesn't exist" or "popular_items_avg_prices not found"
+#### "Table doesn't exist" or "popular_items_avg_prices not found"
 **Solution**: Run the popular items update first:
 ```bash
-python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_popular_items_view.py -d 2026-01-11 -m 10
+```
+
+#### "Operator does not exist: bigint = text"
+**Solution**: This means the popular_items_avg_prices table has wrong data types. Make sure `itemcode` is BIGINT, not TEXT. Re-run:
+```bash
+python update_popular_items_view.py -d 2026-01-11 -m 10
 ```
 
 #### Very few stores in output
@@ -534,8 +540,8 @@ python debug_database.py
 #### Map shows old data
 **Solution**: Make sure you ran all steps:
 ```bash
-python update_popular_items_view.py -d 2025-11-10 -m 10
-python update_and_export_stores.py -d 2025-11-10
+python update_popular_items_view.py -d 2026-01-11 -m 10
+python update_and_export_stores.py -d 2026-01-11
 python csv_to_geojson.py
 # Hard refresh browser: Ctrl+Shift+R
 ```
@@ -548,18 +554,21 @@ python csv_to_geojson.py
 
 #### Store grades seem wrong
 **Check**:
-- Did you use the same date for both view updates?
+- Did you use the same date for both scripts?
 - Is the minimum stores threshold reasonable? (try 10)
 - Verify exclusions are correct
+- Check that popular_items_avg_prices has the correct upload_date:
+```sql
+SELECT DISTINCT upload_date FROM popular_items_avg_prices;
+```
 
 **Test**:
 ```bash
-python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
-python update_and_export_stores.py --dry-run -d 2025-11-10
+python update_popular_items_view.py --dry-run -d 2026-01-11 -m 10
+python update_and_export_stores.py --dry-run -d 2026-01-11
 ```
 
 ### Diagnostic Commands
-
 ```bash
 # Comprehensive database diagnostics
 python debug_database.py
@@ -597,29 +606,29 @@ python SCRIPT_NAME.py --help
 #### Always Use Same Date
 ```bash
 # ✅ CORRECT
-DATE="2025-11-10"
+DATE="2026-01-11"
 python update_popular_items_view.py -d $DATE -m 10
 python update_and_export_stores.py -d $DATE
 
 # ❌ WRONG - Different dates
-python update_popular_items_view.py -d 2025-11-10 -m 10
+python update_popular_items_view.py -d 2026-01-11 -m 10
 python update_and_export_stores.py -d 2025-11-02  # Different date!
 ```
 
 #### Update Popular Items First
 ```bash
 # ✅ CORRECT ORDER
-python update_popular_items_view.py -d 2025-11-10 -m 10
-python update_and_export_stores.py -d 2025-11-10
+python update_popular_items_view.py -d 2026-01-11 -m 10
+python update_and_export_stores.py -d 2026-01-11
 
 # ❌ WRONG - Skip popular items update
-python update_and_export_stores.py -d 2025-11-10  # Uses old averages!
+python update_and_export_stores.py -d 2026-01-11  # Uses old averages!
 ```
 
 #### Test Before Deploying
 ```bash
 # Test with dry-run
-python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+python update_popular_items_view.py --dry-run -d 2026-01-11 -m 10
 
 # Test locally before deploying
 cd leaflet && python -m http.server
@@ -642,6 +651,7 @@ Use default exclusions unless you have a specific reason to change them:
 | `export_store_data.py` (legacy) | Export CSV | ⭐⭐ Slow (5-10 min) | ⭐ Limited |
 | `update_store_comparisons_view.py` | Update view | ⭐⭐⭐ Fast (5 sec) | ⭐⭐⭐ High |
 | `update_and_export_stores.py` | Both | ⭐⭐⭐ Fast (30 sec) | ⭐⭐⭐ High |
+| `update_popular_items_view.py` | Update table | ⭐⭐ ~5 min (one-time) | ⭐⭐⭐ High |
 
 ### When to Use Each Script
 
@@ -655,6 +665,11 @@ Use default exclusions unless you have a specific reason to change them:
 - ✅ When other tools read from view
 - ✅ Testing with dry-run mode
 
+**Use `update_popular_items_view.py` for**:
+- ✅ First-time setup
+- ✅ When price data is updated with new upload_date
+- ✅ When changing the "popular items" definition
+
 **Use `export_store_data.py` for**:
 - ⚠️ Legacy compatibility only
 - ⚠️ Generally not recommended anymore
@@ -664,21 +679,20 @@ Use default exclusions unless you have a specific reason to change them:
 ## Quick Reference
 
 ### Most Common Commands
-
 ```bash
 # Standard weekly update
-python update_popular_items_view.py -d 2025-11-10 -m 10
-python update_and_export_stores.py -d 2025-11-10
+python update_popular_items_view.py -d 2026-01-11 -m 10
+python update_and_export_stores.py -d 2026-01-11
 python csv_to_geojson.py
 
 # Re-export without view update
-python update_and_export_stores.py -d 2025-11-10 --skip-view-update
+python update_and_export_stores.py -d 2026-01-11 --skip-view-update
 
 # Interactive mode (beginner-friendly)
 python update_and_export_stores.py
 
 # Test with dry-run
-python update_popular_items_view.py --dry-run -d 2025-11-10 -m 10
+python update_popular_items_view.py --dry-run -d 2026-01-11 -m 10
 
 # Get help
 python update_and_export_stores.py --help
@@ -766,5 +780,5 @@ For issues or questions:
 
 ---
 
-**Last Updated**: 2025-11-13  
-**Version**: 3.0.0 (Consolidated documentation + new scripts)
+**Last Updated**: 2026-01-20  
+**Version**: 3.1.0 (Updated to use table instead of view for popular_items_avg_prices)
