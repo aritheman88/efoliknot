@@ -7046,7 +7046,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          31.254603,
+          34.79755862,
           31.254603
         ]
       },
@@ -7321,7 +7321,7 @@
         "subchainname": "סופר קופיקס",
         "storeid": 722,
         "address": "חטיבה תשע 34",
-        "city": 7700,
+        "city": "עפולה",
         "zipcode": 0,
         "average_price_diff": 4.974458546,
         "popular_item_count": 1403
@@ -7541,7 +7541,7 @@
         "subchainname": "רמי לוי בשכונה",
         "storeid": 728,
         "address": "שבזי 12",
-        "city": 2640,
+        "city": "ראש העין",
         "zipcode": 0,
         "average_price_diff": 4.161277331,
         "popular_item_count": 1050
@@ -14966,8 +14966,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          35.3350838,
-          31.7854062
+          35.29840181,
+          31.77153522
         ]
       },
       "properties": {
@@ -20994,8 +20994,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          35.33159855,
-          31.790271
+          35.33156635,
+          31.79022534
         ]
       },
       "properties": {
