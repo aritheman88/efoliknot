@@ -1,0 +1,154 @@
+/* ============================================================
+   subchains/css/styles.css
+   Overrides and additions for the effective prices map.
+   Base styles come from ../leaflet/css/styles.css
+   ============================================================ */
+
+/* ── Effective price badge in header ── */
+.effective-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* ── View toggle button ── */
+#toggle-view-btn {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    padding: 8px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+#toggle-view-btn:hover { background: #1557b0; }
+
+/* ── Chain / subchain filter panel ── */
+.filter-section-title {
+    font-weight: bold;
+    font-size: 13px;
+    margin: 12px 0 6px;
+    color: #002d7f;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+}
+.filter-checkbox input[type=checkbox] {
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.filter-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.subchain-checkbox {
+    padding-right: 16px;
+    font-size: 12px;
+    color: #555;
+}
+
+.no-subchains {
+    font-size: 12px;
+    color: #999;
+    padding-right: 16px;
+}
+
+#chain-filters,
+#subchain-filters {
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+/* ── Logo markers ── */
+.logo-marker-inner {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+}
+.logo-marker-inner img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ── Cluster in logo mode ── */
+.marker-cluster-logo {
+    background-color: rgba(100, 100, 100, 0.6);
+}
+.marker-cluster-logo div {
+    background-color: rgba(60, 60, 60, 0.7);
+    color: white;
+}
+
+/* ── Popup note (effective price footnote) ── */
+.popup-note {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* ── Store detail note ── */
+.detail-note {
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+}
+
+/* ── Mobile: make room for chain filter checkboxes ── */
+@media (max-width: 768px) {
+    .sidebar {
+        max-height: 220px; /* taller than parent map to fit chain filters */
+    }
+
+    #chain-filters,
+    #subchain-filters {
+        max-height: 80px;
+    }
+
+    .filter-section-title {
+        font-size: 12px;
+        margin: 8px 0 4px;
+    }
+
+    .filter-checkbox {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    #toggle-view-btn {
+        font-size: 12px;
+        padding: 6px;
+        margin-top: 6px;
+    }
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מפת מחירי הסופרמרקטים - מחיר אפקטיבי</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- MarkerCluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <!-- Base CSS from parent -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Subchains overrides -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* ── Chain / subchain filter panel ── */
+        .filter-section-title {
+            font-weight: bold;
+            font-size: 13px;
+            margin: 10px 0 6px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+        }
+        .filter-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .filter-checkbox input[type=checkbox] {
+            margin: 0;
+            cursor: pointer;
+        }
+        .filter-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+        .subchain-checkbox {
+            padding-right: 16px;
+            font-size: 12px;
+            color: #555;
+        }
+        .no-subchains {
+            font-size: 12px;
+            color: #999;
+            padding-right: 16px;
+        }
+        #chain-filters, #subchain-filters {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        /* ── Toggle view button ── */
+        #toggle-view-btn {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        #toggle-view-btn:hover { background: #1557b0; }
+
+        /* ── Logo markers ── */
+        .logo-marker-inner {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,.3);
+        }
+        .logo-marker-inner img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+        /* ── Cluster in logo mode ── */
+        .marker-cluster-logo {
+            background-color: rgba(100,100,100,0.6);
+        }
+        .marker-cluster-logo div {
+            background-color: rgba(60,60,60,0.7);
+        }
+        /* ── Popup note ── */
+        .popup-note {
+            font-size: 11px;
+            color: #888;
+            margin-top: 4px;
+        }
+        .detail-note {
+            font-size: 11px;
+            color: #888;
+        }
+        /* ── Effective price badge in header ── */
+        .effective-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+            border-radius: 4px;
+            font-size: 11px;
+            padding: 2px 6px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Password Protection Overlay -->
+<div id="password-overlay" style="display:flex;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10000;justify-content:center;align-items:center;">
+    <div style="background:white;padding:40px;border-radius:10px;text-align:center;max-width:400px;box-shadow:0 4px 6px rgba(0,0,0,.1);">
+        <img src="../img/Lobby 99 logo.png" alt="Logo" style="max-width:150px;margin-bottom:20px;">
+        <h2 style="margin-bottom:20px;color:#333;">גישה מוגבלת</h2>
+        <p style="margin-bottom:20px;color:#666;">אתר זה מוגן בסיסמה</p>
+        <input type="password" id="password-input" placeholder="הזן סיסמה" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:5px;font-size:16px;box-sizing:border-box;">
+        <div id="password-error" style="color:#d32f2f;margin-bottom:10px;min-height:20px;font-size:14px;"></div>
+        <button id="password-submit" style="width:100%;padding:12px;background:#4CAF50;color:white;border:none;border-radius:5px;font-size:16px;cursor:pointer;font-weight:bold;">כניסה</button>
+    </div>
+</div>
+
+<div id="main-content" style="display:none;">
+
+<!-- Disclaimer -->
+<div id="disclaimer-modal" class="disclaimer-modal">
+    <div class="disclaimer-content">
+        <h2>Disclaimer</h2>
+        <div class="disclaimer-text">
+            <p>אין להסתמך על הנתונים המופיעים ב-efoliknot.net לצורך ביצוע עסקאות ו/או פעולות.</p>
+            <p>מטרת הנתונים היא להוות כלי עזר בלבד בצירוף עם נתונים או חישובים אחרים.</p>
+            <p>אתר לובי 99 לא אחראי בכל אופן לכל נזק ו/או הפסד שעלול להיגרם כתוצאה מהסתמכות על הנתונים.</p>
+        </div>
+        <div class="disclaimer-buttons">
+            <button id="accept-disclaimer" class="btn btn-primary">קראתי והבנתי</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <a href="https://lobby99.org.il/" target="_blank" title="בקרו באתר לובי 99">
+                <img src="../img/Lobby 99 logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <div class="title-container">
+            <h1>מפת מחירי הסופרמרקטים בישראל
+                <span class="effective-badge">מחיר אפקטיבי</span>
+            </h1>
+            <p class="subtitle">מחירים אפקטיביים (כולל מבצעים) — רשתות עם נתוני מבצעים בלבד</p>
+        </div>
+        <div id="info-button" class="leaflet-control">
+            <button class="info-icon" aria-label="מידע נוסף">i</button>
+        </div>
+        <div id="info-popup" class="info-popup">
+            <div class="info-popup-content">
+                <span class="close-info">&times;</span>
+                <p>המפה משווה כל סניף לממוצע הכללי, תוך שימוש במחיר האפקטיבי — כלומר, אם מוצר במבצע, המחיר שמשמש לחישוב הוא מחיר המבצע.</p>
+                <p>הממוצע הכללי חושב רק מהרשתות המופיעות במפה זו (רשתות שמפרסמות נתוני מבצעים).</p>
+                <p>הנתונים עדכניים ל-1 במאי 2026. עשויים להיות אי-דיוקים, בין השאר בשל טעויות במקור.</p>
+                <p>מצאתם טעות / יש הצעה לשיפור? <a href="https://docs.google.com/forms/d/e/1FAIpQLScFTAI98_d1DsTIEHTmFeHnFAOZx35LtrSo72w4Urw0UxWFiw/viewform?usp=sharing" target="_blank">כתבו לנו</a>. טל"ח</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="sidebar">
+            <div class="filter-container">
+
+                <!-- Price range slider -->
+                <h2>אילו סופרמרקטים להראות?</h2>
+                <div class="filter-groups-mobile">
+                    <div class="filter-group price-range-mobile">
+                        <div class="price-control-row">
+                            <div class="range-slider">
+                                <input type="range" id="price-diff-filter" min="-20" max="20" step="1" value="20">
+                                <div class="slider-labels">
+                                    <span class="slider-label-left">רק הזולים</span>
+                                    <span class="slider-label-right">כולל יקרים</span>
+                                </div>
+                            </div>
+                            <div class="reset-button-mobile">
+                                <button id="reset-filters" class="btn">איפוס</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View toggle -->
+                <button id="toggle-view-btn">הצג לוגו רשת</button>
+
+                <!-- Chain filter -->
+                <div class="filter-section-title">סינון לפי רשת</div>
+                <div id="chain-filters"></div>
+
+                <!-- Subchain filter -->
+                <div class="filter-section-title">סינון לפי תת-רשת</div>
+                <div id="subchain-filters"></div>
+
+            </div>
+
+            <!-- Store details panel -->
+            <div id="store-details"></div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        <p>© כל הזכויות שמורות. נתונים מבוססים על מידע שפורסם ע"י רשתות השיווק. טל"ח</p>
+    </footer>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- MarkerCluster JS -->
+<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+<!-- Custom JS -->
+<script src="js/map.js"></script>
+
+<!-- Legend -->
+<div id="map-legend" class="map-legend leaflet-control">
+    <div class="legend-header">
+        <h4>מקרא צבעים למחיר</h4>
+        <button id="toggle-legend" class="legend-toggle" aria-label="הסתר/הצג מקרא">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+    <div id="legend-content" class="legend-content">
+        <div><span class="legend-color legend-red"></span> יקר ביותר</div>
+        <div><span class="legend-color legend-orange"></span> יקר</div>
+        <div><span class="legend-color legend-yellow"></span> ממוצע</div>
+        <div><span class="legend-color legend-light-green"></span> זול</div>
+        <div><span class="legend-color legend-dark-green"></span> זול ביותר</div>
+    </div>
+</div>
+
+<div id="popup-overlay" class="popup-overlay"></div>
+
+</div><!-- end main-content -->
+
+<!-- Password script -->
+<script>
+(function () {
+    const CORRECT_PASSWORD = 'Lobby99';
+    const SESSION_KEY = 'efoliknot_authenticated';
+
+    const overlay = document.getElementById('password-overlay');
+    const mainContent = document.getElementById('main-content');
+    const input = document.getElementById('password-input');
+    const submit = document.getElementById('password-submit');
+    const error = document.getElementById('password-error');
+
+    function checkAuth() { return sessionStorage.getItem(SESSION_KEY) === 'true'; }
+
+    function showMain() {
+        overlay.style.display = 'none';
+        mainContent.style.display = 'block';
+        setTimeout(function () {
+            if (window.map) {
+                window.map.invalidateSize();
+                if (window.centerMapOnUserLocation) window.centerMapOnUserLocation();
+                else if (window.markers && window.markers.getLayers().length > 0)
+                    window.map.fitBounds(window.markers.getBounds(), { padding: [50, 50] });
+            }
+            window.dispatchEvent(new Event('resize'));
+        }, 100);
+    }
+
+    function tryLogin() {
+        if (input.value === CORRECT_PASSWORD) {
+            sessionStorage.setItem(SESSION_KEY, 'true');
+            error.textContent = '';
+            showMain();
+        } else {
+            error.textContent = 'סיסמה שגויה, נסה שוב';
+            input.value = '';
+            input.focus();
+        }
+    }
+
+    submit.addEventListener('click', tryLogin);
+    input.addEventListener('keypress', e => { if (e.key === 'Enter') tryLogin(); });
+
+    if (checkAuth()) showMain(); else { overlay.style.display = 'flex'; input.focus(); }
+})();
+</script>
+
+</body>
+</html>
