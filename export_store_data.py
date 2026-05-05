@@ -3,7 +3,7 @@ Export store price comparison data from PostgreSQL to CSV
 Uses pre-exported average prices CSV file (no heavy database queries!)
 
 IMPORTANT: Export popular_items_avg_prices view to CSV first:
-  Location: C:/Users/ariel/MyPythonScripts/efoliknot/data/popular_items_avg_prices.csv
+  Location: <efoliknot>/data/popular_items_avg_prices.csv
 """
 import psycopg2
 import pandas as pd
@@ -21,7 +21,7 @@ def timestamp():
 
 # Constants
 UPLOAD_DATE = '2025-11-02'
-OUTPUT_DIR = Path(r'C:\Users\ariel\MyPythonScripts\efoliknot\data')
+OUTPUT_DIR = Path(__file__).parent / 'data'
 
 def get_average_prices_from_csv():
     """Load average prices from CSV file (no database query needed!)"""

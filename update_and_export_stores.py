@@ -33,7 +33,7 @@ DEFAULT_EXCLUDED_SUBCHAINS = ['Be','אונליין']
 DEFAULT_EXCLUDED_CITIES = ['unknown']
 
 # Output directory
-OUTPUT_DIR = Path(r'C:\Users\ariel\MyPythonScripts\efoliknot\data')
+OUTPUT_DIR = Path(__file__).parent / 'data'
 
 
 def timestamp():
