@@ -139,7 +139,7 @@ def update_matview(upload_date, min_stores, dry_run=False):
     print(f"Dry run:                 {dry_run}")
     print(f"{'=' * 60}\n")
 
-    drop_sql = "DROP MATERIALIZED VIEW IF EXISTS public.popular_items_avg_effective_prices;"
+    drop_sql = "DROP MATERIALIZED VIEW IF EXISTS public.popular_items_avg_effective_prices CASCADE;"
     create_sql = build_matview_sql(upload_date, min_stores)
 
     if dry_run:
