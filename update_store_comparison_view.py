@@ -29,7 +29,7 @@ from config import pg_config
 
 # Default filters
 DEFAULT_EXCLUDED_CHAINS = ['סופר פארם','Yellow','דור אלון']
-DEFAULT_EXCLUDED_SUBCHAINS = ['Be','אונליין']
+DEFAULT_EXCLUDED_SUBCHAINS = ['Be','אונליין', 'מרכז לוגיסטי', 'מרכז מכירה וחלוקה', 'רמי לוי לעסקים']
 DEFAULT_EXCLUDED_CITIES = ['unknown']
 
 
