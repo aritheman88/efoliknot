@@ -1,0 +1,162 @@
+/* ============================================================
+   fruit/css/styles.css
+   Overrides and additions for the seasonal fruit page.
+   Base styles come from ../css/styles.css
+   ============================================================ */
+
+.fruit-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* ── Fruit picker ── */
+.fruit-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.fruit-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+    padding: 8px 14px;
+    border: 2px solid #dde3ee;
+    border-radius: 10px;
+    background: #f7f9fc;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color .15s, background .15s;
+}
+.fruit-tab:hover { border-color: #8fa3cc; }
+.fruit-tab.active { border-color: #002d7f; background: #eef2fb; }
+.fruit-name { font-size: 15px; font-weight: bold; color: #002d7f; }
+.fruit-from { font-size: 11px; color: #2e7d32; white-space: nowrap; }
+
+/* ── View tab bar (same as kashi) ── */
+.view-tabs {
+    display: flex;
+    background: #f1f3f4;
+    border-bottom: 2px solid #ddd;
+    padding: 0 16px;
+    flex-shrink: 0;
+}
+.tab-btn {
+    padding: 8px 20px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+.tab-btn:hover { color: #002d7f; }
+.tab-btn.active { color: #002d7f; border-bottom-color: #002d7f; }
+
+/* ── Chain panel ── */
+.fruit-sidebar { width: 360px; }
+.fruit-sidebar h2 { font-size: 1.1rem; margin-bottom: 2px; color: var(--primary-color); }
+.panel-note { font-size: 11px; color: #888; margin-bottom: 8px; }
+
+.chain-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    background: #fff;
+}
+.chain-row:hover { background: #f5f7fc; }
+.chain-row.best { border-color: #66bb6a; background: #f1f8f1; }
+.chain-row.selected { outline: 2px solid #002d7f; }
+.chain-logo { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
+.chain-main { flex: 1; min-width: 0; }
+.chain-line { display: flex; align-items: center; gap: 6px; }
+.chain-name { font-weight: bold; font-size: 14px; }
+.chain-min { margin-right: auto; font-weight: bold; font-size: 16px; color: #1b5e20; direction: ltr; }
+.best-tag {
+    font-size: 10px; background: #2e7d32; color: #fff; border-radius: 3px; padding: 1px 5px;
+}
+.chain-where { font-size: 12px; color: #444; }
+.chain-sub { font-size: 11px; color: #888; }
+.promo-tag { color: #c62828; font-weight: bold; }
+.chain-missing { font-size: 12px; color: #999; padding: 4px 2px 8px; }
+
+.promo-only { display: flex; gap: 6px; align-items: center; font-size: 13px; margin-top: 6px; cursor: pointer; }
+.reset-chains { margin-top: 8px; width: 100%; }
+
+/* ── Legend ── */
+.legend-range { color: #777; font-size: 11px; direction: ltr; unicode-bidi: isolate; }
+
+/* ── Popup ── */
+.store-popup { direction: rtl; text-align: right; font-size: 13px; min-width: 200px; }
+.popup-head { display: flex; align-items: center; gap: 6px; }
+.popup-head img { width: 22px; height: 22px; object-fit: contain; }
+.popup-addr { color: #666; font-size: 12px; margin-bottom: 4px; }
+.popup-price { font-size: 15px; }
+.popup-promo { color: #c62828; font-size: 12px; }
+.popup-note { font-size: 11px; color: #888; margin-top: 2px; }
+.popup-others { margin-top: 6px; border-top: 1px solid #eee; padding-top: 4px; font-size: 12px; }
+.popup-others-title { color: #666; font-size: 11px; }
+
+/* ── Table view ── */
+#view-table { display: flex; flex-direction: column; flex: 1; overflow: hidden; background: #fff; }
+.table-toolbar {
+    display: flex; align-items: center; gap: 12px; padding: 10px 16px;
+    border-bottom: 1px solid #ddd; background: #fafafa; flex-shrink: 0;
+}
+.table-search-input {
+    flex: 1; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; direction: rtl;
+}
+.table-search-input:focus { outline: none; border-color: #002d7f; }
+.download-btn {
+    padding: 8px 14px; background: #002d7f; color: white; border-radius: 4px;
+    text-decoration: none; font-size: 13px; white-space: nowrap;
+}
+.download-btn:hover { background: #001f57; color: white; }
+#fruit-table-container { flex: 1; overflow-y: auto; padding: 0 16px 16px; }
+.table-loading, .table-empty { text-align: center; color: #888; padding: 40px; }
+.table-count { font-size: 12px; color: #666; padding: 8px 0 0; }
+
+.fruit-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+.fruit-table th {
+    background: #002d7f; color: white; padding: 9px 12px; text-align: right;
+    position: sticky; top: 0; z-index: 1; cursor: pointer; user-select: none; white-space: nowrap;
+}
+.fruit-table th:hover { background: #003a99; }
+.fruit-table th.sort-asc::after { content: ' ▲'; font-size: 10px; }
+.fruit-table th.sort-desc::after { content: ' ▼'; font-size: 10px; }
+.fruit-table td { padding: 7px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; }
+.fruit-table td.num { direction: ltr; text-align: center; white-space: nowrap; }
+.fruit-table tbody tr:nth-child(even) { background: #f9f9f9; }
+.fruit-table tbody tr:hover { background: #f0f4ff; }
+.eff-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .fruit-sidebar { width: 100%; max-height: 260px; }
+    .fruit-tabs { padding: 8px; gap: 6px; }
+    .fruit-tab { min-width: 92px; padding: 6px 8px; }
+    .fruit-name { font-size: 13px; }
+    .tab-btn { padding: 6px 14px; font-size: 12px; }
+    .table-toolbar { flex-direction: column; align-items: stretch; gap: 8px; }
+    .fruit-table { font-size: 11px; }
+    .fruit-table th, .fruit-table td { padding: 6px 8px; }
+}
