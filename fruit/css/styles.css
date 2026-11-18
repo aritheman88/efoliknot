@@ -42,6 +42,15 @@
 }
 .fruit-tab:hover { border-color: #8fa3cc; }
 .fruit-tab.active { border-color: #002d7f; background: #eef2fb; }
+.fruit-group-label {
+    align-self: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1b5e20;
+    white-space: nowrap;
+    padding-right: 8px;
+    border-right: 2px solid #c8e6c9;
+}
 .fruit-name { font-size: 15px; font-weight: bold; color: #002d7f; }
 .fruit-from { font-size: 11px; color: #2e7d32; white-space: nowrap; }
 

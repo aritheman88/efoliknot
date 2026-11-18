@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // ── Fruit tabs ────────────────────────────────────────────────────────────
     function buildFruitTabs() {
         const wrap = document.getElementById('fruit-tabs');
-        wrap.innerHTML = data.fruits.map(f => {
+        wrap.innerHTML = data.fruits.map((f, i) => {
             const best = (data.summary[f.key] || [])[0];
-            return `<button class="fruit-tab" role="tab" data-key="${f.key}">
+            const divider = f.group === 'season' && (i === 0 || data.fruits[i - 1].group !== 'season')
+                ? '<span class="fruit-group-label">פירות העונה:</span>' : '';
+            return `${divider}<button class="fruit-tab" role="tab" data-key="${f.key}">
                         <span class="fruit-name">${esc(f.label)}</span>
                         ${best ? `<span class="fruit-from">החל מ-${fmt(best.min)} לק"ג</span>` : ''}
                     </button>`;
@@ -114,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>`;
         }).join('');
-        if (missing.length) html += `<div class="chain-missing">אין נתון ל${fruitLabel(fruit)} במשקל: ${missing.map(esc).join(', ')}</div>`;
+        if (missing.length) html += `<div class="chain-missing">אין מחיר לק"ג ל${fruitLabel(fruit)}: ${missing.map(esc).join(', ')}${fruit === 'strawberry' ? '. תחילת העונה, וחלק מהרשתות מוכרות תותים במארז בלי משקל מוצהר.' : ''}</div>`;
         const panel = document.getElementById('chain-panel');
         panel.innerHTML = html;
         panel.querySelectorAll('.chain-row').forEach(el => {
