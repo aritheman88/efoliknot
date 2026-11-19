@@ -306,12 +306,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${props.chainname || ''} ${props.subchainname ? '- ' + props.subchainname : ''}
                 </p>
                 <p>${props.address || ''}, ${props.city || ''}</p>
-                <p>הפרש מחירים ממוצע (כשי):
+                <p>הפרש מחירים ממוצע (קאשי):
                     <span class="price-indicator ${priceClass}">
                         <span class="number-wrapper">${sign}${Math.abs(formattedDiff)}%</span>
                     </span>
                 </p>
-                <p class="popup-note">* מחיר אפקטיבי לפי פריטי כשי (כולל מבצעים)</p>
+                <p class="popup-note">* מחיר אפקטיבי לפי פריטי קאשי (כולל מבצעים)</p>
             </div>`;
 
         const marker = L.marker(
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="detail-value">${props.address || 'לא זמין'}, ${props.city || ''}</span>
             </div>
             <div class="store-detail-item">
-                <span class="detail-label">הפרש מחירי כשי:</span>
+                <span class="detail-label">הפרש מחירי קאשי:</span>
                 <span class="detail-value">
                     <span class="price-indicator ${priceClass}">
                         <span class="number-wrapper">${priceText}</span>
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </span>
             </div>
             <div class="store-detail-item">
-                <span class="detail-label">מספר פריטי כשי שהושוו:</span>
+                <span class="detail-label">מספר פריטי קאשי שהושוו:</span>
                 <span class="detail-value">${props.kashi_item_count != null ? Number(props.kashi_item_count).toLocaleString() : 'לא זמין'}</span>
             </div>
             <div class="store-detail-item">
@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { key: 'chainname',         label: 'רשת' },
             { key: 'subchainname',      label: 'תת-רשת' },
             { key: 'city',              label: 'עיר' },
-            { key: 'average_price_diff',label: 'הפרש מחיר כשי' },
+            { key: 'average_price_diff',label: 'הפרש מחיר קאשי' },
             { key: 'kashi_item_count',  label: 'מספר פריטים' }
         ];
 
