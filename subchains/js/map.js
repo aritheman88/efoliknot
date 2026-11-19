@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'מחסני השוק': 'mahsaneiHashuk.png',
         'טיב טעם': 'tivTaam.png',
         'אושר עד': 'osherAd.png',
-        'קרפור': 'carrefour.png'
+        'קרפור': 'carrefour.png',
+        'פרש מרקט': 'freshmarket.png'
     };
     const defaultLogo = 'lobby99 water.png';
 

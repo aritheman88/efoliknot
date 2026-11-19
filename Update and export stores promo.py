@@ -7,7 +7,7 @@ Mirrors update_and_export_stores.py but uses effective prices (regular or promo,
 whichever is lower) for the subchains map at efoliknot.net/subchains.
 
 Only includes chains that have promo data:
-    אושר עד, ויקטורי, טיב טעם, יוחננוף, מחסני השוק, קרפור, רמי לוי, שופרסל
+    אושר עד, ויקטורי, טיב טעם, יוחננוף, מחסני השוק, קרפור, רמי לוי, שופרסל, פרש מרקט (since 2026-11-15)
 
 Requires: popular_items_avg_effective_prices materialized view to exist.
 Run update_popular_items_effective_view.py first.
@@ -33,7 +33,7 @@ from config import pg_config
 warnings.filterwarnings('ignore')
 
 # Chains with promo data — only these are included
-PROMO_CHAINS = ['אושר עד', 'ויקטורי', 'טיב טעם', 'יוחננוף', 'מחסני השוק', 'קרפור', 'רמי לוי', 'שופרסל']
+PROMO_CHAINS = ['אושר עד', 'ויקטורי', 'טיב טעם', 'יוחננוף', 'מחסני השוק', 'קרפור', 'רמי לוי', 'שופרסל', 'פרש מרקט']
 
 # Subchains/cities to exclude (same as main map)
 EXCLUDED_SUBCHAINS = ['Be', 'אונליין']

@@ -9,7 +9,7 @@ Creates/refreshes the popular_items_avg_effective_prices MATERIALIZED VIEW.
 i.e. if an item is on promotion, use the promo price; otherwise use the regular price.
 
 Only includes chains that have promo data:
-    אושר עד, ויקטורי, טיב טעם, יוחננוף, מחסני השוק, קרפור, רמי לוי, שופרסל
+    אושר עד, ויקטורי, טיב טעם, יוחננוף, מחסני השוק, קרפור, רמי לוי, שופרסל, פרש מרקט (since 2026-11-15)
 
 Used as the baseline for the subchains map (efoliknot.net/subchains).
 
@@ -26,7 +26,7 @@ from datetime import datetime
 from config import pg_config
 
 # Chains that have promo data — only these are included in the baseline
-PROMO_CHAINS = ['אושר עד', 'ויקטורי', 'טיב טעם', 'יוחננוף', 'מחסני השוק', 'קרפור', 'רמי לוי', 'שופרסל']
+PROMO_CHAINS = ['אושר עד', 'ויקטורי', 'טיב טעם', 'יוחננוף', 'מחסני השוק', 'קרפור', 'רמי לוי', 'שופרסל', 'פרש מרקט']
 
 # Subchains/cities to exclude (same as main map)
 EXCLUDED_SUBCHAINS = ['Be', 'אונליין']
