@@ -500,6 +500,42 @@ priceDiffFilter.addEventListener('change', function() {
         });
     }
 
+    // Store files hold [[itemcode, price], ...]; item names and national averages
+    // live once in data/store_files/_items.json (see export_store_files.py).
+    let itemsDictPromise = null;
+    function loadItemsDict() {
+        if (!itemsDictPromise) {
+            itemsDictPromise = fetch('data/store_files/_items.json')
+                .then(r => {
+                    if (!r.ok) throw new Error(`items dictionary: ${r.status}`);
+                    return r.json();
+                })
+                .catch(err => { itemsDictPromise = null; throw err; });
+        }
+        return itemsDictPromise;
+    }
+
+    function expandStoreFile(data) {
+        if (data.prices || !data.items) return data;   // old format
+        return loadItemsDict().then(dict => {
+            data.prices = data.items.map(([code, price]) => {
+                const it = dict.items[code] || [];
+                const avg = it[4];
+                return {
+                    itemcode: code,
+                    itemname: it[0] || null,
+                    manufacturer: it[1] || null,
+                    brand: it[2] || null,
+                    category: it[3] || null,
+                    price: price,
+                    average_price: avg || null,
+                    price_diff_pct: avg ? (price - avg) / avg * 100 : null
+                };
+            });
+            return data;
+        });
+    }
+
     // Function to fetch and display store price data
     window.showStorePrices = function(storeCode) {
         console.log('showStorePrices called with store code:', storeCode);
@@ -537,6 +573,7 @@ priceDiffFilter.addEventListener('change', function() {
                 }
                 return response.json();
             })
+            .then(expandStoreFile)
             .then(data => {
                 console.log('Data received:', data);
                 console.log('Number of prices:', data.prices ? data.prices.length : 0);
